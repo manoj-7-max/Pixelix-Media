@@ -134,7 +134,7 @@ function IntroSplash({ onDone }) {
     >
       <motion.video
         ref={videoRef}
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full object-contain md:object-cover"
         src="/logo-intro.mp4"
         autoPlay
         muted
@@ -254,9 +254,9 @@ function Hero() {
             <Sparkles size={16} className="text-cyan-300 animate-pulse" />
             <span className="tracking-wide">Chennai's Premier Digital Agency</span>
           </div>
-          <h1 className="max-w-4xl text-6xl font-black leading-[1] tracking-tight text-white sm:text-7xl lg:text-8xl">
+          <h1 className="max-w-4xl text-5xl font-black leading-[1.1] tracking-tight text-white sm:text-7xl lg:text-8xl">
             Elevating Brands <br />
-            <span className="bg-gradient-to-r from-cyan-300 to-violet-500 bg-clip-text text-transparent">In the Digital Era.</span>
+            <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">In the Digital Era.</span>
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-white/60 sm:text-xl">
             We fuse strategy with high-end production to create digital experiences that don't just exist—they lead.
