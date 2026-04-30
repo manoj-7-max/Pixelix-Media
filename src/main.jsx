@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { ArrowRight, Camera, Clapperboard, Mail, MapPin, Megaphone, Palette, Phone, Send, Share2, Sparkles, Target, Users, Video, Link, Newspaper, PenTool } from "lucide-react";
+import { ArrowRight, Camera, Clapperboard, Mail, MapPin, Megaphone, Palette, Phone, Send, Share2, Sparkles, Target, Users, Video, Link as LinkIcon, Newspaper, PenTool } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { BrowserRouter as Router, Routes, Route, Link, useParams, useNavigate, useLocation } from "react-router-dom";
 import "./styles.css";
@@ -63,7 +63,7 @@ const services = [
     id: "affiliate-marketing", 
     title: "Affiliate Marketing", 
     text: "Leverage networks to scale your sales and reach.", 
-    icon: Link,
+    icon: LinkIcon,
     longDescription: "Build a powerful network of partners. We design programs that incentivize referrals and expand your brand's footprint through trusted voices.",
     features: ["Program Design", "Partner Management", "Performance Tracking", "Commission Strategy"]
   },
