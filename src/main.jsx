@@ -210,9 +210,9 @@ function Navbar() {
 
   return (
     <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#0D0D0D]/72 backdrop-blur-xl">
-      <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
+      <nav className="mx-auto flex h-32 max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
         <Link className="flex items-center gap-3" to="/" aria-label="Pixelix Media home">
-          <img className="h-16 w-auto max-w-[240px] object-contain" src="/logo.png" alt="Pixelix Media" />
+          <img className="h-24 w-auto max-w-[320px] object-contain" src="/logo.png" alt="Pixelix Media" />
         </Link>
         <div className="hidden items-center gap-8 text-sm font-medium text-white/70 md:flex">
           <a className="hover:text-white" href="/#services" onClick={(e) => handleNavClick(e, "#services")}>Services</a>
@@ -233,7 +233,7 @@ function Navbar() {
 
 function Hero() {
   return (
-    <section id="home" className="relative min-h-screen overflow-hidden pt-28">
+    <section id="home" className="relative min-h-screen overflow-hidden pt-40">
       <div className="absolute inset-0 z-0">
         <video
           className="h-full w-full object-cover opacity-20 grayscale brightness-50"
@@ -537,7 +537,7 @@ function ServicePage() {
   const Icon = service.icon;
 
   return (
-    <div className="min-h-screen bg-[#050505] pt-32 pb-24">
+    <div className="min-h-screen bg-[#050505] pt-48 pb-24">
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <motion.button 
           onClick={() => navigate("/")}
