@@ -4,7 +4,11 @@
 
 :root {
   color-scheme: dark;
-  background: #0d0d0d;
+  --bg-color: #050505;
+  --cyan: #00f0ff;
+  --violet: #7a00ff;
+  --text-primary: #f0f0f0;
+  --text-secondary: rgba(240, 240, 240, 0.6);
   font-family: Inter, ui-sans-serif, system-ui, sans-serif;
   scroll-behavior: smooth;
 }
@@ -63,18 +67,18 @@ body {
   align-items: center;
   gap: 0.55rem;
   border-radius: 999px;
-  border: 1px solid rgba(0, 240, 255, 0.45);
-  background: linear-gradient(90deg, #00f0ff, #7a00ff);
-  padding: 0.82rem 1.35rem;
+  background: linear-gradient(90deg, var(--cyan), var(--violet));
+  padding: 0.82rem 1.6rem;
   color: white;
   font-weight: 800;
-  box-shadow: 0 0 30px rgba(0, 240, 255, 0.2), 0 0 46px rgba(122, 0, 255, 0.18);
-  transition: transform 180ms ease, box-shadow 180ms ease;
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.25);
+  transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
 }
 
 .neon-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 38px rgba(0, 240, 255, 0.42), 0 0 68px rgba(122, 0, 255, 0.28);
+  box-shadow: 0 0 45px rgba(0, 240, 255, 0.4);
+  filter: brightness(1.1);
 }
 
 .ghost-button {
@@ -155,15 +159,15 @@ body {
 
 .icon-shell {
   display: inline-flex;
-  height: 3.4rem;
-  width: 3.4rem;
+  height: 3.6rem;
+  width: 3.6rem;
   align-items: center;
   justify-content: center;
-  border-radius: 16px;
-  border: 1px solid rgba(0, 240, 255, 0.25);
-  background: linear-gradient(135deg, rgba(0, 240, 255, 0.16), rgba(122, 0, 255, 0.18));
-  color: #b9fbff;
-  box-shadow: 0 0 22px rgba(0, 240, 255, 0.12);
+  border-radius: 18px;
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.15), rgba(122, 0, 255, 0.15));
+  color: var(--cyan);
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.15);
 }
 
 .glass-panel {
@@ -218,13 +222,13 @@ body {
   right: 2rem;
   z-index: 60;
   display: grid;
-  height: 4rem;
-  width: 4rem;
+  height: 4.2rem;
+  width: 4.2rem;
   place-items: center;
   border-radius: 50%;
-  background: linear-gradient(135deg, #00f0ff, #7a00ff);
+  background: linear-gradient(135deg, var(--cyan), var(--violet));
   color: white;
-  box-shadow: 0 10px 40px rgba(0, 240, 255, 0.3);
+  box-shadow: 0 10px 40px rgba(0, 240, 255, 0.35);
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 

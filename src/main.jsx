@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { ArrowRight, Camera, Clapperboard, Mail, MapPin, Megaphone, Palette, Phone, Send, Share2, Sparkles, Users, Video } from "lucide-react";
+import { ArrowRight, Camera, Clapperboard, Mail, MapPin, Megaphone, Palette, Phone, Send, Share2, Sparkles, Target, Users, Video, Link, Newspaper, PenTool } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { BrowserRouter as Router, Routes, Route, Link, useParams, useNavigate, useLocation } from "react-router-dom";
 import "./styles.css";
@@ -14,50 +14,50 @@ const services = [
   { 
     id: "digital-marketing", 
     title: "Digital Marketing", 
-    text: "Performance campaigns, lead funnels, and analytics-led growth systems.", 
+    text: "Data-driven strategies to amplify your brand's digital presence.", 
     icon: Megaphone,
-    longDescription: "Our digital marketing services are built on data and human psychology. We don't just run ads; we build conversion engines. From SEO that puts you on the first page to performance marketing that scales your revenue, we ensure every rupee spent delivers measurable impact.",
-    features: ["Search Engine Optimization", "Pay-Per-Click Advertising", "Conversion Rate Optimization", "Email Marketing Funnels"]
+    longDescription: "We craft comprehensive digital marketing roadmaps that turn browsers into buyers. Our approach combines SEO, performance analytics, and growth hacking to ensure your brand dominates the digital landscape.",
+    features: ["Search Engine Optimization", "Data Analytics & Reporting", "Growth Hacking", "Email Automation"]
   },
   { 
-    id: "branding", 
-    title: "Branding", 
-    text: "Visual identity, positioning, and brand systems built to feel unmistakable.", 
-    icon: Palette,
-    longDescription: "Your brand is more than a logo; it's a feeling. We craft visual identities that command attention and build trust. Our branding process involves deep market research, typography selection, and color psychology to ensure your brand stands out in a crowded marketplace.",
-    features: ["Logo Design & Visual Identity", "Brand Voice & Positioning", "Design Systems", "Packaging Design"]
+    id: "paid-marketing", 
+    title: "Paid Marketing", 
+    text: "High-ROI ad campaigns across search and social platforms.", 
+    icon: Target,
+    longDescription: "Maximize your reach with precision-targeted paid campaigns. We manage your ad spend across Google, Meta, and LinkedIn to deliver the highest possible return on investment through constant A/B testing and optimization.",
+    features: ["Google Ads (SEM)", "Meta Ads Management", "Retargeting Campaigns", "Lead Generation Funnels"]
   },
   { 
-    id: "social-media", 
-    title: "Social Media", 
-    text: "Content calendars, reels, campaign strategy, and community momentum.", 
-    icon: Share2,
-    longDescription: "We turn social feeds into brand assets. By combining trend-aware content with strategic posting schedules, we help brands build loyal communities. Our reels and short-form content are designed to stop the scroll and spark conversation.",
-    features: ["Content Strategy & Creation", "Community Management", "Influencer Marketing", "Social Media Advertising"]
+    id: "traditional-marketing", 
+    title: "Traditional Marketing", 
+    text: "Offline branding and marketing for real-world impact.", 
+    icon: Newspaper,
+    longDescription: "Digital isn't everything. We help you bridge the gap between digital and physical with high-impact traditional marketing strategies, from print media to out-of-home (OOH) advertising that captures local attention.",
+    features: ["Print Media Ads", "Outdoor Advertising", "Event Sponsorships", "Direct Mail Campaigns"]
   },
   { 
-    id: "photography", 
-    title: "Photography", 
-    text: "Product, corporate, event, and campaign photography across Chennai.", 
-    icon: Camera,
-    longDescription: "High-quality visuals are the cornerstone of digital presence. Our photography team captures the essence of your products, people, and events with cinematic precision. We provide professional retouching and fast delivery to keep your brand moving.",
-    features: ["Product & E-commerce", "Corporate Portraits", "Fashion & Lifestyle", "Real Estate Photography"]
+    id: "content-marketing", 
+    title: "Content Marketing", 
+    text: "Storytelling that builds authority and engages audiences.", 
+    icon: PenTool,
+    longDescription: "Content is king, but strategy is the queen. We create valuable, relevant content that attracts and retains a clearly defined audience—building long-term brand authority and trust.",
+    features: ["Blog & Article Creation", "E-book & Whitepapers", "Newsletter Strategy", "SEO Copywriting"]
   },
   { 
-    id: "videography", 
-    title: "Videography", 
-    text: "Brand films, reels, ad creatives, and cinematic production workflows.", 
+    id: "affiliate-marketing", 
+    title: "Affiliate Marketing", 
+    text: "Leverage networks to scale your sales and reach.", 
+    icon: Link,
+    longDescription: "Build a powerful network of partners who sell for you. We design and manage affiliate programs that incentivize high-quality referrals and expand your brand's footprint through trusted voices.",
+    features: ["Program Design", "Partner Management", "Performance Tracking", "Commission Strategy"]
+  },
+  { 
+    id: "ad-shooting", 
+    title: "Ad Shooting", 
+    text: "Cinematic production for brand films and social commercials.", 
     icon: Video,
-    longDescription: "Storytelling through motion is our specialty. We produce high-impact videos that tell your brand's story. From high-energy ad creatives to cinematic brand films, our production workflow is streamlined for excellence and impact.",
-    features: ["Brand Story Films", "Commercial Ad Creatives", "Documentary Style Videos", "Motion Graphics"]
-  },
-  { 
-    id: "event-coverage", 
-    title: "Event Coverage", 
-    text: "Full-service photo and video coverage for launches, gatherings, and milestones.", 
-    icon: Clapperboard,
-    longDescription: "Don't miss a single moment. Our event coverage team provides end-to-end documentation of your most important milestones. We deliver fast-turnaround 'highlight' content for social media and high-resolution archives for your brand history.",
-    features: ["Corporate Launches", "Weddings & Milestones", "Conferences & Seminars", "Behind-the-Scenes Coverage"]
+    longDescription: "Bring your brand to life with high-end video production. Our ad shooting team handles everything from scriptwriting and casting to cinematic filming and post-production, delivering TV-quality commercials for any screen.",
+    features: ["Commercial Brand Films", "Social Media Reels", "Product Showcase Videos", "Professional Post-Production"]
   },
 ];
 
