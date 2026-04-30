@@ -210,9 +210,9 @@ function Navbar() {
 
   return (
     <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#0D0D0D]/72 backdrop-blur-xl">
-      <nav className="mx-auto flex h-32 max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
+      <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
         <Link className="flex items-center gap-3" to="/" aria-label="Pixelix Media home">
-          <img className="h-24 w-auto max-w-[320px] object-contain" src="/logo.png" alt="Pixelix Media" />
+          <img className="h-12 sm:h-16 w-auto max-w-[200px] sm:max-w-[240px] object-contain transition-all" src="/logo.png" alt="Pixelix Media" />
         </Link>
         <div className="hidden items-center gap-8 text-sm font-medium text-white/70 md:flex">
           <a className="hover:text-white" href="/#services" onClick={(e) => handleNavClick(e, "#services")}>Services</a>
@@ -233,7 +233,7 @@ function Navbar() {
 
 function Hero() {
   return (
-    <section id="home" className="relative min-h-screen overflow-hidden pt-40">
+    <section id="home" className="relative min-h-screen overflow-hidden pt-28">
       <div className="absolute inset-0 z-0">
         <video
           className="h-full w-full object-cover opacity-20 grayscale brightness-50"
@@ -254,11 +254,11 @@ function Hero() {
           transition={{ duration: 1, ease: "easeOut" }}
           className="z-10"
         >
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-white/[0.04] px-4 py-2 text-sm text-cyan-100 shadow-glow backdrop-blur-md">
-            <Sparkles size={16} className="text-cyan-300 animate-pulse" />
-            <span className="tracking-wide">Chennai's Premier Digital Agency</span>
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-400/20 bg-white/[0.04] px-4 py-2 text-[11px] sm:text-xs text-blue-100 shadow-glow backdrop-blur-md">
+            <Sparkles size={14} className="text-blue-300 animate-pulse" />
+            <span className="tracking-widest uppercase">Chennai's Premier Digital Agency</span>
           </div>
-          <h1 className="max-w-4xl text-5xl font-black leading-[1.1] tracking-tight text-white sm:text-7xl lg:text-8xl">
+          <h1 className="max-w-4xl text-4xl font-black leading-[1.1] tracking-tight text-white sm:text-7xl lg:text-8xl">
             Elevating Brands <br />
             <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">In the Digital Era.</span>
           </h1>
@@ -276,13 +276,13 @@ function Hero() {
         </motion.div>
 
         <motion.div
-          className="relative mx-auto w-full max-w-[560px]"
+          className="relative mx-auto w-full max-w-[320px] sm:max-w-[560px] mt-12 lg:mt-0"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
         >
-          <div className="absolute inset-0 rounded-full bg-cyan-500/10 blur-[120px] animate-pulse" />
-          <div className="relative overflow-hidden rounded-[40px] border border-white/10 bg-white/[0.02] p-8 shadow-2xl backdrop-blur-2xl">
+          <div className="absolute inset-0 rounded-full bg-blue-500/10 blur-[80px] sm:blur-[120px] animate-pulse" />
+          <div className="relative overflow-hidden rounded-[24px] sm:rounded-[40px] border border-white/10 bg-white/[0.02] p-6 sm:p-8 shadow-2xl backdrop-blur-2xl">
             <motion.img 
               className="mx-auto w-full max-w-[480px] object-contain drop-shadow-[0_0_30px_rgba(0,240,255,0.3)]" 
               src="/logo.png" 
@@ -489,20 +489,20 @@ function FAQ() {
 
 function Footer() {
   return (
-    <footer className="border-t border-white/10 py-10">
-      <div className="mx-auto flex max-w-7xl flex-col gap-6 px-5 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
-        <div className="flex flex-col gap-4">
-          <img className="h-16 w-fit max-w-[240px] object-contain" src="/logo.png" alt="Pixelix Media" />
-          <div className="flex gap-4">
-            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white">
-              <Instagram size={20} />
+    <footer className="border-t border-white/10 py-12">
+      <div className="mx-auto flex max-w-7xl flex-col gap-10 px-5 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+        <div className="flex flex-col gap-6">
+          <img className="h-12 sm:h-16 w-fit max-w-[200px] sm:max-w-[240px] object-contain" src="/logo.png" alt="Pixelix Media" />
+          <div className="flex gap-6">
+            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-full bg-white/5 p-3 text-white/50 hover:bg-white/10 hover:text-white transition-all">
+              <Instagram size={22} />
             </a>
-            <a href={`mailto:pixelixmedia19@gmail.com`} className="text-white/50 hover:text-white">
-              <Mail size={20} />
+            <a href={`mailto:pixelixmedia19@gmail.com`} className="flex items-center gap-2 rounded-full bg-white/5 p-3 text-white/50 hover:bg-white/10 hover:text-white transition-all">
+              <Mail size={22} />
             </a>
           </div>
         </div>
-        <p className="text-sm text-white/50 max-w-md">Pixelix Media, Chennai. Digital marketing, branding, photography, videography, and event coverage.</p>
+        <p className="text-sm text-white/50 max-w-md leading-relaxed">Pixelix Media, Chennai. Digital marketing, branding, photography, videography, and event coverage. High-end creative solutions for the modern brand.</p>
       </div>
     </footer>
   );
@@ -537,7 +537,7 @@ function ServicePage() {
   const Icon = service.icon;
 
   return (
-    <div className="min-h-screen bg-[#050505] pt-48 pb-24">
+    <div className="min-h-screen bg-[#050505] pt-32 pb-24">
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <motion.button 
           onClick={() => navigate("/")}
