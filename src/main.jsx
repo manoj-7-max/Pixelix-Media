@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { ArrowRight, Camera, Clapperboard, Mail, MapPin, Megaphone, Palette, Phone, Send, Share2, Sparkles, Target, Users, Video, Link as LinkIcon, Newspaper, PenTool } from "lucide-react";
+import { ArrowRight, Camera, Clapperboard, Mail, MapPin, Megaphone, Palette, Phone, Send, Share2, Sparkles, Target, Users, Video, Link as LinkIcon, Newspaper, PenTool, Instagram } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { BrowserRouter as Router, Routes, Route, Link, useParams, useNavigate, useLocation } from "react-router-dom";
 import "./styles.css";
@@ -8,6 +8,7 @@ import "./styles.css";
 const WHATSAPP_TEXT =
   "Hello%20Pixelix%20Media,%20I%20am%20interested%20in%20your%20services.%20Here%20are%20my%20details:%0AName:%0AEmail:%0AService:%0AMessage:";
 const WHATSAPP_URL = `https://wa.me/919042041801?text=${WHATSAPP_TEXT}`;
+const INSTAGRAM_URL = "https://www.instagram.com/pixelix_media?igsh=OWIxMGtybzc4YWQ4";
 const INTRO_STORAGE_KEY = "pixelixIntroSeenV2";
 
 const services = [
@@ -211,13 +212,16 @@ function Navbar() {
     <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#0D0D0D]/72 backdrop-blur-xl">
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
         <Link className="flex items-center gap-3" to="/" aria-label="Pixelix Media home">
-          <img className="h-12 w-auto max-w-[190px] object-contain" src="/logo.png" alt="Pixelix Media" />
+          <img className="h-16 w-auto max-w-[240px] object-contain" src="/logo.png" alt="Pixelix Media" />
         </Link>
         <div className="hidden items-center gap-8 text-sm font-medium text-white/70 md:flex">
           <a className="hover:text-white" href="/#services" onClick={(e) => handleNavClick(e, "#services")}>Services</a>
           <a className="hover:text-white" href="/#about" onClick={(e) => handleNavClick(e, "#about")}>About</a>
           <a className="hover:text-white" href="/#faq" onClick={(e) => handleNavClick(e, "#faq")}>FAQ</a>
           <a className="hover:text-white" href="/#contact" onClick={(e) => handleNavClick(e, "#contact")}>Contact</a>
+          <a className="hover:text-white flex items-center gap-2" href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
+            <Instagram size={18} />
+          </a>
         </div>
         <Link className="neon-button hidden sm:inline-flex" to="/#contact" onClick={(e) => handleNavClick(e, "#contact")}>
           Get Started <ArrowRight size={17} />
@@ -487,8 +491,18 @@ function Footer() {
   return (
     <footer className="border-t border-white/10 py-10">
       <div className="mx-auto flex max-w-7xl flex-col gap-6 px-5 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
-        <img className="h-14 w-fit max-w-[220px] object-contain" src="/logo.png" alt="Pixelix Media" />
-        <p className="text-sm text-white/50">Pixelix Media, Chennai. Digital marketing, branding, photography, videography, and event coverage.</p>
+        <div className="flex flex-col gap-4">
+          <img className="h-16 w-fit max-w-[240px] object-contain" src="/logo.png" alt="Pixelix Media" />
+          <div className="flex gap-4">
+            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white">
+              <Instagram size={20} />
+            </a>
+            <a href={`mailto:pixelixmedia19@gmail.com`} className="text-white/50 hover:text-white">
+              <Mail size={20} />
+            </a>
+          </div>
+        </div>
+        <p className="text-sm text-white/50 max-w-md">Pixelix Media, Chennai. Digital marketing, branding, photography, videography, and event coverage.</p>
       </div>
     </footer>
   );

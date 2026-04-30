@@ -15,8 +15,7 @@
   --glass: rgba(255, 255, 255, 0.02);
   --glass-border: rgba(255, 255, 255, 0.06);
   --gradient: linear-gradient(135deg, #1E73BE, #5B5BD6, #9B4DFF);
-  font-family: 'Outfit', sans-serif;
-  letter-spacing: -0.015em;
+  font-family: 'Inter', sans-serif;
   scroll-behavior: smooth;
 }
 
