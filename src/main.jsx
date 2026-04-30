@@ -296,14 +296,14 @@ function Hero() {
                 ease: "easeInOut"
               }}
             />
-            <div className="mt-10 grid grid-cols-3 gap-4">
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
               {["Strategy", "Creative", "Growth"].map((item, i) => (
                 <motion.div 
                   key={item} 
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 + i * 0.1 }}
-                  className="rounded-2xl border border-white/5 bg-white/[0.03] px-4 py-5 text-center text-xs font-bold uppercase tracking-widest text-cyan-100/80 backdrop-blur-md"
+                  className="rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-[10px] font-bold uppercase tracking-[0.2em] text-blue-100/90 backdrop-blur-md"
                 >
                   {item}
                 </motion.div>
@@ -320,9 +320,9 @@ function Services() {
   return (
     <section id="services" className="relative py-24">
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-        <Reveal className="max-w-3xl">
+        <Reveal className="max-w-4xl">
           <p className="eyebrow">Core Services</p>
-          <h2 className="section-title">Digital systems, brand stories, and production built under one roof.</h2>
+          <h2 className="text-3xl font-black text-white sm:text-5xl lg:text-6xl leading-[1.2]">Digital systems, brand stories, and production built under one roof.</h2>
         </Reveal>
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => {
