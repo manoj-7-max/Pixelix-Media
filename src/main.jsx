@@ -587,7 +587,7 @@ function ServicePage() {
 }
 
 function App() {
-  const [ready, setReady] = React.useState(() => typeof window !== "undefined" && localStorage.getItem(INTRO_STORAGE_KEY) === "true");
+  const [ready, setReady] = React.useState(false);
 
   return (
     <Router>
