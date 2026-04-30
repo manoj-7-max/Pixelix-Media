@@ -116,7 +116,6 @@ function IntroSplash({ onDone }) {
 
   const finish = React.useCallback(() => {
     if (exiting) return;
-    localStorage.setItem(INTRO_STORAGE_KEY, "true");
     setExiting(true);
     window.setTimeout(() => {
       setVisible(false);
@@ -413,7 +412,7 @@ function Contact() {
           <div className="mt-8 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04]">
             <iframe
               title="Pixelix Media Chennai map"
-              className="h-72 w-full border-0 grayscale invert-[0.92] contrast-125"
+              className="h-72 w-full border-0"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               src="https://www.google.com/maps?q=Chennai&output=embed"
