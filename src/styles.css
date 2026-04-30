@@ -5,16 +5,18 @@
 :root {
   color-scheme: dark;
   --bg: #0D0F14;
+  --bg-gradient: radial-gradient(circle at 20% 0%, #1a1f2b 0%, #0d0f14 100%);
   --primary-blue: #1E73BE;
   --indigo: #5B5BD6;
   --purple: #9B4DFF;
   --accent: #4DA3FF;
   --text-main: #EAEAF0;
   --text-muted: #A0A3B1;
-  --glass: rgba(255, 255, 255, 0.03);
-  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass: rgba(255, 255, 255, 0.02);
+  --glass-border: rgba(255, 255, 255, 0.06);
   --gradient: linear-gradient(135deg, #1E73BE, #5B5BD6, #9B4DFF);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.015em;
   scroll-behavior: smooth;
 }
 
@@ -26,9 +28,10 @@ body {
   margin: 0;
   min-width: 320px;
   overflow-x: hidden;
-  background: var(--bg);
+  background: var(--bg-gradient);
   color: var(--text-main);
-  line-height: 1.6;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
