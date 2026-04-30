@@ -82,10 +82,8 @@ const sectionReveal = {
 };
 
 function IntroSplash({ onDone }) {
-  const [visible, setVisible] = React.useState(() => {
-    if (typeof window === "undefined") return false;
-    return localStorage.getItem(INTRO_STORAGE_KEY) !== "true";
-  });
+  const [visible, setVisible] = React.useState(true);
+  const [loading, setLoading] = React.useState(true);
   const [exiting, setExiting] = React.useState(false);
   const videoRef = React.useRef(null);
 
@@ -127,11 +125,17 @@ function IntroSplash({ onDone }) {
         muted
         playsInline
         preload="auto"
+        onCanPlay={() => setLoading(false)}
         onEnded={finish}
-        initial={{ scale: 1.06, filter: "brightness(0.85) saturate(1.1)" }}
-        animate={{ scale: 1, filter: "brightness(1) saturate(1.18)" }}
-        transition={{ duration: 1.8, ease: "easeOut" }}
+        initial={{ opacity: 0, scale: 1.1 }}
+        animate={{ opacity: loading ? 0 : 1, scale: 1 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
       />
+      {loading && (
+        <div className="absolute inset-0 flex items-center justify-center bg-[#050506]">
+          <div className="h-12 w-12 animate-spin rounded-full border-4 border-cyan-500 border-t-transparent"></div>
+        </div>
+      )}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,240,255,0.08),transparent_34%),linear-gradient(120deg,rgba(5,5,8,0.78),rgba(5,5,8,0.28)_42%,rgba(10,2,22,0.82))]" />
       <div className="pixel-field opacity-25" />
       <button
