@@ -12,43 +12,59 @@ const INTRO_STORAGE_KEY = "pixelixIntroSeenV2";
 
 const services = [
   { 
+    id: "branding", 
+    title: "Branding", 
+    text: "Visual identity and positioning that makes your brand unmistakable.", 
+    icon: Palette,
+    longDescription: "Your brand is your promise. We craft visual identities that command attention and build trust through deep research, typography, and color psychology.",
+    features: ["Logo & Visual Identity", "Brand Strategy", "Design Systems", "Packaging Design"]
+  },
+  { 
     id: "digital-marketing", 
     title: "Digital Marketing", 
     text: "Data-driven strategies to amplify your brand's digital presence.", 
     icon: Megaphone,
-    longDescription: "We craft comprehensive digital marketing roadmaps that turn browsers into buyers. Our approach combines SEO, performance analytics, and growth hacking to ensure your brand dominates the digital landscape.",
-    features: ["Search Engine Optimization", "Data Analytics & Reporting", "Growth Hacking", "Email Automation"]
+    longDescription: "We craft comprehensive digital marketing roadmaps that turn browsers into buyers. Our approach combines SEO, performance analytics, and growth hacking.",
+    features: ["SEO Optimization", "Analytics & Reporting", "Growth Hacking", "Email Marketing"]
   },
   { 
     id: "paid-marketing", 
     title: "Paid Marketing", 
     text: "High-ROI ad campaigns across search and social platforms.", 
     icon: Target,
-    longDescription: "Maximize your reach with precision-targeted paid campaigns. We manage your ad spend across Google, Meta, and LinkedIn to deliver the highest possible return on investment through constant A/B testing and optimization.",
-    features: ["Google Ads (SEM)", "Meta Ads Management", "Retargeting Campaigns", "Lead Generation Funnels"]
+    longDescription: "Maximize your reach with precision-targeted paid campaigns. We manage your ad spend across Google and Meta to deliver measurable ROI.",
+    features: ["Google Ads (SEM)", "Meta Ads", "Retargeting", "Lead Gen Funnels"]
+  },
+  { 
+    id: "social-media", 
+    title: "Social Media", 
+    text: "Content calendars and community management that drive momentum.", 
+    icon: Share2,
+    longDescription: "We turn social feeds into brand assets. By combining trend-aware content with strategic posting, we build loyal communities for your brand.",
+    features: ["Content Creation", "Community Management", "Influencer Strategy", "Social Ads"]
   },
   { 
     id: "traditional-marketing", 
     title: "Traditional Marketing", 
     text: "Offline branding and marketing for real-world impact.", 
     icon: Newspaper,
-    longDescription: "Digital isn't everything. We help you bridge the gap between digital and physical with high-impact traditional marketing strategies, from print media to out-of-home (OOH) advertising that captures local attention.",
-    features: ["Print Media Ads", "Outdoor Advertising", "Event Sponsorships", "Direct Mail Campaigns"]
+    longDescription: "Bridge the gap between digital and physical. We help you create high-impact traditional strategies from print to outdoor advertising.",
+    features: ["Print Media", "Outdoor Ads", "Event Sponsorships", "Direct Mail"]
   },
   { 
     id: "content-marketing", 
     title: "Content Marketing", 
     text: "Storytelling that builds authority and engages audiences.", 
     icon: PenTool,
-    longDescription: "Content is king, but strategy is the queen. We create valuable, relevant content that attracts and retains a clearly defined audience—building long-term brand authority and trust.",
-    features: ["Blog & Article Creation", "E-book & Whitepapers", "Newsletter Strategy", "SEO Copywriting"]
+    longDescription: "Value-driven content that attracts and retains your target audience. We build long-term brand authority through strategic storytelling.",
+    features: ["Blog Creation", "E-books", "Newsletter Strategy", "SEO Copywriting"]
   },
   { 
     id: "affiliate-marketing", 
     title: "Affiliate Marketing", 
     text: "Leverage networks to scale your sales and reach.", 
     icon: Link,
-    longDescription: "Build a powerful network of partners who sell for you. We design and manage affiliate programs that incentivize high-quality referrals and expand your brand's footprint through trusted voices.",
+    longDescription: "Build a powerful network of partners. We design programs that incentivize referrals and expand your brand's footprint through trusted voices.",
     features: ["Program Design", "Partner Management", "Performance Tracking", "Commission Strategy"]
   },
   { 
@@ -56,8 +72,8 @@ const services = [
     title: "Ad Shooting", 
     text: "Cinematic production for brand films and social commercials.", 
     icon: Video,
-    longDescription: "Bring your brand to life with high-end video production. Our ad shooting team handles everything from scriptwriting and casting to cinematic filming and post-production, delivering TV-quality commercials for any screen.",
-    features: ["Commercial Brand Films", "Social Media Reels", "Product Showcase Videos", "Professional Post-Production"]
+    longDescription: "Bring your brand to life with high-end video production. Our team handles everything from script to cinematic post-production.",
+    features: ["Brand Story Films", "Social Reels", "Product Showcase", "Post-Production"]
   },
 ];
 
