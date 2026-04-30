@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { ArrowRight, Camera, Clapperboard, Mail, MapPin, Megaphone, Palette, Phone, Send, Share2, Sparkles, Users, Video } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { BrowserRouter as Router, Routes, Route, Link, useParams, useNavigate, useLocation } from "react-router-dom";
 import "./styles.css";
 
 const WHATSAPP_TEXT =
@@ -10,12 +11,54 @@ const WHATSAPP_URL = `https://wa.me/919042041801?text=${WHATSAPP_TEXT}`;
 const INTRO_STORAGE_KEY = "pixelixIntroSeenV2";
 
 const services = [
-  { title: "Digital Marketing", text: "Performance campaigns, lead funnels, and analytics-led growth systems.", icon: Megaphone },
-  { title: "Branding", text: "Visual identity, positioning, and brand systems built to feel unmistakable.", icon: Palette },
-  { title: "Social Media", text: "Content calendars, reels, campaign strategy, and community momentum.", icon: Share2 },
-  { title: "Photography", text: "Product, corporate, event, and campaign photography across Chennai.", icon: Camera },
-  { title: "Videography", text: "Brand films, reels, ad creatives, and cinematic production workflows.", icon: Video },
-  { title: "Event Coverage", text: "Full-service photo and video coverage for launches, gatherings, and milestones.", icon: Clapperboard },
+  { 
+    id: "digital-marketing", 
+    title: "Digital Marketing", 
+    text: "Performance campaigns, lead funnels, and analytics-led growth systems.", 
+    icon: Megaphone,
+    longDescription: "Our digital marketing services are built on data and human psychology. We don't just run ads; we build conversion engines. From SEO that puts you on the first page to performance marketing that scales your revenue, we ensure every rupee spent delivers measurable impact.",
+    features: ["Search Engine Optimization", "Pay-Per-Click Advertising", "Conversion Rate Optimization", "Email Marketing Funnels"]
+  },
+  { 
+    id: "branding", 
+    title: "Branding", 
+    text: "Visual identity, positioning, and brand systems built to feel unmistakable.", 
+    icon: Palette,
+    longDescription: "Your brand is more than a logo; it's a feeling. We craft visual identities that command attention and build trust. Our branding process involves deep market research, typography selection, and color psychology to ensure your brand stands out in a crowded marketplace.",
+    features: ["Logo Design & Visual Identity", "Brand Voice & Positioning", "Design Systems", "Packaging Design"]
+  },
+  { 
+    id: "social-media", 
+    title: "Social Media", 
+    text: "Content calendars, reels, campaign strategy, and community momentum.", 
+    icon: Share2,
+    longDescription: "We turn social feeds into brand assets. By combining trend-aware content with strategic posting schedules, we help brands build loyal communities. Our reels and short-form content are designed to stop the scroll and spark conversation.",
+    features: ["Content Strategy & Creation", "Community Management", "Influencer Marketing", "Social Media Advertising"]
+  },
+  { 
+    id: "photography", 
+    title: "Photography", 
+    text: "Product, corporate, event, and campaign photography across Chennai.", 
+    icon: Camera,
+    longDescription: "High-quality visuals are the cornerstone of digital presence. Our photography team captures the essence of your products, people, and events with cinematic precision. We provide professional retouching and fast delivery to keep your brand moving.",
+    features: ["Product & E-commerce", "Corporate Portraits", "Fashion & Lifestyle", "Real Estate Photography"]
+  },
+  { 
+    id: "videography", 
+    title: "Videography", 
+    text: "Brand films, reels, ad creatives, and cinematic production workflows.", 
+    icon: Video,
+    longDescription: "Storytelling through motion is our specialty. We produce high-impact videos that tell your brand's story. From high-energy ad creatives to cinematic brand films, our production workflow is streamlined for excellence and impact.",
+    features: ["Brand Story Films", "Commercial Ad Creatives", "Documentary Style Videos", "Motion Graphics"]
+  },
+  { 
+    id: "event-coverage", 
+    title: "Event Coverage", 
+    text: "Full-service photo and video coverage for launches, gatherings, and milestones.", 
+    icon: Clapperboard,
+    longDescription: "Don't miss a single moment. Our event coverage team provides end-to-end documentation of your most important milestones. We deliver fast-turnaround 'highlight' content for social media and high-resolution archives for your brand history.",
+    features: ["Corporate Launches", "Weddings & Milestones", "Conferences & Seminars", "Behind-the-Scenes Coverage"]
+  },
 ];
 
 const faqs = [
@@ -135,21 +178,31 @@ function Reveal({ children, className = "", delay = 0 }) {
 }
 
 function Navbar() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavClick = (e, id) => {
+    if (location.pathname !== "/") {
+      e.preventDefault();
+      navigate("/" + id);
+    }
+  };
+
   return (
     <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#0D0D0D]/72 backdrop-blur-xl">
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
-        <a className="flex items-center gap-3" href="#home" aria-label="Pixelix Media home">
+        <Link className="flex items-center gap-3" to="/" aria-label="Pixelix Media home">
           <img className="h-12 w-auto max-w-[190px] object-contain" src="/logo.png" alt="Pixelix Media" />
-        </a>
+        </Link>
         <div className="hidden items-center gap-8 text-sm font-medium text-white/70 md:flex">
-          <a className="hover:text-white" href="#services">Services</a>
-          <a className="hover:text-white" href="#about">About</a>
-          <a className="hover:text-white" href="#faq">FAQ</a>
-          <a className="hover:text-white" href="#contact">Contact</a>
+          <a className="hover:text-white" href="/#services" onClick={(e) => handleNavClick(e, "#services")}>Services</a>
+          <a className="hover:text-white" href="/#about" onClick={(e) => handleNavClick(e, "#about")}>About</a>
+          <a className="hover:text-white" href="/#faq" onClick={(e) => handleNavClick(e, "#faq")}>FAQ</a>
+          <a className="hover:text-white" href="/#contact" onClick={(e) => handleNavClick(e, "#contact")}>Contact</a>
         </div>
-        <a className="neon-button hidden sm:inline-flex" href="#contact">
+        <Link className="neon-button hidden sm:inline-flex" to="/#contact" onClick={(e) => handleNavClick(e, "#contact")}>
           Get Started <ArrowRight size={17} />
-        </a>
+        </Link>
       </nav>
     </header>
   );
@@ -252,14 +305,17 @@ function Services() {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <Reveal key={service.title} delay={index * 0.04}>
-                <article className="service-card group">
+              <Reveal key={service.id} delay={index * 0.04}>
+                <Link to={`/services/${service.id}`} className="service-card group block">
                   <div className="icon-shell">
                     <Icon size={24} />
                   </div>
                   <h3 className="mt-6 text-xl font-bold text-white">{service.title}</h3>
                   <p className="mt-3 text-sm leading-6 text-white/64">{service.text}</p>
-                </article>
+                  <div className="mt-6 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-cyan-400 opacity-0 transition-opacity group-hover:opacity-100">
+                    Learn More <ArrowRight size={14} />
+                  </div>
+                </Link>
               </Reveal>
             );
           })}
@@ -427,25 +483,116 @@ function FloatingWhatsApp() {
   );
 }
 
+function ServicePage() {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const service = services.find((s) => s.id === id);
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  if (!service) {
+    return (
+      <div className="flex min-h-screen flex-col items-center justify-center pt-20">
+        <h1 className="text-4xl font-bold text-white">Service Not Found</h1>
+        <button onClick={() => navigate("/")} className="neon-button mt-8">Back to Home</button>
+      </div>
+    );
+  }
+
+  const Icon = service.icon;
+
+  return (
+    <div className="min-h-screen bg-[#050505] pt-32 pb-24">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <motion.button 
+          onClick={() => navigate("/")}
+          className="mb-12 flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-white/50 hover:text-cyan-400"
+          initial={{ opacity: 0, x: -10 }}
+          animate={{ opacity: 1, x: 0 }}
+        >
+          ← Back to Overview
+        </motion.button>
+
+        <div className="grid gap-16 lg:grid-cols-[1fr_0.8fr]">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="icon-shell !h-16 !w-16 !rounded-2xl mb-8">
+              <Icon size={32} />
+            </div>
+            <h1 className="text-5xl font-black text-white sm:text-7xl lg:text-8xl">{service.title}</h1>
+            <p className="mt-10 text-xl leading-relaxed text-white/60">{service.longDescription}</p>
+            
+            <div className="mt-16 grid gap-6 sm:grid-cols-2">
+              {service.features.map((feature, i) => (
+                <motion.div 
+                  key={feature}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: i * 0.1 }}
+                  className="rounded-2xl border border-white/5 bg-white/[0.03] p-6 backdrop-blur-xl"
+                >
+                  <Sparkles size={20} className="text-cyan-400 mb-4" />
+                  <h4 className="text-lg font-bold text-white">{feature}</h4>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="relative"
+          >
+            <div className="glass-panel sticky top-32">
+              <h3 className="text-2xl font-bold text-white">Start your {service.title} journey</h3>
+              <p className="mt-4 text-white/60">Let's build something remarkable together. Contact our Chennai studio today.</p>
+              <div className="mt-8 space-y-6">
+                <ContactLine icon={Mail} text="pixelixmedia19@gmail.com" href="mailto:pixelixmedia19@gmail.com" />
+                <ContactLine icon={Phone} text="9042041801" href="tel:+919042041801" />
+              </div>
+              <button onClick={() => navigate("/#contact")} className="neon-button mt-10 w-full justify-center">
+                Enquire Now <ArrowRight size={18} />
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function App() {
   const [ready, setReady] = React.useState(() => typeof window !== "undefined" && localStorage.getItem(INTRO_STORAGE_KEY) === "true");
 
   return (
-    <>
+    <Router>
       <AnimatePresence>
-        <IntroSplash onDone={() => setReady(true)} />
+        {!ready && <IntroSplash onDone={() => setReady(true)} />}
       </AnimatePresence>
       <main className={ready ? "site-ready" : "site-waiting"}>
         <Navbar />
-        <Hero />
-        <Services />
-        <About />
-        <Contact />
-        <FAQ />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Hero />
+              <Services />
+              <About />
+              <Contact />
+              <FAQ />
+            </>
+          } />
+          <Route path="/services/:id" element={<ServicePage />} />
+        </Routes>
         <Footer />
         <FloatingWhatsApp />
       </main>
-    </>
+    </Router>
   );
 }
 
