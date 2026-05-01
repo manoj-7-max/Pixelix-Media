@@ -15,81 +15,81 @@ const services = [
   { 
     id: "professional-photoshoot", 
     title: "Professional Photoshoot", 
-    text: "High-end brand portraits and commercial photography.", 
+    text: "High-end brand portraits and commercial photography in Chennai.", 
     icon: Camera,
-    longDescription: "We provide professional photoshoot services for brands, products, and individuals. Our high-end equipment and lighting setup ensure cinematic quality in every shot.",
+    longDescription: "As a leading digital marketing agency in Chennai, we provide professional photoshoot services for brands, products, and individuals. Our high-end equipment and lighting setup ensure cinematic quality in every shot, perfect for local businesses looking to stand out in the Tamil Nadu market.",
     features: ["Brand Portraits", "Product Photography", "Commercial Shoots", "Fashion Photography"]
   },
   { 
     id: "cinematic-videography", 
     title: "Cinematic Videography", 
-    text: "Story-driven film production and brand commercials.", 
+    text: "Story-driven film production and brand commercials for Chennai startups.", 
     icon: Clapperboard,
-    longDescription: "Transform your brand's narrative with cinematic videography. We specialize in high-end production, from raw concepts to polished film stories that resonate with your audience.",
+    longDescription: "Transform your brand's narrative with cinematic videography. We specialize in high-end production in Chennai, from raw concepts to polished film stories that resonate with your local and global audience. Our video production services are designed for impact.",
     features: ["Brand Films", "Commercial Ads", "Event Highlights", "Social Media Reels"]
   },
   { 
     id: "branding", 
-    title: "Branding", 
-    text: "Visual identity and positioning that makes your brand unmistakable.", 
+    title: "Branding Agency Chennai", 
+    text: "Visual identity and positioning that makes your Chennai brand unmistakable.", 
     icon: Palette,
-    longDescription: "Your brand is your promise. We craft visual identities that command attention and build trust through deep research, typography, and color psychology.",
+    longDescription: "Pixelix Media is the premier branding agency in Chennai. Your brand is your promise. We craft visual identities that command attention and build trust through deep research, typography, and color psychology tailored for the Tamil Nadu audience.",
     features: ["Logo & Visual Identity", "Brand Strategy", "Design Systems", "Packaging Design"]
   },
   { 
     id: "digital-marketing", 
-    title: "Digital Marketing", 
-    text: "Data-driven strategies to amplify your brand's digital presence.", 
+    title: "Digital Marketing Agency", 
+    text: "Data-driven strategies to amplify your brand's digital presence in Chennai.", 
     icon: Megaphone,
-    longDescription: "We craft comprehensive digital marketing roadmaps that turn browsers into buyers. Our approach combines SEO, performance analytics, and growth hacking.",
+    longDescription: "We are the best digital marketing agency in Chennai, crafting comprehensive digital marketing roadmaps that turn browsers into buyers. Our approach combines SEO, performance analytics, and growth hacking to help Chennai businesses scale effectively.",
     features: ["SEO Optimization", "Analytics & Reporting", "Growth Hacking", "Email Marketing"]
   },
   { 
     id: "paid-marketing", 
-    title: "Paid Marketing", 
-    text: "High-ROI ad campaigns across search and social platforms.", 
+    title: "Google Ads Chennai", 
+    text: "High-ROI ad campaigns across search and social platforms for local growth.", 
     icon: Target,
-    longDescription: "Maximize your reach with precision-targeted paid campaigns. We manage your ad spend across Google and Meta to deliver measurable ROI.",
+    longDescription: "Maximize your reach with precision-targeted paid campaigns and Google Ads in Chennai. We manage your ad spend across Google and Meta to deliver measurable ROI for businesses across Tamil Nadu.",
     features: ["Google Ads (SEM)", "Meta Ads", "Retargeting", "Lead Gen Funnels"]
   },
   { 
     id: "social-media", 
-    title: "Social Media", 
-    text: "Content calendars and community management that drive momentum.", 
+    title: "Social Media Marketing Chennai", 
+    text: "Content calendars and community management that drive momentum for Chennai brands.", 
     icon: Share2,
-    longDescription: "We turn social feeds into brand assets. By combining trend-aware content with strategic posting, we build loyal communities for your brand.",
+    longDescription: "We turn social feeds into brand assets with expert social media marketing in Chennai. By combining trend-aware content with strategic posting, we build loyal communities for your brand across India.",
     features: ["Content Creation", "Community Management", "Influencer Strategy", "Social Ads"]
   },
   { 
     id: "traditional-marketing", 
     title: "Traditional Marketing", 
-    text: "Offline branding and marketing for real-world impact.", 
+    text: "Offline branding and marketing for real-world impact in Chennai.", 
     icon: Newspaper,
-    longDescription: "Bridge the gap between digital and physical. We help you create high-impact traditional strategies from print to outdoor advertising.",
+    longDescription: "Bridge the gap between digital and physical media. We help Chennai businesses create high-impact traditional strategies from print to outdoor advertising across Tamil Nadu.",
     features: ["Print Media", "Outdoor Ads", "Event Sponsorships", "Direct Mail"]
   },
   { 
     id: "content-marketing", 
     title: "Content Marketing", 
-    text: "Storytelling that builds authority and engages audiences.", 
+    text: "Storytelling that builds authority and engages audiences in Chennai.", 
     icon: PenTool,
-    longDescription: "Value-driven content that attracts and retains your target audience. We build long-term brand authority through strategic storytelling.",
+    longDescription: "Value-driven content that attracts and retains your target audience. We build long-term brand authority through strategic storytelling and content marketing services in Chennai, Tamil Nadu.",
     features: ["Blog Creation", "E-books", "Newsletter Strategy", "SEO Copywriting"]
   },
   { 
     id: "affiliate-marketing", 
     title: "Affiliate Marketing", 
-    text: "Leverage networks to scale your sales and reach.", 
+    text: "Leverage networks to scale your sales and reach across India.", 
     icon: LinkIcon,
-    longDescription: "Build a powerful network of partners. We design programs that incentivize referrals and expand your brand's footprint through trusted voices.",
+    longDescription: "Build a powerful network of partners. We design programs that incentivize referrals and expand your brand's footprint through trusted voices, serving as a top digital agency in Chennai.",
     features: ["Program Design", "Partner Management", "Performance Tracking", "Commission Strategy"]
   },
   { 
     id: "event-photography", 
-    title: "Event Photography", 
-    text: "Professional coverage for corporate events and brand launches.", 
+    title: "Event Photography Chennai", 
+    text: "Professional coverage for corporate events and brand launches in Chennai.", 
     icon: Camera,
-    longDescription: "Capture the essence of your events with high-end photography. We provide comprehensive coverage for corporate gatherings, brand launches, and special events.",
+    longDescription: "Capture the essence of your events with high-end photography. We provide comprehensive coverage for corporate gatherings, brand launches, and special events across Chennai and Tamil Nadu.",
     features: ["Corporate Events", "Brand Launches", "Product Unveiling", "Live Editing"]
   },
 ];
@@ -114,16 +114,16 @@ const ourWorks = [
 
 const faqs = [
   {
-    question: "What services does Pixelix Media offer?",
-    answer: "Pixelix Media offers digital marketing, branding, social media management, photography, videography, and event coverage.",
+    question: "What is the best digital marketing agency in Chennai?",
+    answer: "Pixelix Media is a Chennai-based digital marketing agency offering SEO, web development, branding, and social media marketing services to help businesses grow online.",
   },
   {
-    question: "Do you provide event photography in Chennai?",
-    answer: "Yes. Pixelix Media provides event photography and videography services across Chennai for business, brand, and personal events.",
+    question: "How much does SEO cost in Chennai?",
+    answer: "SEO pricing in Chennai varies based on competition and goals, but Pixelix Media offers affordable and customized SEO solutions for startups and businesses.",
   },
   {
-    question: "How can I contact Pixelix Media?",
-    answer: "You can email pixelixmedia19@gmail.com, call 9042041801, or send a WhatsApp enquiry using the contact form.",
+    question: "Why is digital marketing important for businesses?",
+    answer: "Digital marketing helps businesses reach more customers online, increase visibility, generate leads, and improve brand awareness effectively.",
   },
 ];
 
@@ -216,15 +216,15 @@ function Hero() {
             <span className="tracking-widest uppercase">Chennai's Premier Digital Agency</span>
           </div>
           <h1 className="max-w-4xl text-4xl font-black leading-[1.1] tracking-tight text-white sm:text-7xl lg:text-8xl">
-            Elevating Brands <br />
-            <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">In the Digital Era.</span>
+            Digital Marketing Agency <br />
+            <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">in Chennai.</span>
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-white/60 sm:text-xl">
-            We fuse strategy with high-end production to create digital experiences that don't just exist—they lead.
+            Pixelix Media is a digital marketing agency based in Chennai, Tamil Nadu. We fuse strategy with high-end production to create digital experiences that lead.
           </p>
           <div className="mt-10 flex flex-col gap-5 sm:flex-row">
             <a className="neon-button min-w-[180px] justify-center" href="#contact">
-              Launch Project <ArrowRight size={18} />
+              Get Free Consultation <ArrowRight size={18} />
             </a>
             <a className="ghost-button min-w-[180px] justify-center" href="#services">
               Our Expertise
@@ -280,8 +280,8 @@ function Services() {
     <section id="services" className="relative py-24">
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <Reveal className="max-w-4xl">
-          <p className="eyebrow">Core Services</p>
-          <h2 className="text-3xl font-black text-white sm:text-5xl lg:text-6xl leading-[1.2]">Digital systems, brand stories, and production built under one roof.</h2>
+          <p className="eyebrow">SEO Services in Chennai</p>
+          <h2 className="text-3xl font-black text-white sm:text-5xl lg:text-6xl leading-[1.2]">Website Development Services, Branding, and Production.</h2>
         </Reveal>
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => {
@@ -382,7 +382,7 @@ const WorkCard = React.memo(({ item }) => {
       {item.type === "image" ? (
         <img 
           src={item.src} 
-          alt="Portfolio work" 
+          alt={`${item.category || "SEO services"} in Chennai by Pixelix Media`} 
           className="h-full w-full object-contain transition-transform duration-700 group-hover:scale-105"
           loading="lazy"
         />
@@ -432,13 +432,13 @@ function About() {
         <Reveal delay={0.08}>
           <div className="space-y-6 text-base leading-8 text-white/70">
             <p>
-              Pixelix Media is a Chennai-based digital agency shaped around one belief: strong brands need strategy, identity, and media that move together.
+              Pixelix Media is a Chennai-based digital marketing agency and SEO company in Chennai, Tamil Nadu, shaped around one belief: strong brands need strategy and media that move together.
             </p>
             <p>
-              The studio helps businesses turn raw ideas into sharp campaigns, memorable visuals, and high-converting digital experiences.
+              Our studio helps businesses in Chennai turn raw ideas into sharp campaigns, memorable visuals, and high-converting digital experiences. We are a trusted web design company in Chennai for modern brands.
             </p>
             <p>
-              Our mission is to give growing brands a premium creative partner for marketing, branding, photography, videography, social media, and event coverage.
+              Serving startups and businesses across Chennai, Tamil Nadu, our mission is to give growing brands a premium creative partner for SEO services, branding, and website development in Chennai.
             </p>
           </div>
         </Reveal>
@@ -465,12 +465,12 @@ function Contact() {
     <section id="contact" className="relative py-24">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-6 lg:grid-cols-[0.92fr_1.08fr] lg:px-8">
         <Reveal>
-          <p className="eyebrow">Contact</p>
-          <h2 className="section-title">Start your next digital move with Pixelix Media.</h2>
+          <p className="eyebrow">Branding Agency Chennai</p>
+          <h2 className="section-title">Start your next project with Pixelix Media Chennai.</h2>
           <div className="mt-8 space-y-4">
             <ContactLine icon={Mail} text="pixelixmedia19@gmail.com" href="mailto:pixelixmedia19@gmail.com" />
             <ContactLine icon={Phone} text="9042041801" href="tel:+919042041801" />
-            <ContactLine icon={MapPin} text="Chennai" />
+            <ContactLine icon={MapPin} text="Chennai, Tamil Nadu, India" />
           </div>
           <div className="mt-8 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04]">
             <iframe
@@ -495,7 +495,7 @@ function Contact() {
               <textarea className="field min-h-36 resize-none" name="message" placeholder="Tell us what you want to build." required />
             </label>
             <button className="neon-button mt-2 w-full justify-center" type="submit">
-              Send on WhatsApp <Send size={18} />
+              Start Your Project <Send size={18} />
             </button>
           </form>
         </Reveal>
