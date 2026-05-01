@@ -801,6 +801,34 @@ function FounderPortfolio() {
         </div>
       </section>
 
+      {/* Creative Gallery Section */}
+      <section className="py-32">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+          <Reveal>
+            <h2 className="text-6xl font-black text-white mb-20 text-center uppercase">Creative Showcase</h2>
+          </Reveal>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              "/founder/founder_hero.png",
+              "/founder/founder_intro.png",
+              "/founder/founder_editor.png",
+              "/founder/founder_skills.png",
+              "/founder/founder_experience.png",
+              "/founder/founder_thanks.png"
+            ].map((src, i) => (
+              <Reveal key={i} delay={i * 0.1}>
+                <div className="work-item group w-full !h-[350px] overflow-hidden rounded-2xl border border-white/10">
+                  <img src={src} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-110 group-hover:scale-100" alt={`Founder work ${i+1}`} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-6">
+                    <p className="text-white font-bold uppercase tracking-widest text-xs">Featured Project</p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-32 text-center">
         <Reveal>
