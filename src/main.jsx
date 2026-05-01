@@ -585,30 +585,30 @@ function FounderSection() {
     <section id="founder" className="relative py-24">
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <Reveal>
-          <div className="glass-panel overflow-hidden !p-0">
-            <div className="grid lg:grid-cols-2">
-              <div className="p-8 sm:p-12 lg:p-16 flex flex-col justify-center">
-                <p className="eyebrow">Creative Leadership</p>
-                <h2 className="mt-4 text-4xl font-black text-white sm:text-6xl">Ram Prasath</h2>
-                <p className="mt-2 text-xl font-medium text-cyan-400 uppercase tracking-widest">Founder & Creative Head</p>
-                <p className="mt-8 text-lg leading-relaxed text-white/60">
-                  A visionary creator specializing in high-end cinematic visuals and digital branding. From raw concepts to polished brand stories, Ram leads the creative vision at Pixelix Media.
-                </p>
-                <div className="mt-10">
-                  <Link to="/founder" className="neon-button inline-flex items-center gap-2">
-                    View Founder Portfolio <ArrowRight size={18} />
-                  </Link>
-                </div>
-              </div>
-              <div className="relative min-h-[400px] lg:min-h-full bg-[#0D0D0D]">
-                <img 
-                  src="/founder/founder_hero.png" 
-                  alt="Ram Prasath" 
-                  className="absolute inset-0 h-full w-full object-cover grayscale brightness-75 transition-all duration-700 hover:grayscale-0 hover:brightness-100"
-                  onError={(e) => { e.target.src = "/logo.png"; e.target.className = "absolute inset-0 m-auto h-32 w-auto object-contain opacity-20"; }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#0D0D0D] via-transparent to-transparent lg:block hidden" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent lg:hidden block" />
+          <div className="glass-panel overflow-hidden !p-0 relative min-h-[500px] sm:min-h-[600px] flex items-center">
+            {/* Background Image - Full Scale & Original Color */}
+            <img 
+              src="/founder/founder_hero.png" 
+              alt="Ram Prasath" 
+              className="absolute inset-0 h-full w-full object-cover object-center transition-all duration-700"
+              onError={(e) => { e.target.src = "/logo.png"; e.target.className = "absolute inset-0 m-auto h-32 w-auto object-contain opacity-20"; }}
+            />
+            {/* Sophisticated dark gradient overlay for readability */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0D0D0D] via-[#0D0D0D]/90 to-transparent lg:w-2/3" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent lg:hidden block" />
+            
+            {/* Content Section */}
+            <div className="relative z-10 p-8 sm:p-12 lg:p-20 max-w-2xl">
+              <p className="eyebrow">Creative Leadership</p>
+              <h2 className="mt-4 text-4xl font-black text-white sm:text-6xl lg:text-7xl">Ram Prasath</h2>
+              <p className="mt-2 text-xl font-medium text-cyan-400 uppercase tracking-widest">Founder & Creative Head</p>
+              <p className="mt-8 text-lg leading-relaxed text-white/70">
+                A visionary creator specializing in high-end cinematic visuals and digital branding. From raw concepts to polished brand stories, Ram leads the creative vision at Pixelix Media.
+              </p>
+              <div className="mt-10">
+                <Link to="/founder" className="neon-button inline-flex items-center gap-2">
+                  View Founder Portfolio <ArrowRight size={18} />
+                </Link>
               </div>
             </div>
           </div>
