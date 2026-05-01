@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { ArrowRight, Camera, Clapperboard, Mail, MapPin, Megaphone, Palette, Phone, Send, Share2, Sparkles, Target, Users, Video, Link as LinkIcon, Newspaper, PenTool, Instagram } from "lucide-react";
+import { ArrowRight, Camera, Clapperboard, Mail, MapPin, Megaphone, Palette, Phone, Send, Share2, Sparkles, Target, Users, Link as LinkIcon, Newspaper, PenTool, Instagram } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { BrowserRouter as Router, Routes, Route, Link, useParams, useNavigate, useLocation } from "react-router-dom";
 import "./styles.css";
@@ -69,12 +69,12 @@ const services = [
     features: ["Program Design", "Partner Management", "Performance Tracking", "Commission Strategy"]
   },
   { 
-    id: "ad-shooting", 
-    title: "Ad Shooting", 
-    text: "Cinematic production for brand films and social commercials.", 
-    icon: Video,
-    longDescription: "Bring your brand to life with high-end video production. Our team handles everything from script to cinematic post-production.",
-    features: ["Brand Story Films", "Social Reels", "Product Showcase", "Post-Production"]
+    id: "event-photography", 
+    title: "Event Photography", 
+    text: "Professional coverage for corporate events and brand launches.", 
+    icon: Camera,
+    longDescription: "Capture the essence of your events with high-end photography. We provide comprehensive coverage for corporate gatherings, brand launches, and special events.",
+    features: ["Corporate Events", "Brand Launches", "Product Unveiling", "Live Editing"]
   },
 ];
 
@@ -322,15 +322,15 @@ function OurWorks() {
       </div>
 
       {isVisible ? (
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-16">
           {/* Row 1 - Photoshoot */}
           <div className="relative">
-            <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 mb-4">
+            <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 mb-6">
               <h3 className="text-sm font-bold uppercase tracking-[0.3em] text-cyan-400/80">Professional Photoshoots</h3>
             </div>
             <div className="relative flex overflow-hidden">
               <div className="animate-marquee gap-8 py-4">
-                {[...row1, ...row1].map((item, idx) => (
+                {[...row1, ...row1, ...row1].map((item, idx) => (
                   <WorkCard key={`row1-${idx}`} item={item} />
                 ))}
               </div>
@@ -339,12 +339,12 @@ function OurWorks() {
 
           {/* Row 2 - Videography */}
           <div className="relative">
-            <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 mb-4 flex justify-end">
+            <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 mb-6 flex justify-end">
               <h3 className="text-sm font-bold uppercase tracking-[0.3em] text-violet-400/80 text-right">Cinematic Videography</h3>
             </div>
             <div className="relative flex overflow-hidden">
               <div className="animate-marquee-reverse gap-8 py-4">
-                {[...row2, ...row2].map((item, idx) => (
+                {[...row2, ...row2, ...row2].map((item, idx) => (
                   <WorkCard key={`row2-${idx}`} item={item} />
                 ))}
               </div>
@@ -363,45 +363,25 @@ function OurWorks() {
 const WorkCard = React.memo(({ item }) => {
   return (
     <div className="work-item group">
-      {/* Blurred Background to fill the frame for mixed aspect ratios */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        {item.type === "image" ? (
-          <img 
-            src={item.src} 
-            className="h-full w-full object-cover blur-xl opacity-20 scale-125" 
-            alt="" 
-          />
-        ) : (
-          <video 
-            src={item.src} 
-            className="h-full w-full object-cover blur-xl opacity-20 scale-125" 
-            muted 
-          />
-        )}
-      </div>
-
-      <div className="relative h-full w-full flex items-center justify-center p-3">
-        {item.type === "image" ? (
-          <img 
-            src={item.src} 
-            alt="Portfolio work" 
-            className="max-h-full max-w-full object-contain rounded-lg shadow-2xl transition-transform duration-700 group-hover:scale-105"
-            loading="lazy"
-          />
-        ) : (
-          <video 
-            src={item.src} 
-            className="max-h-full max-w-full object-contain rounded-lg shadow-2xl transition-transform duration-700 group-hover:scale-105"
-            autoPlay 
-            muted 
-            loop 
-            playsInline
-            preload="none"
-          />
-        )}
-      </div>
-
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-6">
+      {item.type === "image" ? (
+        <img 
+          src={item.src} 
+          alt="Portfolio work" 
+          className="h-full w-full object-contain transition-transform duration-700 group-hover:scale-105"
+          loading="lazy"
+        />
+      ) : (
+        <video 
+          src={item.src} 
+          className="h-full w-full object-contain transition-transform duration-700 group-hover:scale-105"
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+          preload="none"
+        />
+      )}
+      <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-6">
         <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
           <p className="text-white font-bold tracking-wider uppercase text-[10px]">{item.category || "Premium Media"}</p>
           <p className="text-white/60 text-[9px] mt-0.5">Pixelix Studio Production</p>
@@ -628,12 +608,12 @@ function FounderPortfolio() {
   }, []);
 
   const pages = [
-    { src: "/founder/founder_hero.png", alt: "Ram Prasath Portfolio", showScroll: true },
-    { src: "/founder/founder_intro.png", alt: "Introduction" },
-    { src: "/founder/founder_editor.png", alt: "Editor" },
-    { src: "/founder/founder_skills.png", alt: "Personal Skills" },
-    { src: "/founder/founder_experience.png", alt: "Work Experience" },
-    { src: "/founder/founder_thanks.png", alt: "Thank You" }
+    { src: "/portfolio/IMG_6010.JPG.jpeg", alt: "Ram Prasath Portfolio", showScroll: true },
+    { src: "/portfolio/IMG_5955.JPG.jpeg", alt: "Introduction" },
+    { src: "/portfolio/IMG_5984.JPG.jpeg", alt: "Editor" },
+    { src: "/portfolio/IMG_6000.JPG.jpeg", alt: "Personal Skills" },
+    { src: "/portfolio/IMG_9297.JPG.jpeg", alt: "Work Experience" },
+    { src: "/portfolio/IMG-20260207-WA0044.jpg.jpeg", alt: "Thank You" }
   ];
 
   return (
