@@ -417,27 +417,47 @@ function OurWorks() {
 function WorkCard({ item }) {
   return (
     <div className="work-item group">
-      {item.type === "image" ? (
-        <img 
-          src={item.src} 
-          alt="Portfolio work" 
-          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-          loading="lazy"
-        />
-      ) : (
-        <video 
-          src={item.src} 
-          className="h-full w-full object-cover"
-          autoPlay 
-          muted 
-          loop 
-          playsInline
-        />
-      )}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-6">
+      {/* Blurred Background to fill the frame for mixed aspect ratios */}
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        {item.type === "image" ? (
+          <img 
+            src={item.src} 
+            className="h-full w-full object-cover blur-xl opacity-20 scale-125" 
+            alt="" 
+          />
+        ) : (
+          <video 
+            src={item.src} 
+            className="h-full w-full object-cover blur-xl opacity-20 scale-125" 
+            muted 
+          />
+        )}
+      </div>
+
+      <div className="relative h-full w-full flex items-center justify-center p-3">
+        {item.type === "image" ? (
+          <img 
+            src={item.src} 
+            alt="Portfolio work" 
+            className="max-h-full max-w-full object-contain rounded-lg shadow-2xl transition-transform duration-700 group-hover:scale-105"
+            loading="lazy"
+          />
+        ) : (
+          <video 
+            src={item.src} 
+            className="max-h-full max-w-full object-contain rounded-lg shadow-2xl transition-transform duration-700 group-hover:scale-105"
+            autoPlay 
+            muted 
+            loop 
+            playsInline
+          />
+        )}
+      </div>
+
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-6">
         <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-          <p className="text-white font-bold tracking-wider uppercase text-xs">Premium Production</p>
-          <p className="text-white/60 text-[10px] mt-1">Pixelix Media Studio</p>
+          <p className="text-white font-bold tracking-wider uppercase text-[10px]">Premium Media</p>
+          <p className="text-white/60 text-[9px] mt-0.5">Pixelix Studio Production</p>
         </div>
       </div>
     </div>
