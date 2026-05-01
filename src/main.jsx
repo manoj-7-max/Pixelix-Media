@@ -14,42 +14,42 @@ const INTRO_STORAGE_KEY = "pixelixIntroSeenV2";
 const services = [
   { 
     id: "professional-photoshoot", 
-    title: "Professional Photoshoot", 
-    text: "High-end brand portraits and commercial photography in Chennai.", 
+    title: "Professional Photoshoot in Chennai", 
+    text: "High-end brand portraits and commercial photography in Chennai, Tamil Nadu.", 
     icon: Camera,
-    longDescription: "As a leading digital marketing agency in Chennai, we provide professional photoshoot services for brands, products, and individuals. Our high-end equipment and lighting setup ensure cinematic quality in every shot, perfect for local businesses looking to stand out in the Tamil Nadu market.",
+    longDescription: "As a leading digital marketing agency in Chennai, we provide professional photoshoot services for brands, products, and individuals. Our high-end equipment and lighting setup ensure cinematic quality in every shot. We specialize in commercial photography that captures your brand's essence, helping you stand out in the competitive Tamil Nadu market. Whether you need corporate headshots, product catalogs, or fashion editorials, our Chennai studio delivers world-class results. Our team of experienced photographers understands the local market trends, ensuring your visuals resonate with your target audience in Chennai and beyond. We use state-of-the-art retouching techniques to ensure every image is pixel-perfect and ready for high-end marketing campaigns.",
     features: ["Brand Portraits", "Product Photography", "Commercial Shoots", "Fashion Photography"]
   },
   { 
     id: "cinematic-videography", 
-    title: "Cinematic Videography", 
+    title: "Cinematic Videography Chennai", 
     text: "Story-driven film production and brand commercials for Chennai startups.", 
     icon: Clapperboard,
-    longDescription: "Transform your brand's narrative with cinematic videography. We specialize in high-end production in Chennai, from raw concepts to polished film stories that resonate with your local and global audience. Our video production services are designed for impact.",
+    longDescription: "Transform your brand's narrative with cinematic videography. We specialize in high-end production in Chennai, from raw concepts to polished film stories that resonate with your local and global audience. Our video production services are designed for maximum impact, combining technical expertise with creative storytelling. We produce everything from 15-second social media reels to full-scale brand documentaries for businesses in Tamil Nadu. As a premier videography company in Chennai, we focus on high-production value that drives engagement and conversions. Our process includes detailed pre-production planning, professional cinematography, and expert post-production to ensure your brand story is told effectively across all digital platforms.",
     features: ["Brand Films", "Commercial Ads", "Event Highlights", "Social Media Reels"]
   },
   { 
     id: "branding", 
-    title: "Branding Agency Chennai", 
+    title: "Branding Agency in Chennai", 
     text: "Visual identity and positioning that makes your Chennai brand unmistakable.", 
     icon: Palette,
-    longDescription: "Pixelix Media is the premier branding agency in Chennai. Your brand is your promise. We craft visual identities that command attention and build trust through deep research, typography, and color psychology tailored for the Tamil Nadu audience.",
+    longDescription: "Pixelix Media is the premier branding agency in Chennai. Your brand is your promise to your customers. We craft visual identities that command attention and build trust through deep research, typography, and color psychology tailored for the Tamil Nadu audience. Our comprehensive branding services include logo design, brand strategy, design systems, and packaging. We help Chennai-based startups and established companies redefine their market position. By understanding the cultural nuances of Chennai and the broader Indian market, we create brand experiences that are both authentic and globally relevant. Our goal is to make your business unmistakable and highly memorable through strategic creative direction.",
     features: ["Logo & Visual Identity", "Brand Strategy", "Design Systems", "Packaging Design"]
   },
   { 
     id: "digital-marketing", 
-    title: "Digital Marketing Agency", 
+    title: "Digital Marketing Agency Chennai", 
     text: "Data-driven strategies to amplify your brand's digital presence in Chennai.", 
     icon: Megaphone,
-    longDescription: "We are the best digital marketing agency in Chennai, crafting comprehensive digital marketing roadmaps that turn browsers into buyers. Our approach combines SEO, performance analytics, and growth hacking to help Chennai businesses scale effectively.",
+    longDescription: "We are the best digital marketing agency in Chennai, crafting comprehensive digital marketing roadmaps that turn browsers into buyers. Our approach combines SEO, performance analytics, and growth hacking to help Chennai businesses scale effectively. We focus on measurable results, ensuring your marketing budget is utilized to its full potential. From search engine optimization to email marketing, we cover all aspects of the digital landscape. Our team of experts in Chennai stays ahead of the latest algorithm updates and market trends to keep your brand at the top of search results. We believe in transparency and data-driven decision-making, providing regular reports that show the real impact of our marketing efforts on your business growth in Tamil Nadu.",
     features: ["SEO Optimization", "Analytics & Reporting", "Growth Hacking", "Email Marketing"]
   },
   { 
     id: "paid-marketing", 
-    title: "Google Ads Chennai", 
+    title: "Google Ads Company in Chennai", 
     text: "High-ROI ad campaigns across search and social platforms for local growth.", 
     icon: Target,
-    longDescription: "Maximize your reach with precision-targeted paid campaigns and Google Ads in Chennai. We manage your ad spend across Google and Meta to deliver measurable ROI for businesses across Tamil Nadu.",
+    longDescription: "Maximize your reach with precision-targeted paid campaigns and Google Ads in Chennai. We manage your ad spend across Google and Meta to deliver measurable ROI for businesses across Tamil Nadu. Our performance marketing strategies focus on lead generation and sales conversion. We perform deep keyword research and audience segmentation to ensure your ads reach the right people at the right time. As a specialized Google Ads agency in Chennai, we optimize your campaigns daily to lower acquisition costs and increase lifetime value. Whether you are looking for local foot traffic in Chennai or global e-commerce sales, our paid marketing experts design funnels that convert. We handle everything from ad copy creation to landing page optimization.",
     features: ["Google Ads (SEM)", "Meta Ads", "Retargeting", "Lead Gen Funnels"]
   },
   { 
@@ -57,39 +57,39 @@ const services = [
     title: "Social Media Marketing Chennai", 
     text: "Content calendars and community management that drive momentum for Chennai brands.", 
     icon: Share2,
-    longDescription: "We turn social feeds into brand assets with expert social media marketing in Chennai. By combining trend-aware content with strategic posting, we build loyal communities for your brand across India.",
+    longDescription: "We turn social feeds into brand assets with expert social media marketing in Chennai. By combining trend-aware content with strategic posting, we build loyal communities for your brand across India. Our social media experts manage your presence on Instagram, LinkedIn, and Facebook, ensuring consistent brand voice and high engagement. We create content that people want to share, from viral reels to informative carousels. As a top social media agency in Chennai, we understand the power of community. We don't just post; we engage with your audience, handling comments and messages to build real relationships. Our influencer marketing strategies connect your brand with the right voices in Chennai and Tamil Nadu to expand your reach and credibility.",
     features: ["Content Creation", "Community Management", "Influencer Strategy", "Social Ads"]
   },
   { 
     id: "traditional-marketing", 
-    title: "Traditional Marketing", 
+    title: "Traditional Marketing Agency Chennai", 
     text: "Offline branding and marketing for real-world impact in Chennai.", 
     icon: Newspaper,
-    longDescription: "Bridge the gap between digital and physical media. We help Chennai businesses create high-impact traditional strategies from print to outdoor advertising across Tamil Nadu.",
+    longDescription: "Bridge the gap between digital and physical media with our traditional marketing services in Chennai. We help local businesses create high-impact strategies from print media to outdoor advertising across Tamil Nadu. Our team understands the importance of a physical presence in the Chennai market. We design eye-catching billboards, newspaper ads, and direct mail campaigns that complement your digital efforts. Traditional marketing remains a powerful tool for brand building in India, and we ensure your offline message is perfectly aligned with your online identity. We also manage event sponsorships and BTL activities that put your brand directly in front of your target audience in the real world.",
     features: ["Print Media", "Outdoor Ads", "Event Sponsorships", "Direct Mail"]
   },
   { 
     id: "content-marketing", 
-    title: "Content Marketing", 
+    title: "Content Marketing Services Chennai", 
     text: "Storytelling that builds authority and engages audiences in Chennai.", 
     icon: PenTool,
-    longDescription: "Value-driven content that attracts and retains your target audience. We build long-term brand authority through strategic storytelling and content marketing services in Chennai, Tamil Nadu.",
+    longDescription: "Value-driven content that attracts and retains your target audience. We build long-term brand authority through strategic storytelling and content marketing services in Chennai, Tamil Nadu. Our content strategy includes blog creation, e-book production, and newsletter management. We focus on SEO copywriting that ranks on Google while providing genuine value to your readers. As a leading content agency in Chennai, we help you become a thought leader in your industry. By producing high-quality, relevant content, we help you build a loyal audience that trusts your expertise. Our team ensures that every piece of content is optimized for generative engines (GEO) and answer engines (AEO), making your brand the top choice for AI search results.",
     features: ["Blog Creation", "E-books", "Newsletter Strategy", "SEO Copywriting"]
   },
   { 
     id: "affiliate-marketing", 
-    title: "Affiliate Marketing", 
+    title: "Affiliate Marketing Chennai", 
     text: "Leverage networks to scale your sales and reach across India.", 
     icon: LinkIcon,
-    longDescription: "Build a powerful network of partners. We design programs that incentivize referrals and expand your brand's footprint through trusted voices, serving as a top digital agency in Chennai.",
+    longDescription: "Build a powerful network of partners with our affiliate marketing services in Chennai. We design programs that incentivize referrals and expand your brand's footprint through trusted voices. Affiliate marketing is a highly cost-effective way to scale your sales, as you only pay for results. Our team in Chennai manages partner recruitment, performance tracking, and commission strategies. We help you connect with high-quality affiliates who align with your brand values. By leveraging the networks of others, we help your business reach new heights without the upfront costs of traditional advertising. We ensure your affiliate program is secure, transparent, and highly profitable for both you and your partners.",
     features: ["Program Design", "Partner Management", "Performance Tracking", "Commission Strategy"]
   },
   { 
     id: "event-photography", 
-    title: "Event Photography Chennai", 
+    title: "Event Photography in Chennai", 
     text: "Professional coverage for corporate events and brand launches in Chennai.", 
     icon: Camera,
-    longDescription: "Capture the essence of your events with high-end photography. We provide comprehensive coverage for corporate gatherings, brand launches, and special events across Chennai and Tamil Nadu.",
+    longDescription: "Capture the essence of your events with high-end photography. We provide comprehensive coverage for corporate gatherings, brand launches, and special events across Chennai and Tamil Nadu. Our event photographers are experts at capturing candid moments and key highlights that tell the story of your occasion. We understand the fast-paced nature of events and provide live editing services for immediate social media updates. Whether it is a product unveiling in Chennai or a large-scale corporate conference, we ensure every important detail is documented with professional quality. Our high-resolution images are perfect for press releases, company websites, and marketing materials, helping you maintain a professional brand image.",
     features: ["Corporate Events", "Brand Launches", "Product Unveiling", "Live Editing"]
   },
 ];
@@ -220,7 +220,7 @@ function Hero() {
             <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">in Chennai.</span>
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-white/60 sm:text-xl">
-            Pixelix Media is a digital marketing agency based in Chennai, Tamil Nadu. We fuse strategy with high-end production to create digital experiences that lead.
+            Pixelix Media is a leading digital marketing agency in Chennai, Tamil Nadu, helping businesses grow through SEO, web development, branding, and social media marketing. We work with startups and companies across Chennai to build strong online presence and generate leads.
           </p>
           <div className="mt-10 flex flex-col gap-5 sm:flex-row">
             <a className="neon-button min-w-[180px] justify-center" href="#contact">
@@ -432,13 +432,16 @@ function About() {
         <Reveal delay={0.08}>
           <div className="space-y-6 text-base leading-8 text-white/70">
             <p>
-              Pixelix Media is a Chennai-based digital marketing agency and SEO company in Chennai, Tamil Nadu, shaped around one belief: strong brands need strategy and media that move together.
+              Pixelix Media is a leading <Link to="/" className="text-cyan-400 hover:underline">digital marketing agency in Chennai</Link> and a premier <Link to="/" className="text-cyan-400 hover:underline">SEO company in Chennai</Link>, Tamil Nadu. Our studio is built on the core belief that modern brands need a seamless fusion of strategic thinking and high-end media production. We don't just provide services; we build digital ecosystems that thrive in the competitive Indian market.
             </p>
             <p>
-              Our studio helps businesses in Chennai turn raw ideas into sharp campaigns, memorable visuals, and high-converting digital experiences. We are a trusted web design company in Chennai for modern brands.
+              Our creative studio helps businesses across Chennai turn raw ideas into sharp marketing campaigns, memorable visuals, and high-converting digital experiences. As a trusted <Link to="/" className="text-cyan-400 hover:underline">web design company in Chennai</Link>, we focus on architectural excellence and performance-first engineering. We understand that your website is your digital storefront, and it must be built to convert visitors into loyal customers.
             </p>
             <p>
-              Serving startups and businesses across Chennai, Tamil Nadu, our mission is to give growing brands a premium creative partner for SEO services, branding, and website development in Chennai.
+              Serving startups and established businesses across Chennai, Tamil Nadu, our mission is to give growing brands a premium creative partner for <Link to="/" className="text-cyan-400 hover:underline">SEO services</Link>, <Link to="/" className="text-cyan-400 hover:underline">branding agency</Link> expertise, and <Link to="/" className="text-cyan-400 hover:underline">website development in Chennai</Link>. We combine local market insights with global design standards to ensure your brand stands out everywhere. Trusted by businesses across Chennai, Tamil Nadu, we are dedicated to driving measurable growth and lead generation for all our clients.
+            </p>
+            <p>
+              Why is digital marketing important? In the digital era, your online presence defines your credibility. Pixelix Media helps you bridge the gap between your brand and your audience through data-driven performance marketing, expert social media management, and cinematic storytelling. Whether you need Google Ads in Chennai or a complete brand overhaul, we have the technical skills and creative vision to deliver results.
             </p>
           </div>
         </Reveal>
@@ -514,6 +517,45 @@ function ContactLine({ icon: Icon, text, href }) {
   return href ? <a className="block hover:text-white" href={href}>{content}</a> : content;
 }
 
+function SEOContent() {
+  return (
+    <section className="py-24 border-t border-white/5">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div className="grid gap-16 lg:grid-cols-2">
+          <Reveal>
+            <h2 className="text-3xl font-black text-white mb-6">SEO Services in Chennai</h2>
+            <div className="space-y-4 text-white/60 leading-relaxed">
+              <p>Our <Link to="/" className="text-cyan-400 hover:underline">SEO company in Chennai</Link> focuses on driving organic traffic that actually converts. We understand that ranking on the first page of Google is just the beginning; our goal is to put your brand in front of the right audience in Tamil Nadu and beyond. We use advanced white-hat SEO techniques to build your site's authority and ensure long-term visibility in search results.</p>
+              <p>By conducting deep keyword research and technical audits, we ensure your website meets all search engine requirements. From on-page optimization to building high-quality backlinks, our Chennai-based SEO experts leave no stone unturned. We stay updated with the latest algorithm changes to keep your business ahead of the competition in the digital landscape.</p>
+            </div>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <h2 className="text-3xl font-black text-white mb-6">Website Development Services</h2>
+            <div className="space-y-4 text-white/60 leading-relaxed">
+              <p>As a premier <Link to="/" className="text-cyan-400 hover:underline">web design company in Chennai</Link>, we build websites that are both visually stunning and technically robust. We use modern frameworks like React and Vite to ensure your site is ultra-fast, responsive, and secure across all devices. Our focus is on high-performance engineering that provides a seamless user experience for your customers.</p>
+              <p>Our development process in Chennai involves meticulous planning and user-centric design. We focus on creating digital experiences that reflect your brand's unique identity while providing a seamless journey for your customers in Tamil Nadu. Whether you need a corporate portfolio or a complex web application, our team delivers world-class <Link to="/" className="text-cyan-400 hover:underline">website development in Chennai</Link>.</p>
+            </div>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <h2 className="text-3xl font-black text-white mb-6">Social Media Marketing Chennai</h2>
+            <div className="space-y-4 text-white/60 leading-relaxed">
+              <p>Social media is more than just posting; it's about building a community. Our <Link to="/" className="text-cyan-400 hover:underline">social media marketing in Chennai</Link> helps brands connect with their audience on a personal level through creative storytelling and data-driven engagement. We help you navigate the ever-changing social landscape with confidence and strategic precision.</p>
+              <p>We manage your profiles across Instagram, LinkedIn, and Facebook, creating content that resonates with the local Chennai market while maintaining a global appeal. Our strategies are designed to boost your brand's momentum and reach, turning followers into brand advocates. From viral reels to professional LinkedIn positioning, we handle it all for businesses across Tamil Nadu.</p>
+            </div>
+          </Reveal>
+          <Reveal delay={0.3}>
+            <h2 className="text-3xl font-black text-white mb-6">Branding Agency Chennai</h2>
+            <div className="space-y-4 text-white/60 leading-relaxed">
+              <p>Your brand is the soul of your business. At Pixelix Media, our <Link to="/" className="text-cyan-400 hover:underline">branding agency in Chennai</Link> helps you define your promise and visual identity. We combine deep market research with creative vision to build brands that stand out in crowded markets. We believe that a strong brand is the foundation of all successful marketing efforts.</p>
+              <p>From logo design to full-scale brand strategy, we work closely with Chennai startups and established businesses to ensure their message is clear, consistent, and highly impactful in the competitive Indian landscape. Our goal is to create a visual and narrative language that connects with your audience in Chennai and creates lasting brand loyalty through strategic positioning.</p>
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Field({ label, ...props }) {
   return (
     <label className="block">
@@ -535,8 +577,10 @@ function FAQ() {
           {faqs.map((faq, index) => (
             <Reveal key={faq.question} delay={index * 0.05}>
               <details className="faq-card" open={index === 0}>
-                <summary>{faq.question}</summary>
-                <p>{faq.answer}</p>
+                <summary>
+                  <h3 className="inline text-inherit font-bold">{faq.question}</h3>
+                </summary>
+                <p className="mt-4 text-white/60 leading-relaxed">{faq.answer}</p>
               </details>
             </Reveal>
           ))}
@@ -765,6 +809,7 @@ function MainContent() {
             <OurWorks />
             <FounderSection />
             <About />
+            <SEOContent />
             <Contact />
             <FAQ />
           </>
