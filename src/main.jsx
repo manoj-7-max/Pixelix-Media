@@ -585,25 +585,25 @@ function FounderSection() {
     <section id="founder" className="relative py-24">
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <Reveal>
-          <div className="glass-panel overflow-hidden !p-0 relative min-h-[500px] sm:min-h-[600px] flex items-center">
+          <div className="glass-panel overflow-hidden !p-0 relative min-h-[600px] flex items-center">
             {/* Background Image - Full Scale & Original Color */}
             <img 
               src="/founder/founder_hero.png" 
-              alt="Ram Prasath" 
+              alt="Ram Prasath - Founder of Pixelix Media" 
               className="absolute inset-0 h-full w-full object-cover object-center transition-all duration-700"
               onError={(e) => { e.target.src = "/logo.png"; e.target.className = "absolute inset-0 m-auto h-32 w-auto object-contain opacity-20"; }}
             />
             {/* Sophisticated dark gradient overlay for readability */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0D0D0D] via-[#0D0D0D]/90 to-transparent lg:w-2/3" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent lg:hidden block" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0D0D0D] via-[#0D0D0D]/80 to-transparent lg:w-2/3 hidden lg:block" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/90 via-[#0D0D0D]/40 to-transparent lg:hidden block" />
             
             {/* Content Section */}
-            <div className="relative z-10 p-8 sm:p-12 lg:p-20 max-w-2xl">
+            <div className="relative z-10 p-6 sm:p-12 lg:p-20 max-w-2xl w-full">
               <p className="eyebrow">Creative Leadership</p>
               <h2 className="mt-4 text-4xl font-black text-white sm:text-6xl lg:text-7xl">Ram Prasath</h2>
               <p className="mt-2 text-xl font-medium text-cyan-400 uppercase tracking-widest">Founder & Creative Head</p>
-              <p className="mt-8 text-lg leading-relaxed text-white/70">
-                A visionary creator specializing in high-end cinematic visuals and digital branding. From raw concepts to polished brand stories, Ram leads the creative vision at Pixelix Media.
+              <p className="mt-8 text-lg leading-relaxed text-white/80">
+                A visionary creator specializing in high-end cinematic visuals and digital branding in Chennai. From raw concepts to polished brand stories, Ram leads the creative vision at Pixelix Media.
               </p>
               <div className="mt-10">
                 <Link to="/founder" className="neon-button inline-flex items-center gap-2">
@@ -750,28 +750,39 @@ function ServicePage() {
   );
 }
 
+function MainContent() {
+  const location = useLocation();
+  const isFounderPage = location.pathname === "/founder";
+
+  return (
+    <>
+      {!isFounderPage && <Navbar />}
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Hero />
+            <Services />
+            <OurWorks />
+            <FounderSection />
+            <About />
+            <Contact />
+            <FAQ />
+          </>
+        } />
+        <Route path="/services/:id" element={<ServicePage />} />
+        <Route path="/founder" element={<FounderPortfolio />} />
+      </Routes>
+      {!isFounderPage && <Footer />}
+      {!isFounderPage && <FloatingWhatsApp />}
+    </>
+  );
+}
+
 function App() {
   return (
     <Router>
       <main className="site-ready">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={
-            <>
-              <Hero />
-              <Services />
-              <OurWorks />
-              <FounderSection />
-              <About />
-              <Contact />
-              <FAQ />
-            </>
-          } />
-          <Route path="/services/:id" element={<ServicePage />} />
-          <Route path="/founder" element={<FounderPortfolio />} />
-        </Routes>
-        <Footer />
-        <FloatingWhatsApp />
+        <MainContent />
       </main>
     </Router>
   );
