@@ -98,7 +98,6 @@ const ourWorks = [
   { type: "image", src: "/our works/Picsart_26-02-07_18-41-23-724.jpg.jpeg" },
   { type: "image", src: "/our works/Picsart_26-02-07_18-41-36-385.jpg.jpeg" },
   { type: "image", src: "/our works/Picsart_26-02-07_18-43-16-157.jpg.jpeg" },
-  { type: "video", src: "/our works/VID_20260207_044701.mp4" },
 ];
 
 const faqs = [
