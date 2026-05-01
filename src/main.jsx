@@ -95,7 +95,6 @@ const ourWorks = [
   { type: "image", src: "/our works/IMG_9666.HEIC.heif" },
   { type: "image", src: "/our works/Picsart_26-02-07_18-40-00-359.jpg.jpeg" },
   { type: "image", src: "/our works/Picsart_26-02-07_18-40-17-134.jpg.jpeg" },
-  { type: "image", src: "/our works/Picsart_26-02-07_18-41-23-724.jpg (1).jpeg" },
   { type: "image", src: "/our works/Picsart_26-02-07_18-41-23-724.jpg.jpeg" },
   { type: "image", src: "/our works/Picsart_26-02-07_18-41-36-385.jpg.jpeg" },
   { type: "image", src: "/our works/Picsart_26-02-07_18-43-16-157.jpg.jpeg" },
