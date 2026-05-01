@@ -79,25 +79,25 @@ const services = [
 ];
 
 const ourWorks = [
-  { type: "image", src: "/our works/IMG-20260207-WA0044.jpg.jpeg" },
-  { type: "image", src: "/our works/IMG_5955.JPG.jpeg" },
-  { type: "image", src: "/our works/IMG_5961.JPG.jpeg" },
-  { type: "image", src: "/our works/IMG_5962.JPG.jpeg" },
-  { type: "image", src: "/our works/IMG_5984.JPG.jpeg" },
-  { type: "image", src: "/our works/IMG_6000.JPG.jpeg" },
-  { type: "image", src: "/our works/IMG_6010.JPG.jpeg" },
-  { type: "image", src: "/our works/IMG_9297.JPG.jpeg" },
-  { type: "image", src: "/our works/IMG_9301.JPG.jpeg" },
-  { type: "image", src: "/our works/IMG_9305.JPG.jpeg" },
-  { type: "image", src: "/our works/IMG_9306.JPG.jpeg" },
-  { type: "image", src: "/our works/IMG_9640.jpg.jpeg" },
-  { type: "image", src: "/our works/IMG_9653.JPEG" },
-  { type: "image", src: "/our works/IMG_9666.HEIC.heif" },
-  { type: "image", src: "/our works/Picsart_26-02-07_18-40-00-359.jpg.jpeg" },
-  { type: "image", src: "/our works/Picsart_26-02-07_18-40-17-134.jpg.jpeg" },
-  { type: "image", src: "/our works/Picsart_26-02-07_18-41-23-724.jpg.jpeg" },
-  { type: "image", src: "/our works/Picsart_26-02-07_18-41-36-385.jpg.jpeg" },
-  { type: "image", src: "/our works/Picsart_26-02-07_18-43-16-157.jpg.jpeg" },
+  { type: "image", category: "Photoshoot", src: "/our works/IMG-20260207-WA0044.jpg.jpeg" },
+  { type: "image", category: "Photoshoot", src: "/our works/IMG_5955.JPG.jpeg" },
+  { type: "image", category: "Photoshoot", src: "/our works/IMG_5961.JPG.jpeg" },
+  { type: "image", category: "Photoshoot", src: "/our works/IMG_5962.JPG.jpeg" },
+  { type: "image", category: "Photoshoot", src: "/our works/IMG_5984.JPG.jpeg" },
+  { type: "image", category: "Photoshoot", src: "/our works/IMG_6000.JPG.jpeg" },
+  { type: "image", category: "Photoshoot", src: "/our works/IMG_6010.JPG.jpeg" },
+  { type: "image", category: "Photoshoot", src: "/our works/IMG_9297.JPG.jpeg" },
+  { type: "image", category: "Photoshoot", src: "/our works/IMG_9301.JPG.jpeg" },
+  { type: "image", category: "Photoshoot", src: "/our works/IMG_9305.JPG.jpeg" },
+  { type: "image", category: "Photoshoot", src: "/our works/IMG_9306.JPG.jpeg" },
+  { type: "image", category: "Photoshoot", src: "/our works/IMG_9640.jpg.jpeg" },
+  { type: "image", category: "Photoshoot", src: "/our works/IMG_9653.JPEG" },
+  { type: "image", category: "Photoshoot", src: "/our works/IMG_9666.HEIC.heif" },
+  { type: "image", category: "Photoshoot", src: "/our works/Picsart_26-02-07_18-40-00-359.jpg.jpeg" },
+  { type: "image", category: "Photoshoot", src: "/our works/Picsart_26-02-07_18-40-17-134.jpg.jpeg" },
+  { type: "image", category: "Photoshoot", src: "/our works/Picsart_26-02-07_18-41-23-724.jpg.jpeg" },
+  { type: "image", category: "Photoshoot", src: "/our works/Picsart_26-02-07_18-41-36-385.jpg.jpeg" },
+  { type: "image", category: "Photoshoot", src: "/our works/Picsart_26-02-07_18-43-16-157.jpg.jpeg" },
 ];
 
 const faqs = [
@@ -321,22 +321,32 @@ function OurWorks() {
       </div>
 
       {isVisible ? (
-        <div className="flex flex-col gap-8">
-          {/* Row 1 - Forward */}
-          <div className="relative flex overflow-hidden">
-            <div className="animate-marquee gap-8 py-4">
-              {[...row1, ...row1].map((item, idx) => (
-                <WorkCard key={`row1-${idx}`} item={item} />
-              ))}
+        <div className="flex flex-col gap-12">
+          {/* Row 1 - Photoshoot */}
+          <div className="relative">
+            <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 mb-4">
+              <h3 className="text-sm font-bold uppercase tracking-[0.3em] text-cyan-400/80">Professional Photoshoots</h3>
+            </div>
+            <div className="relative flex overflow-hidden">
+              <div className="animate-marquee gap-8 py-4">
+                {[...row1, ...row1].map((item, idx) => (
+                  <WorkCard key={`row1-${idx}`} item={item} />
+                ))}
+              </div>
             </div>
           </div>
 
-          {/* Row 2 - Reverse */}
-          <div className="relative flex overflow-hidden">
-            <div className="animate-marquee-reverse gap-8 py-4">
-              {[...row2, ...row2].map((item, idx) => (
-                <WorkCard key={`row2-${idx}`} item={item} />
-              ))}
+          {/* Row 2 - Videography */}
+          <div className="relative">
+            <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 mb-4 flex justify-end">
+              <h3 className="text-sm font-bold uppercase tracking-[0.3em] text-violet-400/80 text-right">Cinematic Videography</h3>
+            </div>
+            <div className="relative flex overflow-hidden">
+              <div className="animate-marquee-reverse gap-8 py-4">
+                {[...row2, ...row2].map((item, idx) => (
+                  <WorkCard key={`row2-${idx}`} item={item} />
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -392,7 +402,7 @@ const WorkCard = React.memo(({ item }) => {
 
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-6">
         <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-          <p className="text-white font-bold tracking-wider uppercase text-[10px]">Premium Media</p>
+          <p className="text-white font-bold tracking-wider uppercase text-[10px]">{item.category || "Premium Media"}</p>
           <p className="text-white/60 text-[9px] mt-0.5">Pixelix Studio Production</p>
         </div>
       </div>
