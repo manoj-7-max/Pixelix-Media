@@ -78,6 +78,30 @@ const services = [
   },
 ];
 
+const ourWorks = [
+  { type: "image", src: "/our works/IMG-20260207-WA0044.jpg.jpeg" },
+  { type: "image", src: "/our works/IMG_5955.JPG.jpeg" },
+  { type: "image", src: "/our works/IMG_5961.JPG.jpeg" },
+  { type: "image", src: "/our works/IMG_5962.JPG.jpeg" },
+  { type: "image", src: "/our works/IMG_5984.JPG.jpeg" },
+  { type: "image", src: "/our works/IMG_6000.JPG.jpeg" },
+  { type: "image", src: "/our works/IMG_6010.JPG.jpeg" },
+  { type: "image", src: "/our works/IMG_9297.JPG.jpeg" },
+  { type: "image", src: "/our works/IMG_9301.JPG.jpeg" },
+  { type: "image", src: "/our works/IMG_9305.JPG.jpeg" },
+  { type: "image", src: "/our works/IMG_9306.JPG.jpeg" },
+  { type: "image", src: "/our works/IMG_9640.jpg.jpeg" },
+  { type: "image", src: "/our works/IMG_9653.JPEG" },
+  { type: "image", src: "/our works/IMG_9666.HEIC.heif" },
+  { type: "image", src: "/our works/Picsart_26-02-07_18-40-00-359.jpg.jpeg" },
+  { type: "image", src: "/our works/Picsart_26-02-07_18-40-17-134.jpg.jpeg" },
+  { type: "image", src: "/our works/Picsart_26-02-07_18-41-23-724.jpg (1).jpeg" },
+  { type: "image", src: "/our works/Picsart_26-02-07_18-41-23-724.jpg.jpeg" },
+  { type: "image", src: "/our works/Picsart_26-02-07_18-41-36-385.jpg.jpeg" },
+  { type: "image", src: "/our works/Picsart_26-02-07_18-43-16-157.jpg.jpeg" },
+  { type: "video", src: "/our works/VID_20260207_044701.mp4" },
+];
+
 const faqs = [
   {
     question: "What services does Pixelix Media offer?",
@@ -216,6 +240,7 @@ function Navbar() {
         </Link>
         <div className="hidden items-center gap-8 text-sm font-medium text-white/70 md:flex">
           <a className="hover:text-white" href="/#services" onClick={(e) => handleNavClick(e, "#services")}>Services</a>
+          <a className="hover:text-white" href="/#our-works" onClick={(e) => handleNavClick(e, "#our-works")}>Our Works</a>
           <a className="hover:text-white" href="/#about" onClick={(e) => handleNavClick(e, "#about")}>About</a>
           <a className="hover:text-white" href="/#faq" onClick={(e) => handleNavClick(e, "#faq")}>FAQ</a>
           <a className="hover:text-white" href="/#contact" onClick={(e) => handleNavClick(e, "#contact")}>Contact</a>
@@ -345,6 +370,77 @@ function Services() {
         </div>
       </div>
     </section>
+  );
+}
+
+function OurWorks() {
+  const row1 = [...ourWorks].sort(() => 0.5 - Math.random());
+  const row2 = [...ourWorks].sort(() => 0.5 - Math.random());
+
+  return (
+    <section id="our-works" className="relative py-24 overflow-hidden bg-black/20">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 mb-16 text-center">
+        <Reveal>
+          <p className="eyebrow">Portfolio</p>
+          <h2 className="section-title mx-auto">Our Works</h2>
+          <p className="mt-6 text-lg text-white/60 mx-auto max-w-2xl">
+            A glimpse into our recent productions, brand shoots, and creative campaigns across Chennai.
+          </p>
+        </Reveal>
+      </div>
+
+      <div className="flex flex-col gap-8">
+        {/* Row 1 - Forward */}
+        <div className="relative flex overflow-hidden">
+          <div className="animate-marquee gap-8 py-4">
+            {[...row1, ...row1].map((item, idx) => (
+              <WorkCard key={`row1-${idx}`} item={item} />
+            ))}
+          </div>
+        </div>
+
+        {/* Row 2 - Reverse */}
+        <div className="relative flex overflow-hidden">
+          <div className="animate-marquee-reverse gap-8 py-4">
+            {[...row2, ...row2].map((item, idx) => (
+              <WorkCard key={`row2-${idx}`} item={item} />
+            ))}
+          </div>
+        </div>
+      </div>
+      
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-[#090a0f] via-transparent to-[#090a0f] z-10" />
+    </section>
+  );
+}
+
+function WorkCard({ item }) {
+  return (
+    <div className="work-item group">
+      {item.type === "image" ? (
+        <img 
+          src={item.src} 
+          alt="Portfolio work" 
+          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+          loading="lazy"
+        />
+      ) : (
+        <video 
+          src={item.src} 
+          className="h-full w-full object-cover"
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+        />
+      )}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-6">
+        <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+          <p className="text-white font-bold tracking-wider uppercase text-xs">Premium Production</p>
+          <p className="text-white/60 text-[10px] mt-1">Pixelix Media Studio</p>
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -615,6 +711,7 @@ function App() {
             <>
               <Hero />
               <Services />
+              <OurWorks />
               <About />
               <Contact />
               <FAQ />
