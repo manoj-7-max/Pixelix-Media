@@ -649,8 +649,8 @@ function FounderPortfolio() {
             </h1>
             <img src="/founder/founder_hero.png" className="mx-auto h-[500px] w-auto object-contain drop-shadow-[0_0_50px_rgba(0,240,255,0.2)] rounded-3xl" alt="Ram Prasath" />
             <div className="mt-12">
-              <h2 className="text-5xl font-black text-white sm:text-7xl">Ram Prasath</h2>
-              <p className="mt-4 text-xl text-cyan-400 font-bold uppercase tracking-[0.3em]">Editor & Cinematographer</p>
+              <h2 className="text-5xl font-black text-[#E3D9C6] sm:text-7xl uppercase tracking-tighter italic">Ram Prasath</h2>
+              <p className="mt-4 text-white/40 text-xl font-bold uppercase tracking-[0.4em]">Editor & Cinematographer</p>
             </div>
           </motion.div>
         </div>
@@ -660,9 +660,9 @@ function FounderPortfolio() {
       <section className="py-32 relative">
         <div className="mx-auto max-w-5xl px-5 text-center">
           <Reveal>
-            <h2 className="text-6xl font-black text-white mb-12 uppercase italic tracking-tighter">Introduction</h2>
-            <div className="glass-panel text-2xl leading-relaxed text-white/80 p-12">
-              "Hi, I'm Ram Prasath, a passionate video editor and videographer. I specialize in creating high-quality visuals, including reels, cinematic videos, and photography. I focus on delivering creative and engaging content that connects with the audience. Open to freelance projects and collaborations."
+            <h2 className="text-6xl font-black text-[#E3D9C6] mb-12 uppercase italic tracking-tighter">Introduction</h2>
+            <div className="glass-panel text-2xl leading-relaxed text-white/80 p-12 border-[#E3D9C6]/10">
+              "Hi, I’m Ram Prasath, a passionate video editor and videographer. I specialize in creating high-quality visuals, including reels, cinematic videos, and photography. I focus on delivering creative and engaging content that connects with the audience."
             </div>
           </Reveal>
         </div>
@@ -672,7 +672,7 @@ function FounderPortfolio() {
       <section className="py-32 bg-white/[0.02]">
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
           <Reveal>
-            <h2 className="text-6xl font-black text-white mb-20 text-center uppercase">Personal Skills</h2>
+            <h2 className="text-6xl font-black text-[#E3D9C6] mb-20 text-center uppercase">Personal Skills</h2>
           </Reveal>
           <div className="grid md:grid-cols-2 gap-12">
             <Reveal delay={0.1}>
@@ -701,13 +701,13 @@ function FounderPortfolio() {
       <section className="py-32">
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
           <Reveal>
-            <h2 className="text-6xl font-black text-white mb-20 uppercase">Work Experience</h2>
+            <h2 className="text-6xl font-black text-[#E3D9C6] mb-20 uppercase">Work Experience</h2>
           </Reveal>
           <div className="space-y-8">
             <Reveal delay={0.1}>
-              <div className="glass-panel flex flex-col md:flex-row gap-12 items-center">
+              <div className="glass-panel flex flex-col md:flex-row gap-12 items-center border-[#E3D9C6]/5">
                 <div className="md:w-1/3">
-                  <p className="text-4xl font-black text-cyan-400">2024 - Present</p>
+                  <p className="text-4xl font-black text-[#E3D9C6]">2024 - Present</p>
                   <p className="text-xl font-bold text-white mt-2">Self-employed</p>
                 </div>
                 <div className="md:w-2/3 border-l border-white/10 pl-12 space-y-4 text-lg text-white/60">
@@ -719,10 +719,10 @@ function FounderPortfolio() {
               </div>
             </Reveal>
             <Reveal delay={0.2}>
-              <div className="glass-panel flex flex-col md:flex-row gap-12 items-center border-cyan-500/20 bg-cyan-500/5">
+              <div className="glass-panel flex flex-col md:flex-row gap-12 items-center border-[#E3D9C6]/20 bg-[#E3D9C6]/5">
                 <div className="md:w-1/3">
-                  <p className="text-4xl font-black text-white">Pixelix Media</p>
-                  <p className="text-xl font-bold text-cyan-400 mt-2">Founder & Creative Head</p>
+                  <p className="text-4xl font-black text-[#E3D9C6]">Pixelix Media</p>
+                  <p className="text-xl font-bold text-white mt-2">Founder & Creative Head</p>
                 </div>
                 <div className="md:w-2/3 border-l border-white/10 pl-12 space-y-4 text-lg text-white/60">
                   <p>• Led video editing, photography, and videography projects</p>
@@ -742,10 +742,10 @@ function FounderPortfolio() {
           <Reveal>
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
               <div>
-                <p className="eyebrow">Creative Portfolio</p>
-                <h2 className="text-6xl font-black text-white mt-4 uppercase">Featured Projects</h2>
+                <p className="eyebrow !text-[#E3D9C6]">Creative Portfolio</p>
+                <h2 className="text-6xl font-black text-white mt-4 uppercase tracking-tighter">Featured Projects</h2>
               </div>
-              <p className="text-white/40 max-w-sm text-lg">A curated selection of high-end productions, cinematic edits, and professional photography captures.</p>
+              <p className="text-white/40 max-w-sm text-lg italic">A curated selection of high-end productions, cinematic edits, and professional photography captures.</p>
             </div>
           </Reveal>
           
@@ -763,7 +763,7 @@ function FounderPortfolio() {
                   <img src={item.src} className="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-110" alt={item.title} />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-60 group-hover:opacity-90 transition-opacity" />
                   <div className="absolute bottom-0 left-0 p-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <p className="text-cyan-400 font-black uppercase tracking-widest text-xs mb-2">{item.cat}</p>
+                    <p className="text-[#E3D9C6] font-black uppercase tracking-widest text-xs mb-2">{item.cat}</p>
                     <h3 className="text-3xl font-bold text-white">{item.title}</h3>
                   </div>
                   <div className="absolute top-8 right-8 h-12 w-12 rounded-full border border-white/20 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -779,18 +779,18 @@ function FounderPortfolio() {
       {/* CTA Section */}
       <section className="py-32 text-center">
         <Reveal>
-          <h2 className="text-4xl font-bold text-white mb-8">Ready to start a project?</h2>
-          <Link to="/#contact" className="neon-button inline-flex">
+          <h2 className="text-4xl font-bold text-white mb-8 italic uppercase tracking-tighter">Ready to start a project?</h2>
+          <Link to="/#contact" className="neon-button !bg-[#E3D9C6] !text-black !shadow-[#E3D9C6]/20 inline-flex">
             Get in Touch with Ram <ArrowRight size={18} />
           </Link>
         </Reveal>
       </section>
 
       {/* Thank You Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#050505]">
         <div className="absolute inset-0 z-0">
           <img src="/founder/founder_hero.png" className="w-full h-full object-cover opacity-20" alt="" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]" />
         </div>
         
         <div className="relative z-10 w-full text-center px-5">
@@ -800,8 +800,8 @@ function FounderPortfolio() {
             transition={{ duration: 1 }}
           >
             <div className="relative inline-block">
-              <h2 className="text-[15vw] font-black leading-none tracking-tighter text-white/90 uppercase select-none">
-                THANK <span className="text-transparent border-t border-b border-white/20 px-4">YOU</span>
+              <h2 className="text-[15vw] font-black leading-none tracking-tighter text-[#E3D9C6] uppercase select-none flex flex-col">
+                THANK <span className="text-transparent" style={{ WebkitTextStroke: "1px #E3D9C6" }}>YOU</span>
               </h2>
               <img 
                 src="/founder/founder_hero.png" 
@@ -814,7 +814,7 @@ function FounderPortfolio() {
               <p>Ram Prasath</p>
               <div className="flex flex-col items-center md:items-end mt-6 md:mt-0">
                 <p>Website</p>
-                <p className="text-white mt-1">Pixelixmedia.in</p>
+                <p className="text-[#E3D9C6] mt-1">Pixelixmedia.in</p>
               </div>
             </div>
           </motion.div>
