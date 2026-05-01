@@ -577,7 +577,7 @@ function FounderSection() {
                 <h2 className="mt-4 text-4xl font-black text-white sm:text-6xl">Ram Prasath</h2>
                 <p className="mt-2 text-xl font-medium text-cyan-400 uppercase tracking-widest">Founder & Creative Head</p>
                 <p className="mt-8 text-lg leading-relaxed text-white/60">
-                  A passionate video editor and videographer specializing in high-end cinematic visuals. From raw concepts to polished brand stories, Ram leads the creative vision at Pixelix Media.
+                  A visionary creator specializing in high-end cinematic visuals and digital branding. From raw concepts to polished brand stories, Ram leads the creative vision at Pixelix Media.
                 </p>
                 <div className="mt-10">
                   <button onClick={() => navigate("/founder")} className="neon-button">
@@ -587,7 +587,7 @@ function FounderSection() {
               </div>
               <div className="relative min-h-[400px] lg:min-h-full">
                 <img 
-                  src="/founder/founder_hero.png" 
+                  src="/portfolio/IMG_6010.JPG.jpeg" 
                   alt="Ram Prasath" 
                   className="absolute inset-0 h-full w-full object-cover grayscale brightness-75 transition-all duration-700 hover:grayscale-0 hover:brightness-100"
                 />
