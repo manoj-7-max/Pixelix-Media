@@ -151,7 +151,13 @@ function Navbar() {
     <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#0D0D0D]/72 backdrop-blur-xl">
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
         <Link className="flex items-center gap-3" to="/" aria-label="Pixelix Media home">
-          <img className="h-12 sm:h-16 w-auto max-w-[200px] sm:max-w-[240px] object-contain transition-all" src="/logo.png" alt="Pixelix Media" />
+          <img 
+            className="h-12 sm:h-16 w-auto max-w-[200px] sm:max-w-[240px] object-contain transition-all" 
+            src="/logo.png" 
+            alt="Pixelix Media" 
+            loading="eager"
+            fetchpriority="high"
+          />
         </Link>
         <div className="hidden items-center gap-8 text-sm font-medium text-white/70 md:flex">
           <a className="hover:text-white" href="/#services" onClick={(e) => handleNavClick(e, "#services")}>Services</a>
@@ -229,6 +235,8 @@ function Hero() {
               className="mx-auto w-full max-w-[480px] object-contain drop-shadow-[0_0_30px_rgba(0,240,255,0.3)]" 
               src="/logo.png" 
               alt="Pixelix Media logo"
+              loading="eager"
+              fetchpriority="high"
               animate={{ 
                 y: [0, -10, 0],
               }}
@@ -554,7 +562,12 @@ function Footer() {
     <footer className="border-t border-white/10 py-12">
       <div className="mx-auto flex max-w-7xl flex-col gap-10 px-5 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
         <div className="flex flex-col gap-6">
-          <img className="h-12 sm:h-16 w-fit max-w-[200px] sm:max-w-[240px] object-contain" src="/logo.png" alt="Pixelix Media" />
+          <img 
+            className="h-12 sm:h-16 w-fit max-w-[200px] sm:max-w-[240px] object-contain" 
+            src="/logo.png" 
+            alt="Pixelix Media" 
+            loading="lazy"
+          />
           <div className="flex gap-6">
             <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-full bg-white/5 p-3 text-white/50 hover:bg-white/10 hover:text-white transition-all">
               <Instagram size={22} />

@@ -262,6 +262,11 @@ body {
   transform: scale(1.1) rotate(5deg);
 }
 
+section {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 1000px;
+}
+
 @keyframes revealSite {
   from {
     opacity: 0;
