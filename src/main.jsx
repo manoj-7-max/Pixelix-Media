@@ -813,6 +813,41 @@ function FounderPortfolio() {
           </Link>
         </Reveal>
       </section>
+
+      {/* Thank You Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+        <div className="absolute inset-0 z-0">
+          <img src="/founder/founder_hero.png" className="w-full h-full object-cover opacity-20" alt="" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black" />
+        </div>
+        
+        <div className="relative z-10 w-full text-center px-5">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+          >
+            <div className="relative inline-block">
+              <h2 className="text-[15vw] font-black leading-none tracking-tighter text-white/90 uppercase select-none">
+                THANK <span className="text-transparent border-t border-b border-white/20 px-4">YOU</span>
+              </h2>
+              <img 
+                src="/founder/founder_hero.png" 
+                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[60vh] w-auto object-contain z-20 drop-shadow-[0_0_40px_rgba(0,0,0,0.8)]" 
+                alt="Ram Prasath" 
+              />
+            </div>
+            
+            <div className="mt-20 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto border-t border-white/10 pt-10 text-white/50 font-medium tracking-widest uppercase text-sm">
+              <p>Ram Prasath</p>
+              <div className="flex flex-col items-center md:items-end mt-6 md:mt-0">
+                <p>Website</p>
+                <p className="text-white mt-1">Pixelixmedia.in</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 }
