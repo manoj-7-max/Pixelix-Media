@@ -627,196 +627,45 @@ function FounderPortfolio() {
     window.scrollTo(0, 0);
   }, []);
 
+  const pages = [
+    { src: "/founder/founder_hero.png", alt: "Ram Prasath Portfolio", showScroll: true },
+    { src: "/founder/founder_intro.png", alt: "Introduction" },
+    { src: "/founder/founder_editor.png", alt: "Editor" },
+    { src: "/founder/founder_skills.png", alt: "Personal Skills" },
+    { src: "/founder/founder_experience.png", alt: "Work Experience" },
+    { src: "/founder/founder_thanks.png", alt: "Thank You" }
+  ];
+
   return (
-    <div className="min-h-screen bg-[#050505] pt-20">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img src="/founder/founder_hero.png" className="w-full h-full object-cover opacity-40 grayscale" alt="" />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#050505]/80 to-[#050505]" />
-        </div>
-        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 relative z-10 w-full pt-20 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-[12vw] font-black leading-none tracking-tighter text-white/10 uppercase absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap pointer-events-none">
-              PORTFOLIO
-            </h1>
-            <img src="/founder/founder_hero.png" className="mx-auto h-[500px] w-auto object-contain drop-shadow-[0_0_50px_rgba(0,240,255,0.2)] rounded-3xl" alt="Ram Prasath" />
-            <div className="mt-12">
-              <h2 className="text-5xl font-black text-[#E3D9C6] sm:text-7xl uppercase tracking-tighter italic">Ram Prasath</h2>
-              <p className="mt-4 text-white/40 text-xl font-bold uppercase tracking-[0.4em]">Editor & Cinematographer</p>
+    <div className="h-screen w-full overflow-y-auto snap-y snap-mandatory bg-[#050505]">
+      {pages.map((page, index) => (
+        <section key={index} className="relative h-screen w-full snap-start overflow-hidden flex items-center justify-center">
+          <img 
+            src={page.src} 
+            alt={page.alt} 
+            className="h-full w-full object-contain md:object-cover"
+            loading={index === 0 ? "eager" : "lazy"}
+          />
+          {page.showScroll && (
+            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3">
+              <span className="text-white/40 text-[10px] font-bold uppercase tracking-[0.4em] animate-pulse">Scroll Down</span>
+              <div className="h-12 w-px bg-gradient-to-b from-white/40 to-transparent" />
             </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Intro Section */}
-      <section className="py-32 relative">
-        <div className="mx-auto max-w-5xl px-5 text-center">
-          <Reveal>
-            <h2 className="text-6xl font-black text-[#E3D9C6] mb-12 uppercase italic tracking-tighter">Introduction</h2>
-            <div className="glass-panel text-2xl leading-relaxed text-white/80 p-12 border-[#E3D9C6]/10">
-              "Hi, I’m Ram Prasath, a passionate video editor and videographer. I specialize in creating high-quality visuals, including reels, cinematic videos, and photography. I focus on delivering creative and engaging content that connects with the audience."
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* Skills Section */}
-      <section className="py-32 bg-white/[0.02]">
-        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-          <Reveal>
-            <h2 className="text-6xl font-black text-[#E3D9C6] mb-20 text-center uppercase">Personal Skills</h2>
-          </Reveal>
-          <div className="grid md:grid-cols-2 gap-12">
-            <Reveal delay={0.1}>
-              <div className="glass-panel group hover:border-cyan-500/50 transition-colors">
-                <div className="aspect-video overflow-hidden rounded-xl mb-8">
-                  <img src="/founder/founder_skills.png" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" alt="Photography" />
-                </div>
-                <h3 className="text-3xl font-bold text-white mb-4">Photography</h3>
-                <p className="text-lg text-white/60">A professional photographer with a passion for capturing high-quality and impactful visuals. I specialize in creative and detail-oriented photography for individuals and brands.</p>
-              </div>
-            </Reveal>
-            <Reveal delay={0.2}>
-              <div className="glass-panel group hover:border-violet-500/50 transition-colors">
-                <div className="aspect-video overflow-hidden rounded-xl mb-8">
-                  <img src="/founder/founder_experience.png" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" alt="Videography" />
-                </div>
-                <h3 className="text-3xl font-bold text-white mb-4">Videography</h3>
-                <p className="text-lg text-white/60">Videographer specializing in capturing high-quality and cinematic visuals. I create engaging video content for brands and individuals with a strong focus on storytelling and detail.</p>
-              </div>
-            </Reveal>
+          )}
+          {/* Subtle branding overlay */}
+          <div className="absolute bottom-10 right-10 z-10 hidden md:block">
+            <p className="text-[#E3D9C6] text-[10px] font-black uppercase tracking-[0.3em] opacity-30">Ram Prasath × Pixelix</p>
           </div>
-        </div>
-      </section>
-
-      {/* Experience Section */}
-      <section className="py-32">
-        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-          <Reveal>
-            <h2 className="text-6xl font-black text-[#E3D9C6] mb-20 uppercase">Work Experience</h2>
-          </Reveal>
-          <div className="space-y-8">
-            <Reveal delay={0.1}>
-              <div className="glass-panel flex flex-col md:flex-row gap-12 items-center border-[#E3D9C6]/5">
-                <div className="md:w-1/3">
-                  <p className="text-4xl font-black text-[#E3D9C6]">2024 - Present</p>
-                  <p className="text-xl font-bold text-white mt-2">Self-employed</p>
-                </div>
-                <div className="md:w-2/3 border-l border-white/10 pl-12 space-y-4 text-lg text-white/60">
-                  <p>• Captured and edited videos and photos for personal and small business projects</p>
-                  <p>• Created engaging Instagram reels and promotional content</p>
-                  <p>• Handled camera setup, lighting, and post-production</p>
-                  <p>• Delivered high-quality visual content meeting client expectations</p>
-                </div>
-              </div>
-            </Reveal>
-            <Reveal delay={0.2}>
-              <div className="glass-panel flex flex-col md:flex-row gap-12 items-center border-[#E3D9C6]/20 bg-[#E3D9C6]/5">
-                <div className="md:w-1/3">
-                  <p className="text-4xl font-black text-[#E3D9C6]">Pixelix Media</p>
-                  <p className="text-xl font-bold text-white mt-2">Founder & Creative Head</p>
-                </div>
-                <div className="md:w-2/3 border-l border-white/10 pl-12 space-y-4 text-lg text-white/60">
-                  <p>• Led video editing, photography, and videography projects</p>
-                  <p>• Created engaging reels and promotional content for clients</p>
-                  <p>• Managed end-to-end production (shoot → edit → delivery)</p>
-                  <p>• Built and maintained a creative media brand from scratch</p>
-                </div>
-              </div>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Creative Gallery Section */}
-      <section className="py-32 bg-[#080808]">
-        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-          <Reveal>
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
-              <div>
-                <p className="eyebrow !text-[#E3D9C6]">Creative Portfolio</p>
-                <h2 className="text-6xl font-black text-white mt-4 uppercase tracking-tighter">Featured Projects</h2>
-              </div>
-              <p className="text-white/40 max-w-sm text-lg italic">A curated selection of high-end productions, cinematic edits, and professional photography captures.</p>
-            </div>
-          </Reveal>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {[
-              { src: "/founder/founder_hero.png", title: "Visual Direction", cat: "Art Direction" },
-              { src: "/founder/founder_intro.png", title: "Brand Storytelling", cat: "Production" },
-              { src: "/founder/founder_editor.png", title: "Cinematic Editing", cat: "Post-Production" },
-              { src: "/founder/founder_skills.png", title: "Impact Photography", cat: "Photography" },
-              { src: "/founder/founder_experience.png", title: "Industry Experience", cat: "Strategy" },
-              { src: "/founder/founder_thanks.png", title: "Creative Vision", cat: "Conclusion" }
-            ].map((item, i) => (
-              <Reveal key={i} delay={i * 0.1}>
-                <div className="group relative aspect-[16/10] overflow-hidden rounded-3xl border border-white/5 bg-white/2 cursor-crosshair">
-                  <img src={item.src} className="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-110" alt={item.title} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-60 group-hover:opacity-90 transition-opacity" />
-                  <div className="absolute bottom-0 left-0 p-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <p className="text-[#E3D9C6] font-black uppercase tracking-widest text-xs mb-2">{item.cat}</p>
-                    <h3 className="text-3xl font-bold text-white">{item.title}</h3>
-                  </div>
-                  <div className="absolute top-8 right-8 h-12 w-12 rounded-full border border-white/20 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <ArrowRight size={20} />
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-32 text-center">
-        <Reveal>
-          <h2 className="text-4xl font-bold text-white mb-8 italic uppercase tracking-tighter">Ready to start a project?</h2>
-          <Link to="/#contact" className="neon-button !bg-[#E3D9C6] !text-black !shadow-[#E3D9C6]/20 inline-flex">
-            Get in Touch with Ram <ArrowRight size={18} />
-          </Link>
-        </Reveal>
-      </section>
-
-      {/* Thank You Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#050505]">
-        <div className="absolute inset-0 z-0">
-          <img src="/founder/founder_hero.png" className="w-full h-full object-cover opacity-20" alt="" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]" />
-        </div>
-        
-        <div className="relative z-10 w-full text-center px-5">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
-          >
-            <div className="relative inline-block">
-              <h2 className="text-[15vw] font-black leading-none tracking-tighter text-[#E3D9C6] uppercase select-none flex flex-col">
-                THANK <span className="text-transparent" style={{ WebkitTextStroke: "1px #E3D9C6" }}>YOU</span>
-              </h2>
-              <img 
-                src="/founder/founder_hero.png" 
-                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[60vh] w-auto object-contain z-20 drop-shadow-[0_0_40px_rgba(0,0,0,0.8)]" 
-                alt="Ram Prasath" 
-              />
-            </div>
-            
-            <div className="mt-20 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto border-t border-white/10 pt-10 text-white/50 font-medium tracking-widest uppercase text-sm">
-              <p>Ram Prasath</p>
-              <div className="flex flex-col items-center md:items-end mt-6 md:mt-0">
-                <p>Website</p>
-                <p className="text-[#E3D9C6] mt-1">Pixelixmedia.in</p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+        </section>
+      ))}
+      
+      {/* Floating Home Button */}
+      <Link 
+        to="/" 
+        className="fixed top-8 left-8 z-[100] flex items-center gap-3 rounded-full border border-white/10 bg-black/40 px-5 py-3 text-xs font-bold uppercase tracking-widest text-white backdrop-blur-xl transition-all hover:bg-white hover:text-black"
+      >
+        <ArrowRight className="rotate-180" size={14} /> Back to Studio
+      </Link>
     </div>
   );
 }
