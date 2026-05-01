@@ -13,6 +13,22 @@ const INTRO_STORAGE_KEY = "pixelixIntroSeenV2";
 
 const services = [
   { 
+    id: "professional-photoshoot", 
+    title: "Professional Photoshoot", 
+    text: "High-end brand portraits and commercial photography.", 
+    icon: Camera,
+    longDescription: "We provide professional photoshoot services for brands, products, and individuals. Our high-end equipment and lighting setup ensure cinematic quality in every shot.",
+    features: ["Brand Portraits", "Product Photography", "Commercial Shoots", "Fashion Photography"]
+  },
+  { 
+    id: "cinematic-videography", 
+    title: "Cinematic Videography", 
+    text: "Story-driven film production and brand commercials.", 
+    icon: Clapperboard,
+    longDescription: "Transform your brand's narrative with cinematic videography. We specialize in high-end production, from raw concepts to polished film stories that resonate with your audience.",
+    features: ["Brand Films", "Commercial Ads", "Event Highlights", "Social Media Reels"]
+  },
+  { 
     id: "branding", 
     title: "Branding", 
     text: "Visual identity and positioning that makes your brand unmistakable.", 
@@ -75,22 +91,6 @@ const services = [
     icon: Camera,
     longDescription: "Capture the essence of your events with high-end photography. We provide comprehensive coverage for corporate gatherings, brand launches, and special events.",
     features: ["Corporate Events", "Brand Launches", "Product Unveiling", "Live Editing"]
-  },
-  { 
-    id: "professional-photoshoot", 
-    title: "Professional Photoshoot", 
-    text: "High-end brand portraits and commercial photography.", 
-    icon: Camera,
-    longDescription: "We provide professional photoshoot services for brands, products, and individuals. Our high-end equipment and lighting setup ensure cinematic quality in every shot.",
-    features: ["Brand Portraits", "Product Photography", "Commercial Shoots", "Fashion Photography"]
-  },
-  { 
-    id: "cinematic-videography", 
-    title: "Cinematic Videography", 
-    text: "Story-driven film production and brand commercials.", 
-    icon: Clapperboard,
-    longDescription: "Transform your brand's narrative with cinematic videography. We specialize in high-end production, from raw concepts to polished film stories that resonate with your audience.",
-    features: ["Brand Films", "Commercial Ads", "Event Highlights", "Social Media Reels"]
   },
 ];
 
@@ -600,11 +600,12 @@ function FounderSection() {
                   </Link>
                 </div>
               </div>
-              <div className="relative min-h-[400px] lg:min-h-full">
+              <div className="relative min-h-[400px] lg:min-h-full bg-[#0D0D0D]">
                 <img 
                   src="/founder/founder_hero.png" 
                   alt="Ram Prasath" 
                   className="absolute inset-0 h-full w-full object-cover grayscale brightness-75 transition-all duration-700 hover:grayscale-0 hover:brightness-100"
+                  onError={(e) => { e.target.src = "/logo.png"; e.target.className = "absolute inset-0 m-auto h-32 w-auto object-contain opacity-20"; }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-[#0D0D0D] via-transparent to-transparent lg:block hidden" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent lg:hidden block" />
