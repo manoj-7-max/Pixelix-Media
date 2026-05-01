@@ -626,6 +626,23 @@ function FounderPortfolio() {
             className="h-full w-full object-contain md:object-cover"
             loading={index === 0 ? "eager" : "lazy"}
           />
+          {index === 0 && (
+            <div className="absolute inset-0 flex items-center justify-center p-6 sm:p-12 z-20 pointer-events-none">
+              <motion.div 
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+                className="max-w-xl w-full bg-black/40 backdrop-blur-md border border-white/10 p-8 rounded-3xl pointer-events-auto"
+              >
+                <p className="text-[10px] font-black uppercase tracking-[0.4em] text-cyan-400 mb-4">Creative Leadership</p>
+                <h1 className="text-5xl sm:text-7xl font-black text-white mb-2 leading-none">Ram Prasath</h1>
+                <p className="text-lg sm:text-xl font-bold uppercase tracking-widest text-cyan-400/90 mb-8">Founder & Creative Head</p>
+                <p className="text-white/70 text-sm sm:text-base leading-relaxed font-medium max-w-md">
+                  A visionary creator dedicated to crafting high-impact digital experiences and cinematic brand stories.
+                </p>
+              </motion.div>
+            </div>
+          )}
           {page.showScroll && (
             <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3">
               <span className="text-white/40 text-[10px] font-bold uppercase tracking-[0.4em] animate-pulse">Scroll Down</span>
