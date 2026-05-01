@@ -652,9 +652,6 @@ function FloatingWhatsApp() {
   );
 }
 
-  );
-}
-
 function FounderSection() {
   const navigate = useNavigate();
   return (
