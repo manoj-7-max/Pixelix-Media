@@ -240,6 +240,7 @@ function Navbar() {
         <div className="hidden items-center gap-8 text-sm font-medium text-white/70 md:flex">
           <a className="hover:text-white" href="/#services" onClick={(e) => handleNavClick(e, "#services")}>Services</a>
           <a className="hover:text-white" href="/#our-works" onClick={(e) => handleNavClick(e, "#our-works")}>Our Works</a>
+          <Link className="hover:text-white" to="/founder">Founder</Link>
           <a className="hover:text-white" href="/#about" onClick={(e) => handleNavClick(e, "#about")}>About</a>
           <a className="hover:text-white" href="/#faq" onClick={(e) => handleNavClick(e, "#faq")}>FAQ</a>
           <a className="hover:text-white" href="/#contact" onClick={(e) => handleNavClick(e, "#contact")}>Contact</a>
@@ -651,6 +652,171 @@ function FloatingWhatsApp() {
   );
 }
 
+  );
+}
+
+function FounderSection() {
+  const navigate = useNavigate();
+  return (
+    <section id="founder" className="relative py-24">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <Reveal>
+          <div className="glass-panel overflow-hidden !p-0">
+            <div className="grid lg:grid-cols-2">
+              <div className="p-8 sm:p-12 lg:p-16 flex flex-col justify-center">
+                <p className="eyebrow">Creative Leadership</p>
+                <h2 className="mt-4 text-4xl font-black text-white sm:text-6xl">Ram Prasath</h2>
+                <p className="mt-2 text-xl font-medium text-cyan-400 uppercase tracking-widest">Founder & Creative Head</p>
+                <p className="mt-8 text-lg leading-relaxed text-white/60">
+                  A passionate video editor and videographer specializing in high-end cinematic visuals. From raw concepts to polished brand stories, Ram leads the creative vision at Pixelix Media.
+                </p>
+                <div className="mt-10">
+                  <button onClick={() => navigate("/founder")} className="neon-button">
+                    View Founder Portfolio <ArrowRight size={18} />
+                  </button>
+                </div>
+              </div>
+              <div className="relative min-h-[400px] lg:min-h-full">
+                <img 
+                  src="/founder/founder_hero.png" 
+                  alt="Ram Prasath" 
+                  className="absolute inset-0 h-full w-full object-cover grayscale brightness-75 transition-all duration-700 hover:grayscale-0 hover:brightness-100"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#0D0D0D] via-transparent to-transparent lg:block hidden" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent lg:hidden block" />
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+function FounderPortfolio() {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-[#050505] pt-20">
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="/founder/founder_hero.png" className="w-full h-full object-cover opacity-40 grayscale" alt="" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#050505]/80 to-[#050505]" />
+        </div>
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 relative z-10 w-full pt-20 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-[12vw] font-black leading-none tracking-tighter text-white/10 uppercase absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap pointer-events-none">
+              PORTFOLIO
+            </h1>
+            <img src="/founder/founder_hero.png" className="mx-auto h-[500px] w-auto object-contain drop-shadow-[0_0_50px_rgba(0,240,255,0.2)] rounded-3xl" alt="Ram Prasath" />
+            <div className="mt-12">
+              <h2 className="text-5xl font-black text-white sm:text-7xl">Ram Prasath</h2>
+              <p className="mt-4 text-xl text-cyan-400 font-bold uppercase tracking-[0.3em]">Editor & Cinematographer</p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Intro Section */}
+      <section className="py-32 relative">
+        <div className="mx-auto max-w-5xl px-5 text-center">
+          <Reveal>
+            <h2 className="text-6xl font-black text-white mb-12 uppercase italic tracking-tighter">Introduction</h2>
+            <div className="glass-panel text-2xl leading-relaxed text-white/80 p-12">
+              "Hi, I'm Ram Prasath, a passionate video editor and videographer. I specialize in creating high-quality visuals, including reels, cinematic videos, and photography. I focus on delivering creative and engaging content that connects with the audience. Open to freelance projects and collaborations."
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section className="py-32 bg-white/[0.02]">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+          <Reveal>
+            <h2 className="text-6xl font-black text-white mb-20 text-center uppercase">Personal Skills</h2>
+          </Reveal>
+          <div className="grid md:grid-cols-2 gap-12">
+            <Reveal delay={0.1}>
+              <div className="glass-panel group hover:border-cyan-500/50 transition-colors">
+                <div className="aspect-video overflow-hidden rounded-xl mb-8">
+                  <img src="/founder/founder_skills.png" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" alt="Photography" />
+                </div>
+                <h3 className="text-3xl font-bold text-white mb-4">Photography</h3>
+                <p className="text-lg text-white/60">A professional photographer with a passion for capturing high-quality and impactful visuals. I specialize in creative and detail-oriented photography for individuals and brands.</p>
+              </div>
+            </Reveal>
+            <Reveal delay={0.2}>
+              <div className="glass-panel group hover:border-violet-500/50 transition-colors">
+                <div className="aspect-video overflow-hidden rounded-xl mb-8">
+                  <img src="/founder/founder_experience.png" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" alt="Videography" />
+                </div>
+                <h3 className="text-3xl font-bold text-white mb-4">Videography</h3>
+                <p className="text-lg text-white/60">Videographer specializing in capturing high-quality and cinematic visuals. I create engaging video content for brands and individuals with a strong focus on storytelling and detail.</p>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section className="py-32">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+          <Reveal>
+            <h2 className="text-6xl font-black text-white mb-20 uppercase">Work Experience</h2>
+          </Reveal>
+          <div className="space-y-8">
+            <Reveal delay={0.1}>
+              <div className="glass-panel flex flex-col md:flex-row gap-12 items-center">
+                <div className="md:w-1/3">
+                  <p className="text-4xl font-black text-cyan-400">2024 - Present</p>
+                  <p className="text-xl font-bold text-white mt-2">Self-employed</p>
+                </div>
+                <div className="md:w-2/3 border-l border-white/10 pl-12 space-y-4 text-lg text-white/60">
+                  <p>• Captured and edited videos and photos for personal and small business projects</p>
+                  <p>• Created engaging Instagram reels and promotional content</p>
+                  <p>• Handled camera setup, lighting, and post-production</p>
+                  <p>• Delivered high-quality visual content meeting client expectations</p>
+                </div>
+              </div>
+            </Reveal>
+            <Reveal delay={0.2}>
+              <div className="glass-panel flex flex-col md:flex-row gap-12 items-center border-cyan-500/20 bg-cyan-500/5">
+                <div className="md:w-1/3">
+                  <p className="text-4xl font-black text-white">Pixelix Media</p>
+                  <p className="text-xl font-bold text-cyan-400 mt-2">Founder & Creative Head</p>
+                </div>
+                <div className="md:w-2/3 border-l border-white/10 pl-12 space-y-4 text-lg text-white/60">
+                  <p>• Led video editing, photography, and videography projects</p>
+                  <p>• Created engaging reels and promotional content for clients</p>
+                  <p>• Managed end-to-end production (shoot → edit → delivery)</p>
+                  <p>• Built and maintained a creative media brand from scratch</p>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-32 text-center">
+        <Reveal>
+          <h2 className="text-4xl font-bold text-white mb-8">Ready to start a project?</h2>
+          <Link to="/#contact" className="neon-button inline-flex">
+            Get in Touch with Ram <ArrowRight size={18} />
+          </Link>
+        </Reveal>
+      </section>
+    </div>
+  );
+}
+
 function ServicePage() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -751,12 +917,14 @@ function App() {
               <Hero />
               <Services />
               <OurWorks />
+              <FounderSection />
               <About />
               <Contact />
               <FAQ />
             </>
           } />
           <Route path="/services/:id" element={<ServicePage />} />
+          <Route path="/founder" element={<FounderPortfolio />} />
         </Routes>
         <Footer />
         <FloatingWhatsApp />
