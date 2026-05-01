@@ -178,16 +178,13 @@ function Hero() {
   return (
     <section id="home" className="relative min-h-screen overflow-hidden pt-28">
       <div className="absolute inset-0 z-0">
-        <video
-          className="h-full w-full object-cover opacity-20 grayscale brightness-50"
-          src="/logo-intro.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
+        <img
+          className="h-full w-full object-cover opacity-10 grayscale brightness-50"
+          src="/portfolio/IMG_6010.JPG.jpeg"
+          alt=""
+          loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/20 via-[#0D0D0D]/80 to-[#0D0D0D]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/40 via-[#0D0D0D]/90 to-[#0D0D0D]" />
       </div>
       <div className="pixel-field opacity-10" />
       <div className="hero-gradient opacity-40" />
