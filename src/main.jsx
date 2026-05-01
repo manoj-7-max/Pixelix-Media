@@ -121,89 +121,6 @@ const sectionReveal = {
   show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: "easeOut" } },
 };
 
-function IntroSplash({ onDone }) {
-  const [visible, setVisible] = React.useState(true);
-  const [loading, setLoading] = React.useState(true);
-  const [exiting, setExiting] = React.useState(false);
-  const videoRef = React.useRef(null);
-
-  React.useEffect(() => {
-    if (!visible) {
-      onDone();
-      return undefined;
-    }
-
-    const timer = window.setTimeout(() => finish(), 4600);
-    videoRef.current?.play?.().catch(() => {});
-    return () => window.clearTimeout(timer);
-  }, [visible]);
-
-  const finish = React.useCallback(() => {
-    if (exiting) return;
-    setExiting(true);
-    window.setTimeout(() => {
-      setVisible(false);
-      onDone();
-    }, 650);
-  }, [exiting, onDone]);
-
-  if (!visible) return null;
-
-  return (
-    <motion.div
-      className="fixed inset-0 z-[100] grid place-items-center overflow-hidden bg-[#050506]"
-      initial={{ opacity: 1 }}
-      animate={{ opacity: exiting ? 0 : 1 }}
-      transition={{ duration: 0.65, ease: "easeInOut" }}
-    >
-      <motion.video
-        ref={videoRef}
-        className="absolute inset-0 h-full w-full object-contain md:object-cover"
-        src="/logo-intro.mp4"
-        autoPlay
-        muted
-        playsInline
-        preload="auto"
-        onCanPlay={() => setLoading(false)}
-        onEnded={finish}
-        initial={{ opacity: 0, scale: 1.1 }}
-        animate={{ opacity: loading ? 0 : 1, scale: 1 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
-      />
-      {loading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-[#050506]">
-          <div className="h-12 w-12 animate-spin rounded-full border-4 border-cyan-500 border-t-transparent"></div>
-        </div>
-      )}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,240,255,0.08),transparent_34%),linear-gradient(120deg,rgba(5,5,8,0.78),rgba(5,5,8,0.28)_42%,rgba(10,2,22,0.82))]" />
-      <div className="pixel-field opacity-25" />
-      <button
-        className="group absolute right-5 top-5 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-white/80 backdrop-blur transition hover:border-cyan-300/60 hover:text-white"
-        onClick={finish}
-        type="button"
-      >
-        Skip Intro
-      </button>
-      <motion.div
-        className="absolute bottom-8 left-5 right-5 z-10 mx-auto max-w-5xl"
-        initial={{ opacity: 0, y: 24 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.85, delay: 0.25, ease: "easeOut" }}
-      >
-        <img className="h-16 w-auto max-w-[240px] object-contain sm:h-20 sm:max-w-[320px]" src="/logo.png" alt="Pixelix Media" />
-        <div className="mt-5 h-px overflow-hidden rounded-full bg-white/12">
-          <motion.span
-            className="block h-full bg-gradient-to-r from-cyan-300 to-violet-500"
-            initial={{ width: "0%" }}
-            animate={{ width: "100%" }}
-            transition={{ duration: 4.2, ease: "easeInOut" }}
-          />
-        </div>
-      </motion.div>
-    </motion.div>
-  );
-}
-
 function Reveal({ children, className = "", delay = 0 }) {
   const reduceMotion = useReducedMotion();
   return (
@@ -962,14 +879,9 @@ function ServicePage() {
 }
 
 function App() {
-  const [ready, setReady] = React.useState(false);
-
   return (
     <Router>
-      <AnimatePresence>
-        {!ready && <IntroSplash onDone={() => setReady(true)} />}
-      </AnimatePresence>
-      <main className={ready ? "site-ready" : "site-waiting"}>
+      <main className="site-ready">
         <Navbar />
         <Routes>
           <Route path="/" element={
