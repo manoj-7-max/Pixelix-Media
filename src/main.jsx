@@ -608,12 +608,12 @@ function FounderPortfolio() {
   }, []);
 
   const pages = [
-    { src: "/portfolio/IMG_6010.JPG.jpeg", alt: "Ram Prasath Portfolio", showScroll: true },
-    { src: "/portfolio/IMG_5955.JPG.jpeg", alt: "Introduction" },
-    { src: "/portfolio/IMG_5984.JPG.jpeg", alt: "Editor" },
-    { src: "/portfolio/IMG_6000.JPG.jpeg", alt: "Personal Skills" },
-    { src: "/portfolio/IMG_9297.JPG.jpeg", alt: "Work Experience" },
-    { src: "/portfolio/IMG-20260207-WA0044.jpg.jpeg", alt: "Thank You" }
+    { src: "/founder/founder_hero.png", alt: "Ram Prasath Portfolio", showScroll: true },
+    { src: "/founder/founder_intro.png", alt: "Introduction" },
+    { src: "/founder/founder_editor.png", alt: "Editor" },
+    { src: "/founder/founder_skills.png", alt: "Personal Skills" },
+    { src: "/founder/founder_experience.png", alt: "Work Experience" },
+    { src: "/founder/founder_thanks.png", alt: "Thank You" }
   ];
 
   return (
