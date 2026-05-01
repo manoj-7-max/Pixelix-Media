@@ -266,6 +266,7 @@ function Hero() {
           muted
           loop
           playsInline
+          preload="metadata"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/20 via-[#0D0D0D]/80 to-[#0D0D0D]" />
       </div>
@@ -373,11 +374,25 @@ function Services() {
 }
 
 function OurWorks() {
+  const [isVisible, setIsVisible] = React.useState(false);
+  const containerRef = React.useRef(null);
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setIsVisible(true);
+      },
+      { rootMargin: "400px" }
+    );
+    if (containerRef.current) observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   const row1 = [...ourWorks].sort(() => 0.5 - Math.random());
   const row2 = [...ourWorks].sort(() => 0.5 - Math.random());
 
   return (
-    <section id="our-works" className="relative py-24 overflow-hidden">
+    <section id="our-works" ref={containerRef} className="relative py-24 overflow-hidden">
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 mb-16 text-center">
         <Reveal>
           <p className="eyebrow">Portfolio</p>
@@ -388,30 +403,36 @@ function OurWorks() {
         </Reveal>
       </div>
 
-      <div className="flex flex-col gap-8">
-        {/* Row 1 - Forward */}
-        <div className="relative flex overflow-hidden">
-          <div className="animate-marquee gap-8 py-4">
-            {[...row1, ...row1].map((item, idx) => (
-              <WorkCard key={`row1-${idx}`} item={item} />
-            ))}
+      {isVisible ? (
+        <div className="flex flex-col gap-8">
+          {/* Row 1 - Forward */}
+          <div className="relative flex overflow-hidden">
+            <div className="animate-marquee gap-8 py-4">
+              {[...row1, ...row1].map((item, idx) => (
+                <WorkCard key={`row1-${idx}`} item={item} />
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* Row 2 - Reverse */}
-        <div className="relative flex overflow-hidden">
-          <div className="animate-marquee-reverse gap-8 py-4">
-            {[...row2, ...row2].map((item, idx) => (
-              <WorkCard key={`row2-${idx}`} item={item} />
-            ))}
+          {/* Row 2 - Reverse */}
+          <div className="relative flex overflow-hidden">
+            <div className="animate-marquee-reverse gap-8 py-4">
+              {[...row2, ...row2].map((item, idx) => (
+                <WorkCard key={`row2-${idx}`} item={item} />
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      ) : (
+        <div className="h-[600px] flex items-center justify-center">
+          <div className="h-8 w-8 animate-spin rounded-full border-2 border-cyan-500 border-t-transparent"></div>
+        </div>
+      )}
     </section>
   );
 }
 
-function WorkCard({ item }) {
+const WorkCard = React.memo(({ item }) => {
   return (
     <div className="work-item group">
       {/* Blurred Background to fill the frame for mixed aspect ratios */}
@@ -447,6 +468,7 @@ function WorkCard({ item }) {
             muted 
             loop 
             playsInline
+            preload="none"
           />
         )}
       </div>

@@ -101,8 +101,14 @@ body {
   padding: 0.8rem 1.8rem;
   color: var(--text-main);
   font-weight: 700;
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(12px);
   transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .ghost-button {
+    backdrop-filter: blur(6px);
+  }
 }
 
 .ghost-button:hover {
@@ -134,8 +140,17 @@ body {
 .faq-card {
   border: 1px solid var(--glass-border);
   background: var(--glass);
-  backdrop-filter: blur(24px);
+  backdrop-filter: blur(20px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: translateZ(0); /* Hardware acceleration */
+}
+
+@media (max-width: 768px) {
+  .service-card,
+  .glass-panel,
+  .faq-card {
+    backdrop-filter: blur(10px);
+  }
 }
 
 .service-card {
@@ -303,12 +318,14 @@ body {
   display: flex;
   width: max-content;
   animation: marquee 80s linear infinite;
+  will-change: transform;
 }
 
 .animate-marquee-reverse {
   display: flex;
   width: max-content;
   animation: marquee-reverse 80s linear infinite;
+  will-change: transform;
 }
 
 .animate-marquee:hover,
@@ -325,8 +342,15 @@ body {
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(6px);
   transition: all 0.4s ease;
+  will-change: transform;
+}
+
+@media (max-width: 768px) {
+  .work-item {
+    backdrop-filter: none; /* Disable blur on mobile for performance */
+  }
 }
 
 .work-item:hover {
