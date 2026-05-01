@@ -482,7 +482,7 @@ const WorkCard = React.memo(({ item }) => {
       </div>
     </div>
   );
-}
+});
 
 function About() {
   return (
