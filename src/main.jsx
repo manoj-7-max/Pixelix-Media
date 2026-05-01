@@ -377,7 +377,7 @@ function OurWorks() {
   const row2 = [...ourWorks].sort(() => 0.5 - Math.random());
 
   return (
-    <section id="our-works" className="relative py-24 overflow-hidden bg-black/20">
+    <section id="our-works" className="relative py-24 overflow-hidden">
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 mb-16 text-center">
         <Reveal>
           <p className="eyebrow">Portfolio</p>
@@ -407,8 +407,6 @@ function OurWorks() {
           </div>
         </div>
       </div>
-      
-      <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-[#090a0f] via-transparent to-[#090a0f] z-10" />
     </section>
   );
 }
