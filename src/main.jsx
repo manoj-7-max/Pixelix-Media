@@ -76,6 +76,22 @@ const services = [
     longDescription: "Capture the essence of your events with high-end photography. We provide comprehensive coverage for corporate gatherings, brand launches, and special events.",
     features: ["Corporate Events", "Brand Launches", "Product Unveiling", "Live Editing"]
   },
+  { 
+    id: "professional-photoshoot", 
+    title: "Professional Photoshoot", 
+    text: "High-end brand portraits and commercial photography.", 
+    icon: Camera,
+    longDescription: "We provide professional photoshoot services for brands, products, and individuals. Our high-end equipment and lighting setup ensure cinematic quality in every shot.",
+    features: ["Brand Portraits", "Product Photography", "Commercial Shoots", "Fashion Photography"]
+  },
+  { 
+    id: "cinematic-videography", 
+    title: "Cinematic Videography", 
+    text: "Story-driven film production and brand commercials.", 
+    icon: Clapperboard,
+    longDescription: "Transform your brand's narrative with cinematic videography. We specialize in high-end production, from raw concepts to polished film stories that resonate with your audience.",
+    features: ["Brand Films", "Commercial Ads", "Event Highlights", "Social Media Reels"]
+  },
 ];
 
 const ourWorks = [
@@ -565,7 +581,6 @@ function FloatingWhatsApp() {
 }
 
 function FounderSection() {
-  const navigate = useNavigate();
   return (
     <section id="founder" className="relative py-24">
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
@@ -580,14 +595,14 @@ function FounderSection() {
                   A visionary creator specializing in high-end cinematic visuals and digital branding. From raw concepts to polished brand stories, Ram leads the creative vision at Pixelix Media.
                 </p>
                 <div className="mt-10">
-                  <button onClick={() => navigate("/founder")} className="neon-button">
+                  <Link to="/founder" className="neon-button inline-flex items-center gap-2">
                     View Founder Portfolio <ArrowRight size={18} />
-                  </button>
+                  </Link>
                 </div>
               </div>
               <div className="relative min-h-[400px] lg:min-h-full">
                 <img 
-                  src="/portfolio/IMG_6010.JPG.jpeg" 
+                  src="/founder/founder_hero.png" 
                   alt="Ram Prasath" 
                   className="absolute inset-0 h-full w-full object-cover grayscale brightness-75 transition-all duration-700 hover:grayscale-0 hover:brightness-100"
                 />
