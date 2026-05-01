@@ -741,25 +741,37 @@ function FounderPortfolio() {
       </section>
 
       {/* Creative Gallery Section */}
-      <section className="py-32">
+      <section className="py-32 bg-[#080808]">
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
           <Reveal>
-            <h2 className="text-6xl font-black text-white mb-20 text-center uppercase">Creative Showcase</h2>
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
+              <div>
+                <p className="eyebrow">Creative Portfolio</p>
+                <h2 className="text-6xl font-black text-white mt-4 uppercase">Featured Projects</h2>
+              </div>
+              <p className="text-white/40 max-w-sm text-lg">A curated selection of high-end productions, cinematic edits, and professional photography captures.</p>
+            </div>
           </Reveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {[
-              "/founder/founder_hero.png",
-              "/founder/founder_intro.png",
-              "/founder/founder_editor.png",
-              "/founder/founder_skills.png",
-              "/founder/founder_experience.png",
-              "/founder/founder_thanks.png"
-            ].map((src, i) => (
+              { src: "/founder/founder_hero.png", title: "Visual Direction", cat: "Art Direction" },
+              { src: "/founder/founder_intro.png", title: "Brand Storytelling", cat: "Production" },
+              { src: "/founder/founder_editor.png", title: "Cinematic Editing", cat: "Post-Production" },
+              { src: "/founder/founder_skills.png", title: "Impact Photography", cat: "Photography" },
+              { src: "/founder/founder_experience.png", title: "Industry Experience", cat: "Strategy" },
+              { src: "/founder/founder_thanks.png", title: "Creative Vision", cat: "Conclusion" }
+            ].map((item, i) => (
               <Reveal key={i} delay={i * 0.1}>
-                <div className="work-item group w-full !h-[350px] overflow-hidden rounded-2xl border border-white/10">
-                  <img src={src} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-110 group-hover:scale-100" alt={`Founder work ${i+1}`} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-6">
-                    <p className="text-white font-bold uppercase tracking-widest text-xs">Featured Project</p>
+                <div className="group relative aspect-[16/10] overflow-hidden rounded-3xl border border-white/5 bg-white/2 cursor-crosshair">
+                  <img src={item.src} className="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-110" alt={item.title} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-60 group-hover:opacity-90 transition-opacity" />
+                  <div className="absolute bottom-0 left-0 p-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <p className="text-cyan-400 font-black uppercase tracking-widest text-xs mb-2">{item.cat}</p>
+                    <h3 className="text-3xl font-bold text-white">{item.title}</h3>
+                  </div>
+                  <div className="absolute top-8 right-8 h-12 w-12 rounded-full border border-white/20 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <ArrowRight size={20} />
                   </div>
                 </div>
               </Reveal>
