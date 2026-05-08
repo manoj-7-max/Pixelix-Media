@@ -624,89 +624,6 @@ function FloatingWhatsApp() {
   );
 }
 
-function WorkExperienceSlide() {
-  return (
-    <div className="relative h-full w-full bg-[#0D0D0D] p-8 sm:p-20 flex flex-col justify-center overflow-hidden">
-      {/* Background Accents */}
-      <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
-        <div className="absolute top-[20%] right-[10%] w-[400px] h-[400px] bg-blue-500 rounded-full blur-[120px]" />
-        <div className="absolute bottom-[20%] right-[5%] w-[300px] h-[300px] bg-purple-500 rounded-full blur-[100px]" />
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-20 items-start">
-        {/* Left Side - Large Title and Self-Employed */}
-        <div className="space-y-12">
-          <div className="space-y-[-0.2em]">
-            <h2 className="text-[clamp(4rem,12vw,10rem)] font-black text-[#E3D9C6] leading-none uppercase tracking-tighter">WORK</h2>
-            <h2 className="text-[clamp(4rem,12vw,10rem)] font-black text-[#E3D9C6] leading-none uppercase tracking-tighter">EXPERIENCE</h2>
-          </div>
-
-          <div className="space-y-6 max-w-lg">
-            <div className="space-y-2">
-              <h3 className="text-2xl font-bold text-white">Self-employed | 2024 – Present</h3>
-              <div className="h-0.5 w-12 bg-cyan-400" />
-            </div>
-            <ul className="space-y-4 text-white/70 text-lg">
-              <li className="flex gap-3">
-                <span className="text-cyan-400 mt-1.5">•</span>
-                <span>Captured and edited videos and photos for personal and small business projects</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-cyan-400 mt-1.5">•</span>
-                <span>Created engaging Instagram reels and promotional content</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-cyan-400 mt-1.5">•</span>
-                <span>Handled camera setup, lighting, and post-production</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-cyan-400 mt-1.5">•</span>
-                <span>Delivered high-quality visual content meeting client expectations</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Right Side - Logo and Pixelix Experience */}
-        <div className="flex flex-col h-full justify-between gap-12">
-          <div className="flex justify-start lg:justify-end">
-            <img src="/logo.png" alt="Pixelix Media" className="h-20 lg:h-32 w-auto object-contain opacity-90" />
-          </div>
-
-          <div className="space-y-6 max-w-xl self-start lg:self-end w-full">
-            <div className="space-y-2">
-              <h3 className="text-2xl font-bold text-white">Pixelix Media – Founder & Creative Head</h3>
-              <div className="h-0.5 w-12 bg-violet-400" />
-            </div>
-            <ul className="space-y-4 text-white/70 text-lg">
-              <li className="flex gap-3">
-                <span className="text-violet-400 mt-1.5">•</span>
-                <span>Led video editing, photography, and videography projects</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-violet-400 mt-1.5">•</span>
-                <span>Created engaging reels and promotional content for clients</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-violet-400 mt-1.5">•</span>
-                <span>Managed end-to-end production (shoot → edit → delivery)</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-violet-400 mt-1.5">•</span>
-                <span>Worked with brands and individuals to deliver high-quality visuals</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-violet-400 mt-1.5">•</span>
-                <span>Built and maintained a creative media brand from scratch</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function FounderSection() {
   return (
     <section id="founder" className="relative py-24">
@@ -751,28 +668,24 @@ function FounderPortfolio() {
   }, []);
 
   const pages = [
-    { type: "image", src: "/founder/founder_hero.png", alt: "Ram Prasath Portfolio", showScroll: true },
-    { type: "image", src: "/founder/founder_intro.png", alt: "Introduction" },
-    { type: "image", src: "/founder/founder_editor.png", alt: "Editor" },
-    { type: "image", src: "/founder/founder_skills.png", alt: "Personal Skills" },
-    { type: "component", alt: "Work Experience", component: <WorkExperienceSlide /> },
-    { type: "image", src: "/founder/founder_thanks.png", alt: "Thank You" }
+    { src: "/founder/founder_hero.png", alt: "Ram Prasath Portfolio", showScroll: true },
+    { src: "/founder/founder_intro.png", alt: "Introduction" },
+    { src: "/founder/founder_editor.png", alt: "Editor" },
+    { src: "/founder/founder_skills.png", alt: "Personal Skills" },
+    { src: "/founder/founder_experience.png", alt: "Work Experience" },
+    { src: "/founder/founder_thanks.png", alt: "Thank You" }
   ];
 
   return (
     <div className="h-screen w-full overflow-y-auto snap-y snap-mandatory bg-[#050505]">
       {pages.map((page, index) => (
         <section key={index} className="relative h-screen w-full snap-start overflow-hidden flex items-center justify-center">
-          {page.type === "image" ? (
-            <img 
-              src={page.src} 
-              alt={page.alt} 
-              className="h-full w-full object-contain md:object-cover"
-              loading={index === 0 ? "eager" : "lazy"}
-            />
-          ) : (
-            page.component
-          )}
+          <img 
+            src={page.src} 
+            alt={page.alt} 
+            className="h-full w-full object-contain md:object-cover"
+            loading={index === 0 ? "eager" : "lazy"}
+          />
           {page.showScroll && (
             <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3">
               <span className="text-white/40 text-[10px] font-bold uppercase tracking-[0.4em] animate-pulse">Scroll Down</span>
