@@ -124,7 +124,7 @@ const reviews = [
 const stats = [
   { label: "Works Done", value: "50+" },
   { label: "Happy Clients", value: "30+" },
-  { label: "Years Experience", value: "5+" }
+  { label: "Years Experience", value: "2.5+" }
 ];
 
 const ourWorks = [
