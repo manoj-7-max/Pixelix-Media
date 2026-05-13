@@ -291,9 +291,8 @@ function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
         <img src="/logo.png" className="h-10 w-auto opacity-40" alt="Pixelix" />
         <div className="flex gap-8 text-[10px] font-bold uppercase tracking-[0.3em] text-white/30">
-          <a href={INSTAGRAM_URL} className="hover:text-white transition-colors">Instagram</a>
-          <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
-          <a href="#" className="hover:text-white transition-colors">Privacy</a>
+          <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
+          <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
         </div>
         <p className="text-[10px] font-bold uppercase tracking-widest text-white/20">
           © 2024 Pixelix Media Studio
@@ -408,6 +407,44 @@ function FounderSection() {
   );
 }
 
+function PrivacyPolicy() {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-[#050507] pt-40 pb-24 px-5">
+      <div className="max-w-4xl mx-auto">
+        <Link to="/" className="mb-12 inline-flex items-center gap-2 text-white/40 hover:text-white uppercase tracking-widest text-[10px] font-bold">
+          <ChevronRight className="rotate-180" size={14} /> Back to Studio
+        </Link>
+        <div className="bento-tile p-10 sm:p-16">
+          <h1 className="text-5xl font-black mb-10">Privacy Policy</h1>
+          <div className="space-y-8 text-white/60 leading-relaxed">
+            <section>
+              <h2 className="text-xl font-bold text-white mb-4">1. Data Collection</h2>
+              <p>At Pixelix Media, we collect minimal personal data necessary to provide our services. This includes contact information provided via our enquiry forms or WhatsApp interaction.</p>
+            </section>
+            <section>
+              <h2 className="text-xl font-bold text-white mb-4">2. Usage of Information</h2>
+              <p>The information collected is used solely for client communication, project management, and improving our creative services. We do not sell or share your data with third-party marketing entities.</p>
+            </section>
+            <section>
+              <h2 className="text-xl font-bold text-white mb-4">3. Visual Assets</h2>
+              <p>As a media agency, visual content produced during our partnerships may be used in our portfolio unless otherwise agreed upon in a signed non-disclosure agreement (NDA).</p>
+            </section>
+            <section>
+              <h2 className="text-xl font-bold text-white mb-4">4. Cookies</h2>
+              <p>Our website uses basic cookies to enhance user experience and analyze traffic patterns via standard web analytics tools.</p>
+            </section>
+            <p className="pt-8 border-t border-white/5 text-[10px] uppercase tracking-widest">Last Updated: May 2024</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function MainContent() {
   return (
     <div className="bg-[#050507] min-h-screen no-scrollbar">
@@ -426,6 +463,7 @@ function MainContent() {
         } />
         <Route path="/services/:id" element={<ServicePage />} />
         <Route path="/founder" element={<FounderPortfolio />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
       </Routes>
     </div>
   );
