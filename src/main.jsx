@@ -226,86 +226,164 @@ function Navbar() {
 
 function Hero() {
   return (
-    <section id="home" className="relative min-h-screen overflow-hidden pt-28">
+    <section id="home" className="relative min-h-[95vh] overflow-hidden pt-32 pb-20 sm:pt-40">
+      {/* Background Enhancements */}
       <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-[#050505]" />
         <img
-          className="h-full w-full object-cover opacity-10 grayscale brightness-50"
+          className="h-full w-full object-cover opacity-[0.08] grayscale mix-blend-overlay"
           src="/portfolio/IMG_6010.JPG.jpeg"
           alt=""
           loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/40 via-[#0D0D0D]/90 to-[#0D0D0D]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#050505]/60 to-[#050505]" />
       </div>
-      <div className="pixel-field opacity-10" />
-      <div className="hero-gradient opacity-40" />
-      <div className="mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-center gap-12 px-5 pb-16 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
-        <motion.div 
-          initial={{ opacity: 0, x: -30 }} 
-          animate={{ opacity: 1, x: 0 }} 
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="z-10"
-        >
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-400/20 bg-white/[0.04] px-4 py-2 text-[11px] sm:text-xs text-blue-100 shadow-glow backdrop-blur-md">
-            <Sparkles size={14} className="text-blue-300 animate-pulse" />
-            <span className="tracking-widest uppercase">Premier Digital Agency</span>
-          </div>
-          <h1 className="max-w-4xl text-4xl font-black leading-[1.1] tracking-tight text-white sm:text-7xl lg:text-8xl">
-            Digital Marketing Agency <br />
-            <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">for Modern Brands.</span>
-          </h1>
-          <p className="mt-8 max-w-xl text-lg leading-relaxed text-white/60 sm:text-xl">
-            Pixelix Media is a leading creative studio in Chennai helping businesses grow through high-end SEO, web development, branding, and social media marketing. We partner with ambitious startups to build a strong online presence and drive results.
-          </p>
-          <div className="mt-10 flex flex-col gap-5 sm:flex-row">
-            <a className="neon-button min-w-[180px] justify-center" href="#contact">
-              Get Free Consultation <ArrowRight size={18} />
-            </a>
-            <a className="ghost-button min-w-[180px] justify-center" href="#services">
-              Our Expertise
-            </a>
-          </div>
-        </motion.div>
+      
+      {/* Animated Glows */}
+      <div className="absolute -left-[10%] top-[10%] h-[500px] w-[500px] rounded-full bg-blue-600/10 blur-[120px] animate-pulse" />
+      <div className="absolute -right-[10%] bottom-[10%] h-[500px] w-[500px] rounded-full bg-purple-600/10 blur-[120px] animate-pulse-slow" />
+      
+      <div className="pixel-field opacity-[0.07]" />
+      <div className="hero-gradient opacity-30" />
 
-        <motion.div
-          className="relative mx-auto w-full max-w-[320px] sm:max-w-[560px] mt-12 lg:mt-0"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
-        >
-          <div className="absolute inset-0 rounded-full bg-blue-500/10 blur-[80px] sm:blur-[120px] animate-pulse" />
-          <div className="relative overflow-hidden rounded-[24px] sm:rounded-[40px] border border-white/10 bg-white/[0.02] p-6 sm:p-8 shadow-2xl backdrop-blur-2xl">
-            <motion.img 
-              className="mx-auto w-full max-w-[480px] object-contain drop-shadow-[0_0_30px_rgba(0,240,255,0.3)]" 
-              src="/logo.png" 
-              alt="Pixelix Media logo"
-              loading="eager"
-              fetchpriority="high"
-              animate={{ 
-                y: [0, -10, 0],
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
-            <div className="mt-8 flex flex-wrap justify-center gap-3">
-              {["Strategy", "Creative", "Growth"].map((item, i) => (
-                <motion.div 
-                  key={item} 
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5 + i * 0.1 }}
-                  className="rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-[10px] font-bold uppercase tracking-[0.2em] text-blue-100/90 backdrop-blur-md"
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid items-center gap-16 lg:grid-cols-[1.1fr_0.9fr]">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2 }}
+              className="mb-8 inline-flex items-center gap-3 rounded-full border border-blue-400/20 bg-blue-400/5 px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.2em] text-blue-300 shadow-glow backdrop-blur-xl"
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+              </span>
+              Premier Digital Creative Studio
+            </motion.div>
+            
+            <h1 className="text-5xl font-black leading-[1.05] tracking-tight text-white sm:text-7xl lg:text-8xl">
+              <span className="block">Transforming</span>
+              <span className="block bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent pb-2">Digital Vision</span>
+              <span className="block">into Reality.</span>
+            </h1>
+            
+            <p className="mt-8 max-w-xl text-lg leading-relaxed text-white/50 sm:text-xl lg:text-2xl">
+              Elevating brands through cinematic storytelling, high-performance web engineering, and data-driven marketing strategies that command attention.
+            </p>
+            
+            <div className="mt-12 flex flex-col gap-5 sm:flex-row">
+              <a className="neon-button group min-w-[200px] justify-center text-base" href="#contact">
+                Start a Project 
+                <motion.div
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
                 >
-                  {item}
+                  <ArrowRight size={20} />
                 </motion.div>
-              ))}
+              </a>
+              <a className="ghost-button min-w-[200px] justify-center text-base border-white/5 hover:border-blue-400/30" href="#services">
+                Explore Expertise
+              </a>
             </div>
-          </div>
-        </motion.div>
+
+            {/* Quick Stats/Trust badges */}
+            <div className="mt-16 flex items-center gap-8 border-t border-white/5 pt-12 opacity-60">
+              <div>
+                <p className="text-2xl font-black text-white">50+</p>
+                <p className="text-[10px] font-bold uppercase tracking-widest text-blue-400/80">Productions</p>
+              </div>
+              <div className="h-8 w-px bg-white/10" />
+              <div>
+                <p className="text-2xl font-black text-white">30+</p>
+                <p className="text-[10px] font-bold uppercase tracking-widest text-purple-400/80">Global Brands</p>
+              </div>
+              <div className="h-8 w-px bg-white/10" />
+              <div>
+                <p className="text-2xl font-black text-white">2.5+</p>
+                <p className="text-[10px] font-bold uppercase tracking-widest text-cyan-400/80">Years Exp</p>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="relative"
+            initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+            transition={{ duration: 1.2, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+          >
+            {/* Visual Elements behind logo */}
+            <div className="absolute -inset-10 bg-gradient-to-tr from-blue-600/20 to-purple-600/20 blur-[100px] opacity-50" />
+            
+            <div className="relative z-10 flex items-center justify-center py-12 lg:py-0">
+              <div className="relative h-[320px] w-[320px] sm:h-[500px] sm:w-[500px]">
+                {/* Floating Rings */}
+                {[...Array(3)].map((_, i) => (
+                  <motion.div
+                    key={i}
+                    className="absolute inset-0 rounded-full border border-white/5"
+                    animate={{ 
+                      rotate: 360,
+                      scale: [1, 1.05, 1],
+                    }}
+                    transition={{ 
+                      rotate: { duration: 20 + i * 5, repeat: Infinity, ease: "linear" },
+                      scale: { duration: 4, repeat: Infinity, ease: "easeInOut", delay: i * 0.5 }
+                    }}
+                    style={{ padding: `${i * 40}px` }}
+                  />
+                ))}
+                
+                {/* Main Logo Container */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <motion.div 
+                    className="relative p-12 sm:p-16 rounded-[48px] border border-white/10 bg-white/[0.03] shadow-2xl backdrop-blur-3xl overflow-hidden group"
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ duration: 0.4 }}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <img 
+                      className="relative h-auto w-full max-w-[280px] sm:max-w-[340px] drop-shadow-[0_0_50px_rgba(59,130,246,0.4)]" 
+                      src="/logo.png" 
+                      alt="Pixelix Media" 
+                    />
+                  </motion.div>
+                </div>
+
+                {/* Floating Tech Chips/Icons */}
+                <FloatingIcon Icon={Camera} className="top-10 right-10 bg-blue-500/20" delay={0} />
+                <FloatingIcon Icon={Clapperboard} className="bottom-20 -left-5 bg-purple-500/20" delay={0.5} />
+                <FloatingIcon Icon={Sparkles} className="top-1/2 -right-10 bg-cyan-500/20" delay={1} />
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
+  );
+}
+
+function FloatingIcon({ Icon, className = "", delay = 0 }) {
+  return (
+    <motion.div
+      className={`absolute hidden sm:flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 backdrop-blur-xl ${className}`}
+      animate={{ 
+        y: [0, -15, 0],
+        rotate: [0, 5, -5, 0]
+      }}
+      transition={{ 
+        duration: 5,
+        repeat: Infinity,
+        ease: "easeInOut",
+        delay
+      }}
+    >
+      <Icon size={24} className="text-white/80" />
+    </motion.div>
   );
 }
 
