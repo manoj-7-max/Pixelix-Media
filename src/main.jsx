@@ -99,11 +99,43 @@ function HeroBento() {
     <section className="pt-32 pb-12 px-5 sm:px-10 max-w-7xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 lg:gap-6">
         {/* Main Hero Tile */}
-        <div className="bento-tile md:col-span-3 md:row-span-2 p-10 lg:p-16 flex flex-col justify-end min-h-[500px]">
-          <div className="absolute inset-0 z-0">
-            <img src="/portfolio/IMG_6010.JPG.jpeg" className="h-full w-full object-cover opacity-20 grayscale" alt="" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+        <div className="bento-tile md:col-span-3 md:row-span-2 p-10 lg:p-16 flex flex-col justify-end min-h-[500px] overflow-hidden">
+          {/* Dynamic Abstract Visuals */}
+          <div className="absolute inset-0 z-0 overflow-hidden">
+            {/* Animated Gradient Mesh */}
+            <motion.div 
+              animate={{ 
+                scale: [1, 1.2, 1],
+                rotate: [0, 90, 0],
+              }}
+              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              className="absolute -top-[50%] -left-[50%] h-[200%] w-[200%] bg-[radial-gradient(circle_at_center,_rgba(59,130,246,0.15)_0%,_transparent_50%),_radial-gradient(circle_at_center,_rgba(139,92,246,0.1)_0%,_transparent_50%)]"
+              style={{ backgroundPosition: '20% 30%, 80% 70%' }}
+            />
+            
+            {/* Floating Wireframe Visuals */}
+            <div className="absolute inset-0 flex items-center justify-center opacity-20">
+              <div className="grid grid-cols-8 gap-4 w-full h-full p-10">
+                {[...Array(32)].map((_, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: [0.1, 0.3, 0.1] }}
+                    transition={{ duration: Math.random() * 5 + 2, repeat: Infinity, delay: Math.random() * 2 }}
+                    className="h-px w-full bg-blue-500/30"
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Glowing Orbs */}
+            <div className="absolute top-1/4 left-1/4 h-64 w-64 bg-blue-500/20 blur-[120px] rounded-full animate-pulse" />
+            <div className="absolute bottom-1/4 right-1/4 h-64 w-64 bg-purple-500/20 blur-[120px] rounded-full animate-pulse-slow" />
+            
+            {/* Noise Texture */}
+            <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
           </div>
+
           <div className="relative z-10">
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
