@@ -128,40 +128,6 @@ const stats = [
   { label: "Awards Won", value: "12+" }
 ];
 
-const reviews = [
-  {
-    name: "Anjali Sharma",
-    role: "Founder, Bloom Fashion",
-    text: "Pixelix Media transformed our brand's presence. Their cinematic reels and photography are simply world-class. We saw a 3x increase in engagement!",
-    stars: 5
-  },
-  {
-    name: "Rahul Kumar",
-    role: "Marketing Head, TechNova",
-    text: "The most professional team we've worked with. Their SEO strategy helped us rank for high-competition keywords in just a few months.",
-    stars: 5
-  },
-  {
-    name: "Priya Menon",
-    role: "Owner, Organic Eats",
-    text: "Exceeded all expectations. Their branding identity work gave our business the premium look we needed to stand out.",
-    stars: 5
-  },
-  {
-    name: "Karthik Raja",
-    role: "CEO, Spark Events",
-    text: "Incredible attention to detail in their event coverage. Every shot captures the emotion perfectly. Pixelix is our go-to media partner.",
-    stars: 5
-  }
-];
-
-const stats = [
-  { label: "Works Done", value: "50+" },
-  { label: "Happy Clients", value: "30+" },
-  { label: "Years Experience", value: "5+" },
-  { label: "Awards Won", value: "12+" }
-];
-
 const ourWorks = [
   { type: "image", category: "Photoshoot", src: "/portfolio/IMG-20260207-WA0044.jpg.jpeg" },
   { type: "image", category: "Photoshoot", src: "/portfolio/IMG_5955.JPG.jpeg" },
