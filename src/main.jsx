@@ -124,8 +124,7 @@ const reviews = [
 const stats = [
   { label: "Works Done", value: "50+" },
   { label: "Happy Clients", value: "30+" },
-  { label: "Years Experience", value: "5+" },
-  { label: "Awards Won", value: "12+" }
+  { label: "Years Experience", value: "5+" }
 ];
 
 const ourWorks = [
@@ -314,7 +313,7 @@ function Stats() {
   return (
     <section className="relative py-12 border-y border-white/5 bg-white/[0.01]">
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
           {stats.map((stat, i) => (
             <Reveal key={i} delay={i * 0.1}>
               <div className="text-center">
