@@ -14,67 +14,67 @@ const INTRO_STORAGE_KEY = "pixelixIntroSeenV2";
 const services = [
   { 
     id: "professional-photoshoot", 
-    title: "Professional Photoshoot", 
-    text: "High-end brand portraits and commercial photography for businesses in Tamil Nadu.", 
+    title: "Cinematic Photography", 
+    text: "Capturing brand essence through high-precision commercial and portrait photography.", 
     icon: Camera,
-    longDescription: "As a premier digital marketing agency, we provide professional photoshoot services for brands, products, and individuals. Our high-end equipment and lighting setup ensure cinematic quality in every shot. We specialize in commercial photography that captures your brand's essence, helping you stand out in a competitive market. Whether you need corporate headshots, product catalogs, or fashion editorials, our Chennai studio delivers world-class results. Our team of experienced photographers understands market trends, ensuring your visuals resonate with your target audience. We use state-of-the-art retouching techniques to ensure every image is pixel-perfect and ready for high-end marketing campaigns.",
-    features: ["Brand Portraits", "Product Photography", "Commercial Shoots", "Fashion Photography"]
+    longDescription: "We deliver visual excellence that commands attention. Our professional photography services focus on technical precision and creative storytelling, ensuring every frame resonates with your target audience and elevates your brand's market position.",
+    features: ["Executive Portraits", "Industrial Photography", "Product Catalogs", "Fashion Editorials"]
   },
   { 
     id: "cinematic-videography", 
-    title: "Cinematic Videography", 
-    text: "Story-driven film production and brand commercials for ambitious startups.", 
-    icon: Clapperboard,
-    longDescription: "Transform your brand's narrative with cinematic videography. We specialize in high-end production, from raw concepts to polished film stories that resonate with your local and global audience. Our video production services are designed for maximum impact, combining technical expertise with creative storytelling. We produce everything from 15-second social media reels to full-scale brand documentaries for businesses in Tamil Nadu. As a premier videography company in Chennai, we focus on high-production value that drives engagement and conversions. Our process includes detailed pre-production planning, professional cinematography, and expert post-production to ensure your brand story is told effectively across all digital platforms.",
-    features: ["Brand Films", "Commercial Ads", "Event Highlights", "Social Media Reels"]
+    title: "Cinematic Production", 
+    text: "High-impact video storytelling for modern brands and corporate narratives.", 
+    icon: Video,
+    longDescription: "Transforming raw concepts into polished cinematic experiences. We specialize in high-production value videography, from viral social media assets to comprehensive brand documentaries that drive deep engagement and conversion.",
+    features: ["Brand Films", "Social Reels", "Corporate Documentaries", "Product Launch Videos"]
   },
   { 
-    id: "branding", 
-    title: "Branding & Identity", 
-    text: "Visual identity and positioning that makes your brand unmistakable.", 
+    id: "branding-agency", 
+    title: "Strategic Branding", 
+    text: "Forging unmistakable identities through deep research and world-class design systems.", 
     icon: Palette,
-    longDescription: "Pixelix Media is a premier branding agency in Chennai. Your brand is your promise to your customers. We craft visual identities that command attention and build trust through deep research, typography, and color psychology tailored for your audience. Our comprehensive branding services include logo design, brand strategy, design systems, and packaging. We help startups and established companies redefine their market position. By understanding cultural nuances and broader market trends, we create brand experiences that are both authentic and globally relevant. Our goal is to make your business unmistakable and highly memorable through strategic creative direction.",
-    features: ["Logo & Visual Identity", "Brand Strategy", "Design Systems", "Packaging Design"]
+    longDescription: "Your brand is your most valuable asset. We craft cohesive visual identities and strategic brand systems that build trust and distinction in competitive landscapes, ensuring long-term recognition and authority.",
+    features: ["Visual Identity", "Design Systems", "Brand Strategy", "Market Positioning"]
   },
   { 
     id: "digital-marketing", 
-    title: "Digital Marketing Strategy", 
-    text: "Data-driven strategies to amplify your brand's digital presence.", 
-    icon: Megaphone,
-    longDescription: "We are a leading digital marketing agency in Chennai, crafting comprehensive digital marketing roadmaps that turn browsers into buyers. Our approach combines SEO, performance analytics, and growth hacking to help businesses scale effectively. We focus on measurable results, ensuring your marketing budget is utilized to its full potential. From search engine optimization to email marketing, we cover all aspects of the digital landscape. Our team of experts stays ahead of the latest algorithm updates and market trends to keep your brand at the top of search results. We believe in transparency and data-driven decision-making, providing regular reports that show the real impact of our marketing efforts on your business growth.",
-    features: ["SEO Optimization", "Analytics & Reporting", "Growth Hacking", "Email Marketing"]
+    title: "Growth Engineering", 
+    text: "Performance-driven digital roadmaps designed to scale your business footprint.", 
+    icon: BarChart3,
+    longDescription: "We don't just market; we engineer growth. Our comprehensive digital strategies combine search optimization, performance analytics, and precision targeting to turn market opportunities into measurable revenue.",
+    features: ["SEO Strategy", "Market Analysis", "Growth Hacking", "ROI Optimization"]
   },
   { 
     id: "paid-marketing", 
-    title: "Performance Marketing", 
-    text: "High-ROI ad campaigns across search and social platforms for rapid growth.", 
+    title: "Precision Ads", 
+    text: "ROI-focused performance marketing across Google and Meta platforms.", 
     icon: Target,
-    longDescription: "Maximize your reach with precision-targeted paid campaigns and Google Ads. We manage your ad spend across Google and Meta to deliver measurable ROI for businesses across Tamil Nadu. Our performance marketing strategies focus on lead generation and sales conversion. We perform deep keyword research and audience segmentation to ensure your ads reach the right people at the right time. As a specialized performance agency in Chennai, we optimize your campaigns daily to lower acquisition costs and increase lifetime value. Whether you are looking for local foot traffic or global e-commerce sales, our paid marketing experts design funnels that convert.",
-    features: ["Google Ads (SEM)", "Meta Ads", "Retargeting", "Lead Gen Funnels"]
+    longDescription: "Maximize your reach with precision-targeted paid campaigns. We manage your ad spend with technical rigor, optimizing for lead generation and sales conversion to deliver industry-leading return on investment.",
+    features: ["Google Ads", "Meta Campaigns", "Funnel Optimization", "Lead Generation"]
   },
   { 
-    id: "social-media", 
-    title: "Social Media Management", 
-    text: "Content calendars and community management that drive momentum for your brand.", 
+    id: "social-media-marketing", 
+    title: "Social Authority", 
+    text: "Building loyal brand communities through strategic content and engagement.", 
     icon: Share2,
-    longDescription: "We turn social feeds into brand assets with expert social media marketing. By combining trend-aware content with strategic posting, we build loyal communities for your brand across India. Our social media experts manage your presence on Instagram, LinkedIn, and Facebook, ensuring consistent brand voice and high engagement. We create content that people want to share, from viral reels to informative carousels. As a top social media agency in Chennai, we understand the power of community. We don't just post; we engage with your audience, handling comments and messages to build real relationships. Our influencer marketing strategies connect your brand with the right voices to expand your reach and credibility.",
-    features: ["Content Creation", "Community Management", "Influencer Strategy", "Social Ads"]
+    longDescription: "We turn social channels into brand assets. By combining trend-aware creative with strategic distribution, we build loyal communities and expand your brand's voice across India's digital landscape.",
+    features: ["Content Strategy", "Community Management", "Influencer Partnerships", "Engagement Growth"]
   },
   { 
-    id: "traditional-marketing", 
-    title: "Traditional Marketing", 
-    text: "Offline branding and marketing for real-world impact.", 
-    icon: Newspaper,
-    longDescription: "Bridge the gap between digital and physical media with our traditional marketing services. We help businesses create high-impact strategies from print media to outdoor advertising. Our team understands the importance of a physical presence in the market. We design eye-catching billboards, newspaper ads, and direct mail campaigns that complement your digital efforts. Traditional marketing remains a powerful tool for brand building, and we ensure your offline message is perfectly aligned with your online identity. We also manage event sponsorships and BTL activities that put your brand directly in front of your target audience in the real world.",
-    features: ["Print Media", "Outdoor Ads", "Event Sponsorships", "Direct Mail"]
+    id: "web-design", 
+    title: "Web Engineering", 
+    text: "High-performance digital architecture built for conversion and scale.", 
+    icon: Globe,
+    longDescription: "Your website is the heart of your digital ecosystem. We build high-performance, aesthetically stunning web architectures that merge seamless user experience with industrial-grade engineering for maximum conversion.",
+    features: ["E-commerce", "Corporate Portals", "UX/UI Design", "Performance Optimization"]
   },
   { 
     id: "content-marketing", 
-    title: "Content Marketing", 
-    text: "Storytelling that builds authority and engages your audience.", 
-    icon: PenTool,
-    longDescription: "Value-driven content that attracts and retains your target audience. We build long-term brand authority through strategic storytelling and content marketing services. Our content strategy includes blog creation, e-book production, and newsletter management. We focus on SEO copywriting that ranks on Google while providing genuine value to your readers. As a leading content agency in Chennai, we help you become a thought leader in your industry. By producing high-quality, relevant content, we help you build a loyal audience that trusts your expertise. Our team ensures that every piece of content is optimized for modern search engines, making your brand the top choice for AI search results.",
-    features: ["Blog Creation", "E-books", "Newsletter Strategy", "SEO Copywriting"]
+    title: "Authority Content", 
+    text: "Strategic storytelling that builds trust and dominates search results.", 
+    icon: FileText,
+    longDescription: "Establish market leadership through high-value content. We produce strategic narratives that educate, inspire, and convert, while ensuring your brand remains at the forefront of modern search and AI engines.",
+    features: ["Thought Leadership", "SEO Copywriting", "Strategic Blogging", "Newsletter Systems"]
   },
   { 
     id: "affiliate-marketing", 
@@ -408,25 +408,31 @@ function Stats() {
 
 function Services() {
   return (
-    <section id="services" className="relative py-24">
+    <section id="services" className="relative py-32 bg-[#050505]">
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <Reveal className="max-w-4xl">
-          <p className="eyebrow">Our Expertise</p>
-          <h2 className="text-3xl font-black text-white sm:text-5xl lg:text-6xl leading-[1.2]">Premium Website Development, Branding, and Media Production.</h2>
+          <p className="eyebrow">Strategic Expertise</p>
+          <h2 className="text-4xl font-black text-white sm:text-6xl lg:text-7xl leading-[1.1]">
+            Engineering Excellence in <br/>
+            <span className="text-blue-500">Design & Growth.</span>
+          </h2>
         </Reveal>
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-20 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <Reveal key={service.id} delay={index * 0.04}>
-                <Link to={`/services/${service.id}`} className="service-card group block">
-                  <div className="icon-shell">
-                    <Icon size={24} />
-                  </div>
-                  <h3 className="mt-6 text-xl font-bold text-white">{service.title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-white/64">{service.text}</p>
-                  <div className="mt-6 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-cyan-400 opacity-0 transition-opacity group-hover:opacity-100">
-                    Learn More <ArrowRight size={14} />
+              <Reveal key={service.id} delay={index * 0.05}>
+                <Link to={`/services/${service.id}`} className="group relative block rounded-3xl border border-white/5 bg-white/[0.02] p-8 transition-all hover:border-blue-500/30 hover:bg-white/[0.04] hover:-translate-y-2">
+                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="relative z-10">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-500/10 text-blue-400 border border-blue-500/20 group-hover:bg-blue-500 group-hover:text-white transition-all">
+                      <Icon size={28} />
+                    </div>
+                    <h3 className="mt-8 text-2xl font-bold text-white">{service.title}</h3>
+                    <p className="mt-4 text-white/50 leading-relaxed">{service.text}</p>
+                    <div className="mt-8 flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-blue-400">
+                      Learn Strategy <ArrowRight size={16} />
+                    </div>
                   </div>
                 </Link>
               </Reveal>
@@ -540,42 +546,47 @@ const WorkCard = React.memo(({ item }) => {
 
 function About() {
   return (
-    <section id="about" className="relative overflow-hidden py-24">
-      <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
-        <Reveal>
-          <div className="glass-panel about-panel h-full">
-            <p className="eyebrow">About Pixelix</p>
-            <h2 className="mt-4 text-4xl font-black text-white sm:text-5xl">Built for brands that need sharp digital presence.</h2>
-            <div className="mt-8 grid gap-3 sm:grid-cols-3">
-              {[
-                ["Strategy", "Market clarity"],
-                ["Creative", "Premium visuals"],
-                ["Growth", "Lead momentum"],
-              ].map(([title, text]) => (
-                <div key={title} className="rounded-2xl border border-white/10 bg-black/24 p-4">
-                  <p className="text-lg font-black text-white">{title}</p>
-                  <p className="mt-1 text-sm text-white/58">{text}</p>
-                </div>
-              ))}
+    <section id="about" className="relative overflow-hidden py-32 bg-[#050505]">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+        <div className="grid gap-16 lg:grid-cols-2">
+          <Reveal>
+            <div className="relative">
+              <p className="eyebrow">The Studio</p>
+              <h2 className="mt-6 text-5xl font-black text-white sm:text-7xl leading-tight">Built for brands that <br/><span className="text-blue-500">demand excellence.</span></h2>
+              <div className="mt-12 grid gap-4 sm:grid-cols-3">
+                {[
+                  ["Strategic", "Market Clarity"],
+                  ["Creative", "Visual Power"],
+                  ["Digital", "Performance"],
+                ].map(([title, text]) => (
+                  <div key={title} className="rounded-2xl border border-white/5 bg-white/[0.02] p-6 backdrop-blur-xl">
+                    <p className="text-xl font-black text-white">{title}</p>
+                    <p className="mt-1 text-xs uppercase tracking-widest text-blue-400 font-bold">{text}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        </Reveal>
-        <Reveal delay={0.08}>
-          <div className="space-y-6 text-base leading-8 text-white/70">
-            <p>
-              Pixelix Media is a leading <Link to="/" className="text-cyan-400 hover:underline">digital marketing agency</Link> and a premier <Link to="/" className="text-cyan-400 hover:underline">SEO company</Link> based in Chennai, Tamil Nadu. Our studio is built on the core belief that modern brands need a seamless fusion of strategic thinking and high-end media production. We don't just provide services; we build digital ecosystems that thrive in the competitive marketplace.
-            </p>
-            <p>
-              Our creative studio helps businesses turn raw ideas into sharp marketing campaigns, memorable visuals, and high-converting digital experiences. As a trusted <Link to="/" className="text-cyan-400 hover:underline">web design agency</Link>, we focus on architectural excellence and performance-first engineering. We understand that your website is your digital storefront, and it must be built to convert visitors into loyal customers.
-            </p>
-            <p>
-              Serving startups and established businesses, our mission is to give growing brands a premium creative partner for <Link to="/" className="text-cyan-400 hover:underline">SEO services</Link>, <Link to="/" className="text-cyan-400 hover:underline">branding</Link> expertise, and <Link to="/" className="text-cyan-400 hover:underline">website development</Link>. We combine market insights with global design standards to ensure your brand stands out everywhere. Trusted by businesses across Tamil Nadu, we are dedicated to driving measurable growth for all our clients.
-            </p>
-            <p>
-              Why is digital marketing important? In the digital era, your online presence defines your credibility. Pixelix Media helps you bridge the gap between your brand and your audience through data-driven performance marketing, expert social media management, and cinematic storytelling. Whether you need Google Ads or a complete brand overhaul, we have the technical skills and creative vision to deliver results.
-            </p>
-          </div>
-        </Reveal>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <div className="space-y-8 text-lg leading-relaxed text-white/40">
+              <p className="text-white/70">
+                Pixelix Media is a high-performance <span className="text-white font-semibold">creative engineering studio</span>. We operate at the intersection of cinematic storytelling and industrial-grade digital marketing.
+              </p>
+              <p>
+                Our philosophy is simple: <span className="text-blue-400">Design should convert, and strategy should scale.</span> We partner with ambitious leaders to build digital ecosystems that don't just exist—they dominate.
+              </p>
+              <p>
+                From our roots in Tamil Nadu to a global creative vision, we've redefined what it means to be a "digital agency". We are your strategic partners in the pursuit of market authority and visual distinction.
+              </p>
+              <div className="pt-8 flex items-center gap-4 border-t border-white/5">
+                <div className="h-12 w-12 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400">
+                  <Sparkles size={20} />
+                </div>
+                <p className="text-sm font-bold uppercase tracking-[0.2em] text-white">Pixelix Quality Assurance</p>
+              </div>
+            </div>
+          </Reveal>
+        </div>
       </div>
     </section>
   );
@@ -583,30 +594,35 @@ function About() {
 
 function Reviews() {
   return (
-    <section id="reviews" className="relative py-24 bg-white/[0.01]">
+    <section id="reviews" className="relative py-32 bg-[#050505]">
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-        <Reveal className="text-center mb-16">
-          <p className="eyebrow">Testimonials</p>
-          <h2 className="section-title mx-auto">Customer Reviews</h2>
-          <p className="mt-6 text-lg text-white/60 mx-auto max-w-2xl">
-            Don't just take our word for it. Here is what our clients have to say about their experience with Pixelix Media.
+        <Reveal className="text-center mb-20">
+          <p className="eyebrow">Social Proof</p>
+          <h2 className="section-title mx-auto">Market Authority.</h2>
+          <p className="mt-6 text-xl text-white/40 mx-auto max-w-2xl leading-relaxed">
+            Trusted by founders and marketing leaders who value technical rigor and creative distinction.
           </p>
         </Reveal>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {reviews.map((review, i) => (
             <Reveal key={i} delay={i * 0.1}>
-              <div className="glass-panel h-full flex flex-col justify-between group hover:border-cyan-400/50 transition-colors">
+              <div className="relative rounded-3xl border border-white/5 bg-white/[0.02] p-8 h-full flex flex-col justify-between group transition-all hover:bg-white/[0.04]">
                 <div>
-                  <div className="flex gap-1 mb-6 text-yellow-500">
+                  <div className="flex gap-1 mb-8 text-blue-400">
                     {[...Array(review.stars)].map((_, i) => (
-                      <Sparkles key={i} size={14} fill="currentColor" />
+                      <Star key={i} size={14} fill="currentColor" />
                     ))}
                   </div>
-                  <p className="text-white/80 leading-relaxed italic">"{review.text}"</p>
+                  <p className="text-white/70 leading-relaxed italic text-lg">"{review.text}"</p>
                 </div>
-                <div className="mt-8 pt-6 border-t border-white/5">
-                  <p className="text-white font-bold">{review.name}</p>
-                  <p className="text-xs text-cyan-400/80 uppercase tracking-widest mt-1">{review.role}</p>
+                <div className="mt-12 flex items-center gap-4">
+                  <div className="h-10 w-10 rounded-full bg-gradient-to-tr from-blue-600 to-purple-600 p-px">
+                    <div className="h-full w-full rounded-full bg-[#0D0D0D]" />
+                  </div>
+                  <div>
+                    <p className="text-white font-bold text-sm">{review.name}</p>
+                    <p className="text-[10px] text-blue-400/80 uppercase tracking-widest font-black mt-0.5">{review.role}</p>
+                  </div>
                 </div>
               </div>
             </Reveal>
@@ -734,20 +750,25 @@ function Field({ label, ...props }) {
 
 function FAQ() {
   return (
-    <section id="faq" className="py-24">
+    <section id="faq" className="py-32 bg-[#050505]">
       <div className="mx-auto max-w-4xl px-5 sm:px-6 lg:px-8">
-        <Reveal>
-          <p className="eyebrow">FAQ</p>
-          <h2 className="section-title">Answers for fast-moving brands.</h2>
+        <Reveal className="text-center mb-20">
+          <p className="eyebrow">Knowledge Base</p>
+          <h2 className="text-4xl font-black text-white sm:text-5xl">Strategic Insights.</h2>
         </Reveal>
-        <div className="mt-10 space-y-4">
+        <div className="space-y-4">
           {faqs.map((faq, index) => (
             <Reveal key={faq.question} delay={index * 0.05}>
-              <details className="faq-card" open={index === 0}>
-                <summary>
-                  <h3 className="inline text-inherit font-bold">{faq.question}</h3>
+              <details className="group rounded-3xl border border-white/5 bg-white/[0.01] p-6 transition-all hover:bg-white/[0.03]" open={index === 0}>
+                <summary className="flex cursor-pointer items-center justify-between list-none font-bold text-lg text-white">
+                  <span>{faq.question}</span>
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-blue-400 transition-transform group-open:rotate-180">
+                    <ArrowRight className="rotate-90" size={16} />
+                  </span>
                 </summary>
-                <p className="mt-4 text-white/60 leading-relaxed">{faq.answer}</p>
+                <div className="mt-6 border-t border-white/5 pt-6 text-white/50 leading-relaxed">
+                  {faq.answer}
+                </div>
               </details>
             </Reveal>
           ))}
@@ -793,32 +814,38 @@ function FloatingWhatsApp() {
 
 function FounderSection() {
   return (
-    <section id="founder" className="relative py-24">
+    <section id="founder" className="relative py-32 bg-[#050505]">
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <Reveal>
-          <div className="glass-panel overflow-hidden !p-0 relative min-h-[600px] flex items-center">
-            {/* Background Image - Full Scale & Original Color */}
+          <div className="relative rounded-[40px] border border-white/5 bg-white/[0.01] overflow-hidden min-h-[600px] flex items-center">
+            {/* Background Image */}
             <img 
               src="/founder/founder_hero.png" 
               alt="Ram Prasath - Founder of Pixelix Media" 
-              className="absolute inset-0 h-full w-full object-cover object-center transition-all duration-700"
-              onError={(e) => { e.target.src = "/logo.png"; e.target.className = "absolute inset-0 m-auto h-32 w-auto object-contain opacity-20"; }}
+              className="absolute inset-0 h-full w-full object-cover object-center lg:object-[center_top]"
+              onError={(e) => { e.target.src = "/logo.png"; e.target.className = "absolute inset-0 m-auto h-32 w-auto object-contain opacity-10"; }}
             />
-            {/* Sophisticated dark gradient overlay for readability */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0D0D0D] via-[#0D0D0D]/80 to-transparent lg:w-2/3 hidden lg:block" />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/90 via-[#0D0D0D]/40 to-transparent lg:hidden block" />
+            {/* Desktop Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/80 to-transparent lg:w-2/3 hidden lg:block" />
+            {/* Mobile Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-b from-[#050505]/95 via-[#050505]/60 to-[#050505]/20 lg:hidden block" />
             
-            {/* Content Section */}
-            <div className="relative z-10 p-6 sm:p-12 lg:p-20 max-w-2xl w-full">
-              <p className="eyebrow">Creative Leadership</p>
-              <h2 className="mt-4 text-4xl font-black text-white sm:text-6xl lg:text-7xl">Ram Prasath</h2>
-              <p className="mt-2 text-xl font-medium text-cyan-400 uppercase tracking-widest">Founder & Creative Head</p>
-              <p className="mt-8 text-lg leading-relaxed text-white/80">
-                A visionary creator specializing in high-end cinematic visuals and digital branding. From raw concepts to polished brand stories, Ram leads the creative vision at Pixelix Media.
+            <div className="relative z-10 p-8 sm:p-16 lg:p-24 max-w-3xl">
+              <div className="mb-8 inline-flex items-center gap-3 rounded-full border border-blue-500/20 bg-blue-500/5 px-5 py-2 text-[10px] font-black uppercase tracking-[0.3em] text-blue-400">
+                Founding Vision
+              </div>
+              <h2 className="text-5xl font-black text-white sm:text-7xl lg:text-8xl tracking-tight">Ram Prasath</h2>
+              <p className="mt-4 text-xl font-bold text-white/40 uppercase tracking-widest flex items-center gap-4">
+                Creative Director
+                <span className="h-px w-12 bg-white/10" />
+                Pixelix Founder
               </p>
-              <div className="mt-10">
-                <Link to="/founder" className="neon-button inline-flex items-center gap-2">
-                  View Founder Portfolio <ArrowRight size={18} />
+              <p className="mt-10 text-lg leading-relaxed text-white/50 max-w-xl">
+                A multidisciplinary creator specializing in the intersection of high-end cinematic visuals and strategic digital branding. Ram leads the studio with a commitment to technical precision and visual distinction.
+              </p>
+              <div className="mt-12">
+                <Link to="/founder" className="neon-button px-10">
+                  Enter Founder Portfolio <ArrowRight size={20} className="ml-2" />
                 </Link>
               </div>
             </div>
