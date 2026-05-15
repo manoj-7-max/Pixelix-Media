@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { 
   ArrowRight, Camera, Video, Palette, BarChart3, Target, Share2, Globe, FileText, 
   Mail, Phone, Instagram, Star, Sparkles, LayoutGrid, Zap, ShieldCheck, 
-  ChevronRight, Play, Award, Heart
+  ChevronRight, Play, Award, Heart, Megaphone, Users, Newspaper, PenTool, Link as LinkIcon
 } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { BrowserRouter as Router, Routes, Route, Link, useParams, useNavigate, useLocation } from "react-router-dom";
@@ -16,34 +16,102 @@ const services = [
   { 
     id: "cinematic-photography", 
     title: "Cinematic Photography", 
-    text: "Visual excellence that commands market authority.", 
+    text: "Visual excellence that commands market authority through high-end imagery.", 
     icon: Camera,
     color: "from-blue-500 to-indigo-600",
-    size: "large"
+    size: "large",
+    longDescription: "Elevate your brand with world-class photography. We specialize in capturing the essence of your business, from executive portraits to industrial landscapes, ensuring every frame projects authority and professional distinction.",
+    features: ["Executive Portraits", "Industrial Photography", "Product Catalogs", "Fashion Editorials"]
   },
   { 
-    id: "strategic-branding", 
-    title: "Strategic Branding", 
-    text: "Forging unmistakable brand identities.", 
-    icon: Palette,
+    id: "cinematic-videography", 
+    title: "Cinematic Production", 
+    text: "High-impact video storytelling for modern brands and corporate narratives.", 
+    icon: Video,
     color: "from-purple-500 to-pink-600",
-    size: "medium"
+    size: "medium",
+    longDescription: "Transforming raw concepts into polished cinematic experiences. We specialize in high-production value videography, from viral social media assets to comprehensive brand documentaries that drive deep engagement and conversion.",
+    features: ["Brand Films", "Social Reels", "Corporate Documentaries", "Product Launch Videos"]
   },
   { 
-    id: "web-engineering", 
-    title: "Web Engineering", 
-    text: "High-performance digital architecture.", 
-    icon: Globe,
+    id: "branding-agency", 
+    title: "Strategic Branding", 
+    text: "Forging unmistakable identities through deep research and design systems.", 
+    icon: Palette,
     color: "from-emerald-500 to-teal-600",
-    size: "medium"
+    size: "medium",
+    longDescription: "Your brand is your most valuable asset. We craft cohesive visual identities and strategic brand systems that build trust and distinction in competitive landscapes, ensuring long-term recognition and authority.",
+    features: ["Visual Identity", "Design Systems", "Brand Strategy", "Market Positioning"]
   },
   { 
-    id: "growth-marketing", 
+    id: "digital-marketing", 
     title: "Growth Engineering", 
-    text: "Scaling your footprint with precision.", 
+    text: "Performance-driven digital roadmaps designed to scale your footprint.", 
     icon: BarChart3,
     color: "from-orange-500 to-red-600",
-    size: "small"
+    size: "small",
+    longDescription: "We don't just market; we engineer growth. Our comprehensive digital strategies combine search optimization, performance analytics, and precision targeting to turn market opportunities into measurable revenue.",
+    features: ["SEO Strategy", "Market Analysis", "Growth Hacking", "ROI Optimization"]
+  },
+  { 
+    id: "paid-marketing", 
+    title: "Precision Ads", 
+    text: "ROI-focused performance marketing across Google and Meta platforms.", 
+    icon: Target,
+    color: "from-red-500 to-rose-600",
+    size: "medium",
+    longDescription: "Maximize your reach with precision-targeted paid campaigns. We manage your ad spend with technical rigor, optimizing for lead generation and sales conversion to deliver industry-leading return on investment.",
+    features: ["Google Ads", "Meta Campaigns", "Funnel Optimization", "Lead Generation"]
+  },
+  { 
+    id: "social-media-marketing", 
+    title: "Social Authority", 
+    text: "Building loyal brand communities through strategic content and engagement.", 
+    icon: Share2,
+    color: "from-blue-600 to-indigo-400",
+    size: "medium",
+    longDescription: "We turn social channels into brand assets. By combining trend-aware creative with strategic distribution, we build loyal communities and expand your brand's voice across India's digital landscape.",
+    features: ["Content Strategy", "Community Management", "Influencer Partnerships", "Engagement Growth"]
+  },
+  { 
+    id: "web-design", 
+    title: "Web Engineering", 
+    text: "High-performance digital architecture built for conversion and scale.", 
+    icon: Globe,
+    color: "from-cyan-500 to-blue-600",
+    size: "medium",
+    longDescription: "Your website is the heart of your digital ecosystem. We build high-performance, aesthetically stunning web architectures that merge seamless user experience with industrial-grade engineering for maximum conversion.",
+    features: ["E-commerce", "Corporate Portals", "UX/UI Design", "Performance Optimization"]
+  },
+  { 
+    id: "content-marketing", 
+    title: "Authority Content", 
+    text: "Strategic storytelling that builds trust and dominates search results.", 
+    icon: FileText,
+    color: "from-amber-500 to-orange-600",
+    size: "small",
+    longDescription: "Establish market leadership through high-value content. We produce strategic narratives that educate, inspire, and convert, while ensuring your brand remains at the forefront of modern search and AI engines.",
+    features: ["Thought Leadership", "SEO Copywriting", "Strategic Blogging", "Newsletter Systems"]
+  },
+  { 
+    id: "affiliate-marketing", 
+    title: "Affiliate Marketing", 
+    text: "Leverage networks to scale your sales and reach across India.", 
+    icon: LinkIcon,
+    color: "from-emerald-400 to-green-600",
+    size: "small",
+    longDescription: "Build a powerful network of partners who sell for you. We design and manage affiliate programs that incentivize high-quality referrals and expand your brand's footprint through trusted voices.",
+    features: ["Program Design", "Partner Management", "Performance Tracking", "Commission Strategy"]
+  },
+  { 
+    id: "event-photography", 
+    title: "Event Coverage", 
+    text: "Professional coverage for corporate events and brand launches.", 
+    icon: Camera,
+    color: "from-blue-400 to-indigo-500",
+    size: "medium",
+    longDescription: "Capture the essence of your events with high-end photography. We provide comprehensive coverage for corporate gatherings, brand launches, and special events with professional quality and live editing options.",
+    features: ["Corporate Events", "Brand Launches", "Product Unveiling", "Live Editing"]
   }
 ];
 
@@ -325,19 +393,19 @@ function ServicePage() {
               <service.icon size={40} />
             </div>
             <h1 className="text-6xl font-black mb-8 leading-tight">{service.title}</h1>
-            <p className="text-2xl text-white/40 leading-relaxed mb-12">{service.text}</p>
+            <p className="text-2xl text-white/40 leading-relaxed mb-12">{service.longDescription || service.text}</p>
             <div className="flex gap-4">
               <a href={WHATSAPP_URL} className="btn-primary">Start Strategy</a>
             </div>
           </div>
           <div className="space-y-6">
-            {[1, 2, 3].map(i => (
+            {(service.features || [1, 2, 3]).map((feature, i) => (
               <div key={i} className="bento-tile p-8 flex items-start gap-6">
                 <div className="h-10 w-10 rounded-full bg-white/5 flex items-center justify-center text-primary flex-shrink-0">
                   <Sparkles size={20} />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold mb-2">Phase {i}: Engineering</h4>
+                  <h4 className="text-lg font-bold mb-2">{typeof feature === 'string' ? feature : `Phase ${feature}: Engineering`}</h4>
                   <p className="text-white/40 text-sm leading-relaxed">High-precision execution tailored for your brand's growth and visual authority.</p>
                 </div>
               </div>
