@@ -14,8 +14,8 @@ const INSTAGRAM_URL = "https://www.instagram.com/pixelix_media";
 
 const services = [
   { 
-    id: "cinematic-photography", 
-    title: "Cinematic Photography", 
+    id: "professional-photoshoot", 
+    title: "Professional Photoshoot", 
     text: "Visual excellence that commands market authority through high-end imagery.", 
     icon: Camera,
     color: "from-blue-500 to-indigo-600",
@@ -25,7 +25,7 @@ const services = [
   },
   { 
     id: "cinematic-videography", 
-    title: "Cinematic Production", 
+    title: "Cinematic Videography", 
     text: "High-impact video storytelling for modern brands and corporate narratives.", 
     icon: Video,
     color: "from-purple-500 to-pink-600",
@@ -34,8 +34,8 @@ const services = [
     features: ["Brand Films", "Social Reels", "Corporate Documentaries", "Product Launch Videos"]
   },
   { 
-    id: "branding-agency", 
-    title: "Strategic Branding", 
+    id: "branding", 
+    title: "Branding", 
     text: "Forging unmistakable identities through deep research and design systems.", 
     icon: Palette,
     color: "from-emerald-500 to-teal-600",
@@ -44,74 +44,84 @@ const services = [
     features: ["Visual Identity", "Design Systems", "Brand Strategy", "Market Positioning"]
   },
   { 
-    id: "digital-marketing", 
-    title: "Growth Engineering", 
-    text: "Performance-driven digital roadmaps designed to scale your footprint.", 
-    icon: BarChart3,
-    color: "from-orange-500 to-red-600",
-    size: "small",
-    longDescription: "We don't just market; we engineer growth. Our comprehensive digital strategies combine search optimization, performance analytics, and precision targeting to turn market opportunities into measurable revenue.",
-    features: ["SEO Strategy", "Market Analysis", "Growth Hacking", "ROI Optimization"]
-  },
-  { 
-    id: "paid-marketing", 
-    title: "Precision Ads", 
-    text: "ROI-focused performance marketing across Google and Meta platforms.", 
-    icon: Target,
+    id: "ad-shooting", 
+    title: "Ad Shooting", 
+    text: "Commercial video production optimized for maximum ad conversions.", 
+    icon: Play,
     color: "from-red-500 to-rose-600",
-    size: "medium",
-    longDescription: "Maximize your reach with precision-targeted paid campaigns. We manage your ad spend with technical rigor, optimizing for lead generation and sales conversion to deliver industry-leading return on investment.",
-    features: ["Google Ads", "Meta Campaigns", "Funnel Optimization", "Lead Generation"]
+    size: "small",
+    longDescription: "Maximize your campaign reach with precision-targeted ad shoots. We produce visually compelling commercial content designed specifically for high conversion rates on digital and broadcast platforms.",
+    features: ["Commercials", "Social Ads", "Product Spots", "Campaign Videos"]
   },
   { 
-    id: "social-media-marketing", 
-    title: "Social Authority", 
+    id: "social-media-management", 
+    title: "Social Media Management", 
     text: "Building loyal brand communities through strategic content and engagement.", 
     icon: Share2,
     color: "from-blue-600 to-indigo-400",
     size: "medium",
-    longDescription: "We turn social channels into brand assets. By combining trend-aware creative with strategic distribution, we build loyal communities and expand your brand's voice across India's digital landscape.",
+    longDescription: "We turn social channels into brand assets. By combining trend-aware creative with strategic distribution, we build loyal communities and expand your brand's voice across the digital landscape.",
     features: ["Content Strategy", "Community Management", "Influencer Partnerships", "Engagement Growth"]
   },
   { 
-    id: "web-design", 
-    title: "Web Engineering", 
-    text: "High-performance digital architecture built for conversion and scale.", 
-    icon: Globe,
+    id: "seo-automation", 
+    title: "SEO Automation", 
+    text: "Data-driven search optimization strategies to dominate search engine results.", 
+    icon: BarChart3,
     color: "from-cyan-500 to-blue-600",
     size: "medium",
-    longDescription: "Your website is the heart of your digital ecosystem. We build high-performance, aesthetically stunning web architectures that merge seamless user experience with industrial-grade engineering for maximum conversion.",
-    features: ["E-commerce", "Corporate Portals", "UX/UI Design", "Performance Optimization"]
+    longDescription: "Establish market leadership through automated, data-backed SEO. We ensure your brand remains at the forefront of modern search and AI engines with continuous technical and content optimization.",
+    features: ["Technical SEO", "Keyword Automation", "Backlink Strategy", "Performance Tracking"]
   },
   { 
-    id: "content-marketing", 
-    title: "Authority Content", 
-    text: "Strategic storytelling that builds trust and dominates search results.", 
-    icon: FileText,
-    color: "from-amber-500 to-orange-600",
+    id: "lead-generating", 
+    title: "Lead Generating", 
+    text: "High-performance systems built to capture and convert targeted prospects.", 
+    icon: Target,
+    color: "from-orange-500 to-red-600",
     size: "small",
-    longDescription: "Establish market leadership through high-value content. We produce strategic narratives that educate, inspire, and convert, while ensuring your brand remains at the forefront of modern search and AI engines.",
-    features: ["Thought Leadership", "SEO Copywriting", "Strategic Blogging", "Newsletter Systems"]
+    longDescription: "We engineer growth by building robust lead generation pipelines. Using a mix of targeted outreach and optimized conversion funnels, we deliver high-quality prospects directly to your sales team.",
+    features: ["Funnel Optimization", "B2B Outreach", "Conversion Tracking", "Lead Nurturing"]
   },
   { 
-    id: "affiliate-marketing", 
-    title: "Affiliate Marketing", 
-    text: "Leverage networks to scale your sales and reach across India.", 
-    icon: LinkIcon,
+    id: "designing", 
+    title: "Designing", 
+    text: "Comprehensive design solutions tailored to your business needs.", 
+    icon: LayoutGrid,
+    color: "from-violet-500 to-purple-600",
+    size: "small",
+    longDescription: "End-to-end design services that communicate your brand's unique value. From marketing collateral to digital assets, we provide cohesive and stunning designs that engage your audience.",
+    features: ["Digital Assets", "Print Media", "Presentation Design", "Marketing Collateral"]
+  },
+  { 
+    id: "editing", 
+    title: "Editing", 
+    text: "Professional post-production for flawless visual and audio content.", 
+    icon: Video,
+    color: "from-fuchsia-500 to-pink-600",
+    size: "small",
+    longDescription: "Refining your raw content into masterpieces. Our post-production team specializes in precise video editing, color grading, and audio mastering to ensure a polished final product.",
+    features: ["Video Editing", "Color Grading", "Audio Mixing", "VFX & Motion Graphics"]
+  },
+  { 
+    id: "graphic-design", 
+    title: "Graphic Design", 
+    text: "Striking visual communication that captures attention and conveys your message.", 
+    icon: PenTool,
     color: "from-emerald-400 to-green-600",
-    size: "small",
-    longDescription: "Build a powerful network of partners who sell for you. We design and manage affiliate programs that incentivize high-quality referrals and expand your brand's footprint through trusted voices.",
-    features: ["Program Design", "Partner Management", "Performance Tracking", "Commission Strategy"]
+    size: "medium",
+    longDescription: "Transform ideas into compelling visuals. Our graphic design services create powerful imagery that aligns with your brand identity and leaves a lasting impression on your target audience.",
+    features: ["Typography", "Illustration", "Brand Assets", "Vector Graphics"]
   },
   { 
-    id: "event-photography", 
-    title: "Event Coverage", 
-    text: "Professional coverage for corporate events and brand launches.", 
-    icon: Camera,
+    id: "ui-ux-design", 
+    title: "UI/UX Design", 
+    text: "Intuitive digital experiences crafted for optimal user engagement.", 
+    icon: Globe,
     color: "from-blue-400 to-indigo-500",
     size: "medium",
-    longDescription: "Capture the essence of your events with high-end photography. We provide comprehensive coverage for corporate gatherings, brand launches, and special events with professional quality and live editing options.",
-    features: ["Corporate Events", "Brand Launches", "Product Unveiling", "Live Editing"]
+    longDescription: "We build user-centric digital interfaces that merge seamless functionality with stunning aesthetics. Our UX/UI processes are designed to maximize usability and drive conversion.",
+    features: ["Wireframing", "Prototyping", "User Research", "Interface Design"]
   }
 ];
 
